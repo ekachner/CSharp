@@ -1,0 +1,54 @@
+General Elements,,,Physical Elements,,,Logical Elements,,,,
+Column Name,Parent Table,Description,Data Type ,Length,Decimal Places,Key Type,Uniqueness,Supports NULL,Default Value,Range of Values
+emp_id,employees,Unique ID for each employee; supports data integrity ,INT,,0,PK,Unique,NO,,UNSIGNED
+fname,employees,Allows user to access first name of each employee,VARCHAR,40,,,,NO,,
+lname,employees,Allows user to access last name of each employee,VARCHAR,40,,,,NO,,
+emp_type,employees,Defines professional role of each employee; allows user to track hours and bill rates depending on the type of employee,VARCHAR,10,,FK,,NO,,"""Apprentice"", ""Manager"""
+gender,employees,Defines gender of each employee; useful for comparing hours and wages according to gender,CHAR,1,,,,YES,"""Not available""","""M"", ""F"""
+phone,employees,Phone number of each employee; provides means of contact ,CHAR,14,,,,NO,,(***)-***-****
+email,employees ,Email address of each employee; provides additional means of contact if employee can't be reached by phone,VARCHAR,75,,,,NO,,
+street,employees,Street address of each employee; used as a mailing address to mail invoices and W2 forms,VARCHAR,75,,,,NO,,
+city,employees,Defines city of each employee's address; necessary component of a mailing address,VARCHAR,40,,,,NO,,
+state,employees,Defines state of each employee's address; necessary component of mailing address,CHAR,2,,FK,,NO,,2 character abbreviation defined in state validation table
+zip,employees,Defines ZIP code of each employee's address; necessary component of mailing address,INT,,0,,,NO,,*****
+emp_type,emp_type,Defines professional role of each employee; allows user to track hours and bill rates depending on the type of employee,VARCHAR,10,,PK,Unique,NO,,"""Apprentice"", ""Manager"""
+state,state,Defines state of each employee's address; necessary component of mailing address,CHAR,2,,PK,Unique,NO,,2 character abbreviation; must match one of the state values in this column
+emp_id,apprentices,Unique ID for each employee; refers to employee id in employees table,INT,,,"PK, FK",Unique,NO,,UNSIGNED
+manager_id,apprentices,Establishes which manager each apprentice is assigned to,INT,,,FK,,NO,,UNSIGNED
+instructional_hrs,apprentices,Logs how many work/instructional hours an apprentice had prior to their apprenticeship (if any),INT,,2,,,YES,0,0-2000
+from_date,apprentices,"First date each apprentice was employed; used to track employment status, salaries, and work hours",DATE,,,,,NO,,****-**-** 
+to_date,apprentices,"Last date of employment for each apprentice; used to track employment status, and potentially employment type",DATE,,,,,YES,NULL,****-**-** 
+manager_id,managers,Unique ID for each employee; refers to employee id in employees table,INT,,0,"PK, FK",Unique,NO,,UNSIGNED
+from_date,managers,"First date of employment for each manager; used to track employment status, salary, and work hours",DATE,,,,,NO,,****-**-** 
+to_date,managers,"Last date of employment for each manager; used to track employment status, and potentially employment type",DATE,,,,,YES,NULL,****-**-** 
+proj_id,projects,Unique ID for each project; supports data integrity,INT,,0,PK,Unique,NO,,UNSIGNED
+comp_id,projects,ID of the company that the project is being built for,INT,,0,FK,,NO,,UNSIGNED
+proj_name,projects,"Name of the project; for organization purposes, makes it easier for the user to distinguish specific projects",VARCHAR,40,,,,NO,,
+est_hrs,projects,Manager's estimation of how many hours it will take to complete a project,INT,,2,,,YES,"""Hours to complete is not yet estimated""","0-99,999"
+bill_rate,projects,Hourly rate for a specific project; apprentice wage and manager wage are taken into account to estimate a total hourly rate for clients to pay,INT,,2,,,NO,,"0-9,999"
+start_date,projects,Logs when the project was started; allows user to track the status of a project (complete / incomplete) and allows the user to keep a record of the length of each project,DATE,,,,,NO,,
+end_date,projects,Logs when the project was started; allows user to track the status of a project (complete / incomplete) and allows the user to keep a record of the length of each project,DATE,,,,,YES,"""In progress""",
+comp_id,companies,Unique ID for each client / company; supports data integrity,INT,,0,PK,Unique,NO,,00000-99999
+comp_name,companies,Name of company / client; makes it easier for a user to distinguish which company is associated with which project(s),VARCHAR,40,,,,NO,,
+street,companies,Street address of company/client; allows Array to send any documentation to the company's mailing address,VARCHAR,75,,,,YES,NULL,
+city,companies,City of a company's physical address; necessary component of a mailing address,VARCHAR,40,,,,YES,NULL,
+state,companies,State of a company's physical address; necessary component of a mailing address,CHAR,2,,FK,,YES,NULL,2 character abbreviation defined in state validation table
+zip,companies,ZIP code of a company's physical address; necessary component of a mailing address,INT,,,,,YES,NULL,*****
+poc_id,point_of_contact,Unique ID for a point of contact representative assigned to each individual project; supports data integrity,INT,,0,PK,Unique,NO,,00000-99999
+comp_id,point_of_contact,ID of the company associated with each point of contact; used to establish a one-to-many relationship between a company and its point(s) of contact,INT,,0,FK,,NO,,00000-99999
+fname,point_of_contact,Allows user to access the first name of a point of contact representative on a particular project,VARCHAR,40,,,,NO,,
+lname,point_of_contact,Allows user to access the first name of a point of contact representative on a particular project,VARCHAR,40,,,,NO,,
+phone,point_of_contact,Provides a means of contact for the point of contact representative on each project,CHAR,14,,,,NO,,(***)-***-****
+email,point_of_contact,Provides additional means of contact in case the POC can't be reached by phone,VARCHAR,75,,,,NO,,
+"proj_id, poc_id",poc_project,Links the POC to their respective project(s) ,INT,,0,PK,Unique,NO,,00000-99999
+poc_id,poc_project,Links the POC table to the junction table; needed in a many-to-many relationship,INT,,0,FK,,NO,,00000-99999
+proj_id,poc_project,Links the projects table to the junction table; needed in a many-to-many relationship,INT,,0,FK,,NO,,00000-99999
+"emp_id, proj_id",emp_project,Links the employee to their respective project(s),INT,,0,PK,Unique,NO,,00000-99999
+proj_id,emp_project,Links the projects table to the junction table; needed in a many-to-many relationship,INT,,0,FK,,NO,,00000-99999
+emp_id,emp_project,Links the employees table to the junction table; needed in a many-to-many relationship,INT,,0,FK,,NO,,00000-99999
+timestamp_id,time_entries,"Allows user to access timestamps inputted by employees; needed to determine hours worked on a project, how many instructional hours an apprentice recieves, and how many work hours an employee puts in",INT,,0,PK,Unique,NO,,00000-99999
+start_time,time_entries,Logs the time when an employees starts working on a project; necessary when calculating how many hours an employee worked on a project,TIMESTAMP,,,,,NO,,"Year, month, day, hours, minutes, seconds"
+end_time,time_entries,Logs the time when an employees finishes working on a project; necessary when calculating how many hours an employee worked on a project,TIMESTAMP,,,,,NO,,"Year, month, day, hours, minutes, seconds"
+approval_date,time_entries,Allows managers to confirm apprentice's logged hours; this keeps the time entries more accurate and gives more control to managers,TIMESTAMP,,,,,YES,"""Unapproved""","Year, month, day, hours, minutes, seconds"
+entry_type,time_entries,Distinguishes between time spent giving/recieving instruction and time spent working on projects; helps to keep track of apprenticeship status and project status,VARCHAR,13,,,,NO,,"""Instructional"", ""Work"""
+emp_id,time_entries,Tracks how many hours an employee works on a project by connecting their employee id,INT,,0,FK,,NO,,00000-99999
