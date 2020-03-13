@@ -20,9 +20,10 @@ Submission are due no later than March 22nd, 2020.
    1. File
    2. Download
    3. Comma-separated values
-5. place the .csv file in the directory you created in step 2
-6. place the .sql file you created that creates all of your tables
-7. submit your work
+5. place the .csv file in the directory you created in step 2 in your directory
+6. place the diagram you created in draw.io in your directory
+7. place the .sql file you created that creates all of your tables in your directory
+8. submit your work
    ```
    git add .
    git commit -m '<your name> SQL standards'
