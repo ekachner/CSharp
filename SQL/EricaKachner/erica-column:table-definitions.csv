@@ -1,0 +1,57 @@
+General Elements,,,Physical Elements,,,,Logical Elements,,,,
+Column Name,Parent Table,Description,Data Type,Length,Decimal Places,Character Support,Key Type,Uniqueness,Supports Null,Default Value,Range of Values
+emp_id,employees,identification number of employee,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+first_name,employees,employee first name,character string,20,null,,regular,,no,,
+last_name,employees,employee last name,character string,20,null,,regular,,no,,
+role,employees,employee role (manager / apprentice),character string,20,null,,regular,,no,,"apprentice, manager"
+phone,employees,employee phone number,character string,12,null,,regular,,yes,null,
+email,employees,employee email ,character string,20,null,,regular,,no,,
+permissions,employees,access to time information,character string,3,null,,regular,,no,,
+,,,,,,,,,,,
+emp_id,employees,identification number of employee in manager role,exact numeric,6,null,,PRIMARY/FOREIGN,yes,no,,1-999999
+hire_date,managers,date of hire for employee in manager position,datetime,,null,,regular,,no,,
+term_date,managers,termination date for employee in manager position,datetime,,null,,regular,,yes,null,
+,,,,,,,,,,,
+emp_id,employees,identification number of employee in apprentice role,exact numeric,6,null,,PRIMARY/FOREIGN,yes,no,,1-999999
+man_id,managers,identification number of employee in manager position overlooking the employee in apprentice role,exact numeric,6,null,,FOREIGN,,no,,1-999999
+instruction_time,apprentices,total hours of instruction time which the employee in apprentice role has accrued,exact numeric,6,null,,regular,,no,0,
+hire_date,apprentices,date of hire for employee in apprentice position,datetime,,null,,regular,,no,,
+term_date,apprentices,terminiation date for employee in apprentice position,datetime,,null,,regular,,yes,null,
+,,,,,,,,,,,
+emp_id,employees,identification number of employee,exact numeric,6,null,,FOREIGN,yes,no,,1-999999
+proj_id,projects,identification number of project,exact numeric,6,null,,FOREIGN,yes,no,,1-999999
+,,,,,,,,,,,
+proj_id,projects,identification number of project,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+proj_name,projects,one word description of the project - typically client organization ,character string,20,null,,regular,,no,,
+client_id,clients,identification number of the client,exact numeric,6,null,,FOREIGN,,no,,1-999999
+start_date,projects,project start date,datetime,,null,,regular,,yes,,
+end_date,projects,project end date,datetime,,null,,regular,,yes,,
+bill_rate,projects,the monetary value for each hour of time spent working on a project,exact numeric - DECIMAL,"(5,2)",null,,regular,,no,,1-999
+time_id,time_entries,identification number of the time entry,exact numeric,6,null,,FOREIGN,,yes,null,1-999999
+poc_id,point_of_contact,identification number for the liason,exact numeric,6,null,,FOREIGN,,yes,null,1-999999
+,,,,,,,,,,,
+client_id,clients,identification number for the client/organization commissioning the project,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+client_org,clients,organization name commissioning the project,character string,20,null,,regular,,no,,
+address_id,address,identification number for the address specific to the client,exact numeric,6,null,,FOREIGN,,no,,1-999999
+,,,,,,,,,,,
+address_id,address,identification number for the address specific to the client,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+street_address,address,the client's street address,character string,40,null,,regular,,no,,
+city,address,the city in which the client lives,character string,20,null,,regular,,no,,
+state_initials,state,the state initials in which the client lives,character string,2,null,,FOREIGN,,no,,
+zip,address,the area code in which the client lives,character string,5,null,,regular,,no,,
+,,,,,,,,,,,
+state_initials,state,the state in which the client lives in abbreviated format,character string,2,null,,PRIMARY ,yes,no,,AK - WY
+state_name,state,the state in which the client lives spelled out in full,character string,20,null,,regular,,no,""" """,Alabama - Wyoming
+,,,,,,,,,,,
+poc_id,point_of_contact,identification number for the liason,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+first_name,point_of_contact,liason first name,character string,20,null,,regular,,no,,
+last_name,point_of_contact,liason last name,character string,20,null,,regular,,no,,
+email,point_of_contact,liason email,character string,20,null,,regular,,no,,
+phone,point_of_contact,liason phone number,character string,12,null,,regular,,yes,null,
+client_id,clients,identification number of the client tied to a particular liason,exact numeric,6,null,,FOREIGN,,no,,1-999999
+,,,,,,,,,,,
+time_id,time_entries,identification number of the time entry,exact numeric,6,null,,PRIMARY ,yes,no,,1-999999
+emp_id,employees,identification number of the employee,exact numeric,6,null,,FOREIGN,,no,,1-999999
+start_time,time_entries,timestamp begin on click,datetime,,null,,regular,,no,,
+end_time,time_entries,timestamp end on click,datetime,,null,,regular,,yes,null,
+entry_type,time_entries,timestamp entry type (instructional or project),character string,20,null,,regular,,no,,"instruction, project"
