@@ -1,0 +1,15 @@
+Table Name,Description
+users,The people and companies who use our application.  User information is vital because it allows us to maintain a list of current and past users
+employees,The hirelings who do the work for clients. Employee information is vital because it allows us to ensure we have enough workers to complete client projects.
+apprentices,All the people working towards official certification. Apprentice information is vital because it allows us to track the certification process.
+time_entry,System to track the number of work hours completed on a project. Time information is vital because it allows us to track hours on client projects.
+point_of_contact,Person or persons who are the liaisons for projects and clients. Point of contact information is vital because it allows us to maintain contact with clients.
+companies,Clients who contract us to complete projects. Company information is vital because it allows us to record clients.
+projects,Contracted jobs to be completed by employees. Project information is vital because it allows us to record projects.
+projects_employees,Represents the relationship between employees and projects. This relationship is vital because it creates linked record fields.
+projects_poc,Represents the relationship between point of contact and projects. This relationship is vital because it creates linked record fields.
+gender,Sex of employees. Gender information is vital because it allows for statistical reporting.
+state,State in which a company or person resides. State information is vital for complete addresses.
+role,Categories for employees. Role information is vital because it allows for multiple employee categories.
+time_type,Categories for work hours. Time type is vital because it allows for multiple work categories.
+user_type,Categories for users. User type is vital because it allows for multiple user categories.
