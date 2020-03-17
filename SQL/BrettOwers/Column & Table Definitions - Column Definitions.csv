@@ -1,0 +1,44 @@
+General Elements,,,Physical Elements,,,,Logical Elements,,,,
+Column Name,Parent Table,Description,Data Type,Length,Decimal Places,Character Support,Key Type,Uniqueness,Supports Null,Default Value,Range of Values
+project_id,projects,Identifies contract,int2,,0,0-9,PK,yes,no,,0 - 99999999
+client_id,projects,Identifies external company contracting Array,int2,,0,0-9,FK,no,no,,0 - 99999999
+poc_id,projects,Identifier of human representing client,int2,,0,0-9,FK,no,no,,0 - 99999999
+project_hours,projects,Contains total verified time spent on project,decimal,,2,0-9 . ,,no,no,0,0 - 9999
+end_date,projects,Contains when contract is scheduled to be complete / has been completed,datetime,,0,A-z 0-9 - :,,no,yes,,
+start_date,projects,Contains when contract begins/began,datetime,,0,A-z 0-9 - :,,no,no,,
+billing_rate,projects,Contains hourly price client is billed for this project,decimal,,2,0-9 .,,no,no,60,60-999.99
+project_name,projects,To identify contract,varchar,35,0,A-z,,no,no,,
+project_status,projects,Contains state of contract,enum,,0,A-z,,no,no,Pending,Pending / Ongoing / Completed / Cancelled
+employee_id,employee_projects,Identifies apprentice/mentor and associates them with a contract,int2,,0,0-9,PK / CK,no,no,,0 - 99999999
+project_id,employee_projects,Identifies contract and associates it with an employee,int2,,0,0-9,PK / CK,no,no,,0 - 99999999
+client_id,clients,Identifies external company contracting Array,int2,,0,0-9,PK,yes,no,,0 - 99999999
+client_name,clients,Important for communicating and matching billing information with external company,int2,,0,0-9,FK,yes,no,,0 - 99999999
+state_id,clients,For billing client,enum,,0,A-Z,,no,no,,
+city,clients,For billing client,varchar,35,0,A-z,,no,no,,
+street,clients,For billing client,varchar,95,0,A-z 0-9,,no,no,,
+zip,clients,For billing client,int4,10,0,0-9,,no,no,,
+poc_id,pocs,Identifies company ambassador,int2,,0,0-9,PK,yes,no,,0 - 99999999
+first_name,pocs,Given identifier of ambassador,varchar,50,0,A-z,,no,no,,
+last_name,pocs,Surname of ambassador,varchar,50,0,A-z,,no,no,,
+email,pocs,Method to contact ambassador,varchar,75,0,,,no,no,,
+phone_number,pocs,Method to contact ambassador,varchar,13,0,0-9 - ( ),,no,no,,
+project_id,time_entries,Identify contract for tracking hours,int2,,0,8,PK / CK,no,no,,0 - 99999999
+employee_id,time_entries,Identify apprentice for tracking hours,int2,,0,8,PK / CK,no,no,,0 - 99999999
+mentor_id,time_entries,Identify manager to validate hour tracking,int2,,0,8,FK,no,no,,0 - 99999999
+start_date,time_entries,Identify beginning of clock in,datetime,,0,A-z 0-9,,no,no,,
+end_date,time_entries,Identify time of clock out,datetime,,0,A-z 0-9,,no,no,,
+verification_date,time_entries,For mentor to input to verify accuracy of apprentice clocked in time,datetime,,0,,,no,yes,,
+employee_id,employees,Idenitfy apprentice/mentor,int2,,0,,PK,yes,no,,0 - 99999999
+first_name,employees,Given primary identifier of worker,varchar,50,0,,,no,no,,
+last_name,employees,Surname of worker,varchar,50,0,,,no,no,,
+role,employees,Describe place of employee in context of Array,enum,,0,,,no,no,,Designer / Developer
+emp_status,employees,Track worker state within Array,enum,,0,,,no,no,,Fired / Apprentice / Completed Program / Mentor
+end_date,employees,Describes when worker is scheduled to complete work at Array / completed work at Array,datetime,,0,,,no,yes,,
+start_date,employees,Describes when worker began working / school at Array,datetime,,0,,,no,no,,
+phone_number,employees,Method to contact worker,varchar,13,0,,,no,no,,
+email,employees,Method to contact worker,varchar,75,0,,,no,no,,
+apprentice_id,apprentices,Identifies worker,int2,,0,,PK / CK,yes,no,,00000000 - 99999999
+mentor_id,apprentices,Identifies manager of worker,int2,,0,,FK,no,no,,00000000 - 99999999
+instructional_time,apprentices,Contains hours employee has spent learning,decimal,,2,,,no,yes,0,0-9999.99
+state_id,states,Identifies geographic region,int1,2,0,0-9,PK,yes,no,,All states
+state_initials,states,Represents geographic region with two letters,char,2,,A-Z,,yes,no,,All states
