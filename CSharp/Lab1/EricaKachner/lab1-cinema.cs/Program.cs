@@ -16,16 +16,20 @@ namespace erica_cinema.cs
             string ageText = Console.ReadLine();
             int age = int.Parse(ageText);
 
-            //test if number = 1 and age = 3  (enjoy film)
-            //test if number = 4 and age = 21  (enjoy film)
+
+            if (age >= 100 && number >= 1 && number < 7)
+            {
+                Console.Write("Bless your soul...");
+            }
+
+            
             if (number == 1 || number == 4)
             {
                 Console.WriteLine("Enjoy the film!");
             }
 
 
-            //test if number = 2 and age = 3  (access denied)
-            //test if number = 5 and age = 13  (enjoy film)
+            
             if (number == 2 || number == 5)
             {
                 if (age >= 13)
@@ -40,8 +44,7 @@ namespace erica_cinema.cs
             }
 
 
-            //test if number = 3 and age = 17   (access denied)
-            //test if number = 6 and age = 18   (enjoy film)
+            
             if (number == 3 || number == 6)
             {
                 if(age >= 18)
@@ -53,7 +56,13 @@ namespace erica_cinema.cs
                     Console.WriteLine("Access denied - You are too young to view this film.");
                 }
                    
-            }  
+            }
+
+            if (number > 6 || number == 0)
+			{
+                Console.WriteLine("The film number you entered is not a valid input");
+			}
+
         }
     }
 }
