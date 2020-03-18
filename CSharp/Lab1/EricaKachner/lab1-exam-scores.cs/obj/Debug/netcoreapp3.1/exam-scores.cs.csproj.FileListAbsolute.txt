@@ -1,0 +1,10 @@
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/obj/Debug/netcoreapp3.1/exam-scores.cs.csprojAssemblyReference.cache
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/obj/Debug/netcoreapp3.1/exam-scores.cs.AssemblyInfoInputs.cache
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/obj/Debug/netcoreapp3.1/exam-scores.cs.AssemblyInfo.cs
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/bin/Debug/netcoreapp3.1/exam-scores.cs.deps.json
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/bin/Debug/netcoreapp3.1/exam-scores.cs.runtimeconfig.json
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/bin/Debug/netcoreapp3.1/exam-scores.cs.runtimeconfig.dev.json
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/bin/Debug/netcoreapp3.1/exam-scores.cs.dll
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/bin/Debug/netcoreapp3.1/exam-scores.cs.pdb
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/obj/Debug/netcoreapp3.1/exam-scores.cs.dll
+/Users/ericakachner/Projects/C#/exam-scores.cs/exam-scores.cs/obj/Debug/netcoreapp3.1/exam-scores.cs.pdb
