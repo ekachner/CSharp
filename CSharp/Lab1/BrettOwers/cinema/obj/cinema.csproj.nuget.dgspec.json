@@ -14,7 +14,7 @@
         "outputPath": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/brettowers/.nuget/NuGet/NuGet.Config"
+          "/Users/brettowers/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
