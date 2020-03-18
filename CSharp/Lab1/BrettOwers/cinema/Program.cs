@@ -23,18 +23,38 @@ namespace cinema
 
         static int EnterFilmNo()
         {
-            Console.Write("Enter the film you wish to see: ");
+            Console.Write("Enter the number of the film you wish to see: ");
             int filmNumber;
             string filmInput = Console.ReadLine();
             bool result = int.TryParse(filmInput, out filmNumber);
-            return filmNumber;
+            if (result == true)
+            {
+                return filmNumber;
+                
+ 
+            } else
+            {
+                Console.WriteLine("Invalid entry!");
+                filmNumber = EnterFilmNo();
+                return filmNumber;
+            }
+
         }
+
         static void EnterAge(int filmNo)
         {
             Console.Write("Enter your age: ");
             int age;
+            string ageMessage = "Invalid age! Please input an integer between 3 - 110";
             string ageInput = Console.ReadLine();
             bool result = int.TryParse(ageInput, out age);
+
+            if (result == false || age < 3 || age > 110)
+            {
+                Console.WriteLine(ageMessage);
+                EnterAge(filmNo);
+                return;
+            }
 
             switch (filmNo)
             {
@@ -57,6 +77,7 @@ namespace cinema
                     break;
                   
             }
+           
         }
         static void AgeCheck(int age, int minAge)
         {
