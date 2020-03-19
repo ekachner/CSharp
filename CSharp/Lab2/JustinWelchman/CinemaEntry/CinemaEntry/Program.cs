@@ -67,12 +67,17 @@ namespace CinemaEntry
                 {
                     Console.WriteLine("Access Denied! You are too young to view this film!");
                 }
-                Console.WriteLine("Would you like to purchase another ticket?");
+                Console.WriteLine("Would you like to purchase another ticket? Y/N");
                 anotherTicket = char.ToUpper(Console.ReadLine()[0]);
                 if (anotherTicket == 'N')
                 {
                     Console.WriteLine("Thank you for choosing us! Beverages will be on the next counter. Enjoy your film!");
 
+                } else
+                {
+                    Console.WriteLine("Invalid response!");
+                    Console.WriteLine("Would you like to purchase another ticket? Y/N");
+                    anotherTicket = char.ToUpper(Console.ReadLine()[0]);
                 }
             } while (anotherTicket == 'Y');
         }
