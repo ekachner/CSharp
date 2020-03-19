@@ -1,0 +1,11 @@
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/obj/Debug/netcoreapp3.1/ZachLab1.csprojAssemblyReference.cache
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/obj/Debug/netcoreapp3.1/ZachLab1.AssemblyInfoInputs.cache
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/obj/Debug/netcoreapp3.1/ZachLab1.AssemblyInfo.cs
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1.deps.json
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1.runtimeconfig.json
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1.runtimeconfig.dev.json
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1.dll
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/bin/Debug/netcoreapp3.1/ZachLab1.pdb
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/obj/Debug/netcoreapp3.1/ZachLab1.dll
+/Users/zacharylopez-smith/Projects/ZachLab1/ZachLab1/obj/Debug/netcoreapp3.1/ZachLab1.pdb

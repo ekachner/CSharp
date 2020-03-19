@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kellyredmond/Projects/exam_scores/exam_scores/exam_scores.csproj",
+      "projectUniqueName": "/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab1/KellyRedmond/exam_scores/exam_scores/exam_scores.csproj",
       "projectName": "exam_scores",
-      "projectPath": "/Users/kellyredmond/Projects/exam_scores/exam_scores/exam_scores.csproj",
+      "projectPath": "/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab1/KellyRedmond/exam_scores/exam_scores/exam_scores.csproj",
       "packagesPath": "/Users/kellyredmond/.nuget/packages/",
-      "outputPath": "/Users/kellyredmond/Projects/exam_scores/exam_scores/obj/",
+      "outputPath": "/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab1/KellyRedmond/exam_scores/exam_scores/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kellyredmond/.config/NuGet/NuGet.Config"
@@ -56,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }
