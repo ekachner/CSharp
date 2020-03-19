@@ -1,0 +1,54 @@
+General Elements,,,Physical Elements,,,,Logical Elements,,,,
+Column Name,Parent Table,Description,Data Type,Length,Decimal Places,Notes,Key Type,Uniqueness,Supports Null,Default Value,Range of Values
+user_id,users,A unique identifier for every entity logging in. Integral for indexing and data integrity.,int,,,"auto_increment, unsigned",primary,yes,no,,
+fname,users,Given name of the user. Necessary component of a user's full name.,varchar,40,,,,no,no,,
+lname,users,Surname of the user. Necessary component of a user's full name.,varchar,40,,,,no,no,,
+phone,users,Contact information to call the user. Integral for contacting user.,char,12,,,,no,no,,
+email,users,Electronic correspondence information for user and the username for login purposes. Integral for contacting user and login credentials.,varchar,75,,,,no,no,,
+pass,users,User specified string of characters that allows access to application. Necessary component for login credentials.,varchar,255,,hash,,no,no,,
+user_type,users,Categories to separate entities. Necessary component to allow for multiple entity categories.,varchar,16,,,foreign,no,no,,"employee, point of contact"
+emp_id,employees,A unique identifier for hirelings. Integral for indexing and data integrity.,int,,,"auto_increment, unsigned",primary,yes,no,,
+user_id,employees,Cross references users table. Creates relationship between the tables.,int,,,unsigned,foreign,yes,no,,
+street_address,employees,House number and road that employee resides on. Necessary component of employee's address.,varchar,75,,,,no,no,,
+city,employees,Metro area that the employee resides. Necessary component of employee's address.,varchar,30,,,,no,no,,
+state,employees,Cross references state table. Ensures data validation.,char,2,,,foreign,no,no,,"AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','GU','HI','IA','ID', 'IL','IN','KS','KY','LA','MA','MD','ME','MH','MI','MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY', 'OH','OK','OR','PA','PR','PW','RI','SC','SD','TN','TX','UT','VA','VI','VT','WA','WI','WV','WY'"
+zip_code,employees,Postal code for the employee. Necessary component of employee's address.,char,5,,,,no,no,,
+hire_date,employees,Day employee begins employment. ,date,,,,,no,no,,
+gender,employees,Cross references gender table. Ensures data validation.,varchar,10,,,foreign,no,no,,"male, female, non-binary"
+role,employees,Cross references role table. Ensures data validation.,varchar,10,,,foreign,no,no,,"apprentice, manager"
+emp_id,apprentices,A unique identifier for apprentices. Cross references employees table. Creates relationship between the tables.,int,,,unsigned,"primary, foreign",yes,no,,
+man_id,apprentices,Cross references employees table. Creates relationship between the tables.,int,,,unsigned,foreign,no,no,,
+start_date,apprentices,Marks beginning of apprenticeship. Necessary to keep track of length of apprenticeship.,date,,,,,no,no,,
+end_date,apprentices,Marks end of apprenticeship. Necessary to keep track of length of apprenticeship.,date,,,,,no,yes,,
+instructional_time,apprentices,Apprentice earned hours not previously recorded. Necessary component to track apprentice hours.,smallint,,,unsigned,,no,yes,0,
+time_id,time_entry,A unique identifier for entries. Integral for indexing and data integrity.,int,,,"auto_increment, unsigned",primary,yes,no,,
+emp_id,time_entry,Cross references employees table. Creates relationship between the tables.,int,,,unsigned,foreign,no,no,,
+proj_id,time_entry,Cross references projects table. Creates relationship between the tables. ,int,,,unsigned,foreign,no,no,,
+time_start,time_entry,Marks the beginning of work on a given day. Integral for tracking hours for employees and projects.,datetime,,,,,no,no,,
+time_end,time_entry,Marks the end of work done on a given day. Integral for tracking hours for employees and projects.,datetime,,,,,no,no,,
+time_type,time_entry,Categories to separate hours logged. Necessary component to track apprentice hours.,varchar,13,,,foreign,no,no,,"instructional, work"
+approved_date,time_entry,Manager accepting apprentice's logged time. Necessary component to track apprentice hours.,datetime,,,,,no,yes,,
+user_id,point_of_contact,A unique identifier for client liaisons. Integral for indexing and data integrity.,int,,,unsigned,"primary,  foreign",yes,no,,
+comp_id,point_of_contact,Cross references company table. Creates relationship between the tables.,int,,,unsigned,foreign,no,no,,
+proj_id,projects,A unique identifier for client jobs. Integral for indexing and data integrity.,int,,,"auto_increment, unsigned",primary ,yes,no,,
+proj_name,projects,Name of project. Necessary for project identification.,varchar,70,,,,yes,no,,
+comp_id,projects,Cross references company table. Creates relationship between the tables.,int,,,unsigned,foreign,no,no,,
+start_date,projects,Marks the beginning of work on a project. Integral for tracking project status.,date,,,,,no,yes,,
+end_date,projects,Marks the completion of a project. Integral for tracking project status.,date,,,,,no,yes,,
+bill_rate,projects,Denotes the hourly fee the client will be charged for work. Necessary for transparency and accountability.,smallint,,,unsigned,,no,no,0,
+projected_hours,projects,Denotes the estimated time a project will take to complete. Necessary for transparency and accountability.,smallint,,,unsigned,,no,no,0,
+comp_id,companies,A unique identifier for clients. Integral for indexing and data integrity.,int,,,"auto_increment, unsigned",primary,yes,no,,
+comp_name,companies,Name of the client. Necessary component for client identification,varchar,70,,,,yes,no,,
+street_address,companies,Building number and road that client resides on. Necessary component of client's address.,varchar,100,,,,no,yes,,
+city,companies,Metro area that the client resides in. Necessary component of client's address.,varchar,50,,,,no,no,,
+state,companies,Cross references state table. Ensures data validation.,char,2,,,foreign,no,no,,"AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','GU','HI','IA','ID', 'IL','IN','KS','KY','LA','MA','MD','ME','MH','MI','MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY', 'OH','OK','OR','PA','PR','PW','RI','SC','SD','TN','TX','UT','VA','VI','VT','WA','WI','WV','WY'"
+zip_code,companies,Postal code for the client. Necessary component of client's address.,char,5,,,,no,yes,,
+emp_id,projects_employees,Cross references employees table. Creates relationship between the tables. Necessary component of composite key.,int,,,unsigned,"composite primary, foreign","cpk yes, fk no",no,,
+proj_id,projects_employees,Cross references projects table. Creates relationship between the tables. Necessary component of composite key.,int,,,unsigned,"composite primary, foreign","cpk yes, fk no",no,,
+user_id,projects_poc,Cross references point_of_contact table. Creates relationship between the tables. Necessary component of composite key.,int,,,unsigned,"composite primary, foreign","cpk yes, fk no",no,,
+proj_id,projects_poc,Cross references projects table. Creates relationship between the tables. Necessary component of composite key.,int,,,unsigned,"composite primary, foreign","cpk yes, fk no",no,,
+gender,gender,A unique identifier for sex of employee. Integral for indexing and data integrity.,varchar,10,,,primary,yes,no,,"male, female, non-binary"
+role,role,A unique identifier for employee categories. Integral for indexing and data integrity.,varchar,10,,,primary,yes,no,,"apprentice, manager"
+state,state,A unique identifier for region of residence. Integral for indexing and data integrity.,char,2,,,primary,yes,no,,"AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','GU','HI','IA','ID', 'IL','IN','KS','KY','LA','MA','MD','ME','MH','MI','MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY', 'OH','OK','OR','PA','PR','PW','RI','SC','SD','TN','TX','UT','VA','VI','VT','WA','WI','WV','WY'"
+time_type,time_type,A unique identifier for work entry categories. Integral for indexing and data integrity.,varchar,13,,,primary,yes,no,,"instructional, work"
+user_type,user_type,A unique identifier for entity categories. Integral for indexing and data integrity.,varchar,16,,,primary,yes,no,,"employee, point of contact"

@@ -61,7 +61,7 @@ CREATE TABLE apprentices
 (
 app_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
 manager_id INT UNSIGNED NOT NULL,
-instruction_hrs INT UNSIGNED DEFAULT 0,
+instruction_hrs DECIMAL (4, 2) UNSIGNED DEFAULT 0,
 hire_date DATE NOT NULL,
 to_date DATE,
 
@@ -112,7 +112,7 @@ CREATE TABLE projects
 proj_id INT UNSIGNED AUTO_INCREMENT NOT NULL,
 comp_id INT UNSIGNED NOT NULL,
 proj_name VARCHAR(40) NOT NULL,
-est_hrs INT UNSIGNED,
+est_hrs DECIMAL (5, 2) UNSIGNED,
 bill_rate SMALLINT UNSIGNED,
 start_date DATE NOT NULL,
 end_date DATE,

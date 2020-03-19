@@ -1,0 +1,11 @@
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.deps.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.runtimeconfig.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.runtimeconfig.dev.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/bin/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.pdb
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.csprojAssemblyReference.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.AssemblyInfoInputs.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.AssemblyInfo.cs
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/Debug/netcoreapp3.1/Week12Lab-PotatoGrading.pdb

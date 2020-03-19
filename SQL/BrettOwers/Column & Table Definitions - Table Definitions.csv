@@ -1,0 +1,10 @@
+Table Name,Description
+EMPLOYEES,"Employees - contains information regarding everyone who works at Array. This table is necessary for identifying, paying and contacting employees."
+APPRENTICES,"Apprentice - contains all the employees who have mentors. This table is used to associate mentors with apprentices, so that approval"
+MENTORS,Mentor - contains all the employees who have apprentices. This table is used by the apprentice table to pair managers with their apprentices.
+PROJECTS,"Project - contains information about specified work contracted out from Clients for Array to do that involves apprentices. It is important for managing associated employees with particular contracts, client to employer communication, and billing."
+CLIENTS,Client - contains information on each particular company doing business with Array. It's important because any particular company may have more than one project.
+TIME ENTIRES,Time Entries - contains information on hours spent on projects. It's important for verifying the hours logged by employees and billing.
+POCS,POC - contains information on how to get ahold of human representatives for particular projects. It's important to keep in touch with company representatives for CI/CD.
+CLIENT PROJECTS,Client Projects - exists as the junction table linking each company to each of their ongoing business dealings with Array. Important because each company can have multiple dealings.
+EMPLOYEE PROJECTS,Employee Projects - exists as the junction table linking each apprentice / mentor to the particular contract they are fulfilling. Important because employees can have multiple contracts.
