@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/lab1-cinema.cs/erica-cinema.cs.csproj": {}
+    "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/cinema.cs/erica-cinema.cs.csproj": {}
   },
   "projects": {
-    "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/lab1-cinema.cs/erica-cinema.cs.csproj": {
+    "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/cinema.cs/erica-cinema.cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/lab1-cinema.cs/erica-cinema.cs.csproj",
+        "projectUniqueName": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/cinema.cs/erica-cinema.cs.csproj",
         "projectName": "erica-cinema.cs",
-        "projectPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/lab1-cinema.cs/erica-cinema.cs.csproj",
+        "projectPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/cinema.cs/erica-cinema.cs.csproj",
         "packagesPath": "/Users/ericakachner/.nuget/packages/",
-        "outputPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/lab1-cinema.cs/obj/",
+        "outputPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/EricaKachner/cinema.cs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ericakachner/.config/NuGet/NuGet.Config"

@@ -1,9 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/gfyprototype/.dotnet/store/|arch|/|tfm|",
-      "/Users/gfyprototype/.nuget/packages",
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "/Users/ericakachner/.dotnet/store/|arch|/|tfm|",
+      "/Users/ericakachner/.nuget/packages"
     ]
   }
 }

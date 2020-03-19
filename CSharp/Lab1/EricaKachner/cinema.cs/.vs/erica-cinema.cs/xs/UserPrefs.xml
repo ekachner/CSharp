@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{2D62AD68-A1B2-4AF2-A816-32B9D3BF7F13}|Default">
   <MonoDevelop.Ide.ItemProperties.erica-cinema.cs PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../cinema2.cs">
     <Files>
-      <File FileName="Program.cs" Line="23" Column="14" />
+      <File FileName="Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
