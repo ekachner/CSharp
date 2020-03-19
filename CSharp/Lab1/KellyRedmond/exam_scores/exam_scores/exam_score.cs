@@ -1,12 +1,11 @@
 ﻿using System;
 using static System.Console;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace exam_scores
 {
-    public struct ExamScore
+    public class ExamScore
     {
         public int MinScore;
         public int MaxScore;
@@ -41,7 +40,8 @@ namespace exam_scores
                 if (input < min || input > max)
                 {
                     WriteLine($"Please input a value between {min} and {max}");
-                } else
+                }
+                else
                 {
                     break;
                 }
@@ -61,7 +61,8 @@ namespace exam_scores
                 if (input == value1 || input == value2)
                 {
                     break;
-                } else
+                }
+                else
                 {
                     WriteLine($"Please enter a {value1} or {value2}");
                 }
@@ -72,14 +73,14 @@ namespace exam_scores
 
         static void Main()
         {
-            ArrayList examScores = new ArrayList();
+            List<ExamScore> examScores = new List<ExamScore>();
 
-            examScores.Add(new ExamScore (0, 35, "Fail"));
-            examScores.Add(new ExamScore (35, 40, "Can be \"compensated\""));
-            examScores.Add(new ExamScore (40, 50, "Third class degree - III"));
-            examScores.Add(new ExamScore (50, 60, "Lower second class degree - II(ii)"));
-            examScores.Add(new ExamScore (60, 70, "Upper second class degree - II(i)"));
-            examScores.Add(new ExamScore (70, 100, "First class degree - I"));
+            examScores.Add(new ExamScore(0, 35, "Fail"));
+            examScores.Add(new ExamScore(35, 40, "Can be \"compensated\""));
+            examScores.Add(new ExamScore(40, 50, "Third class degree - III"));
+            examScores.Add(new ExamScore(50, 60, "Lower second class degree - II(ii)"));
+            examScores.Add(new ExamScore(60, 70, "Upper second class degree - II(i)"));
+            examScores.Add(new ExamScore(70, 100, "First class degree - I"));
 
             string addAnotherScore;
 
