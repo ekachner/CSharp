@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{8A557CA0-F15A-4A43-875F-53FCF3E568AB}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="exam_scores/exam_score.cs">
     <Files>
-      <File FileName="exam_scores/Program.cs" Line="59" Column="28" />
+      <File FileName="exam_scores/exam_score.cs" Line="114" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
