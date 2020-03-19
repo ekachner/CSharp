@@ -22,7 +22,7 @@ namespace erica_cinema.cs
 
 
                 do
-                {
+                {       //ask for film number and keep asking till acceptable film input is given
                     try
                     {
                         Console.Write("Enter the corresponding film number wished to be viewed: ");
@@ -45,7 +45,7 @@ namespace erica_cinema.cs
 
 
                 do
-                {
+                {       //ask for age and keep asking till a numeric value is given
 
                     try
                     {
@@ -62,7 +62,7 @@ namespace erica_cinema.cs
                         if (age < 5 || age > 120)
                         {
                             Console.WriteLine("The age you submitted is either too young or too old, " +
-                                "are you certain of the age value? Please try agian.");
+                                "are you certain of the age value? Please try again.");
                         }
                     }
                 } while (age < 5 || age > 120);
@@ -109,7 +109,7 @@ namespace erica_cinema.cs
                 Console.Write("Would you like to add another person to your party? If yes enter \"Y\": ");
                 roundAbout = Console.ReadLine();
 
-            } while (roundAbout.ToUpper() == "Y");
+            } while (roundAbout.ToUpper() == "Y");  //if input is "Y" then program will run again if not then program executes
 
             
             Console.WriteLine("Thank you for choosing Cineplex to enjoy all your box office hits.");
