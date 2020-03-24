@@ -1,0 +1,11 @@
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab.deps.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab.runtimeconfig.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab.runtimeconfig.dev.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/bin/Debug/netcoreapp3.1/JustinW-Week12Lab.pdb
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/obj/Debug/netcoreapp3.1/JustinW-Week12Lab.csprojAssemblyReference.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/obj/Debug/netcoreapp3.1/JustinW-Week12Lab.AssemblyInfoInputs.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/obj/Debug/netcoreapp3.1/JustinW-Week12Lab.AssemblyInfo.cs
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/obj/Debug/netcoreapp3.1/JustinW-Week12Lab.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/JustinW-Week12Lab/JustinW-Week12Lab/obj/Debug/netcoreapp3.1/JustinW-Week12Lab.pdb

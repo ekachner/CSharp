@@ -1,0 +1,11 @@
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema.deps.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema.runtimeconfig.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema.runtimeconfig.dev.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/bin/Debug/netcoreapp3.1/cinema.pdb
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/Debug/netcoreapp3.1/cinema.csprojAssemblyReference.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/Debug/netcoreapp3.1/cinema.AssemblyInfoInputs.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/Debug/netcoreapp3.1/cinema.AssemblyInfo.cs
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/Debug/netcoreapp3.1/cinema.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/cinema/obj/Debug/netcoreapp3.1/cinema.pdb

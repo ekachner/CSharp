@@ -12,12 +12,16 @@ Submission are due no later than March 20th, 2020.
    ```
    cd class-fullstack-19-20 && git checkout submission
    ```
-3. create a new directory with your name in snake case (e.g JasonHammock) under C# Lab1
+3. pull new changes into your local repository
+   ```
+   git pull origin submission
+   ```
+4. create a new directory with your name in snake case (e.g JasonHammock) under C# Lab1
    ```
    cd CSharp/Lab1 && mkdir <YourNameHere> && cd <YourNameHere>
    ```
-4. place your solution folder for lab1 in your named directory
-5. submit your work
+5. place your solution folder for lab1 in your named directory
+6. submit your work
    ```
    git add .
    git commit -m '<your name> C# Lab1'

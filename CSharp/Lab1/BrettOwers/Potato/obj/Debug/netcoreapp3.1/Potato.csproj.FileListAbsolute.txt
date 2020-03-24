@@ -1,0 +1,11 @@
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato.deps.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato.runtimeconfig.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato.runtimeconfig.dev.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/bin/Debug/netcoreapp3.1/Potato.pdb
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/obj/Debug/netcoreapp3.1/Potato.csprojAssemblyReference.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/obj/Debug/netcoreapp3.1/Potato.AssemblyInfoInputs.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/obj/Debug/netcoreapp3.1/Potato.AssemblyInfo.cs
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/obj/Debug/netcoreapp3.1/Potato.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab1/BrettOwers/Potato/obj/Debug/netcoreapp3.1/Potato.pdb
