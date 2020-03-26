@@ -1,9 +1,11 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace exam_scores
 {
-    public struct ExamScore
+    public class ExamScore
     {
         public int MinScore;
         public int MaxScore;
@@ -17,6 +19,12 @@ namespace exam_scores
         }
     }
 
+
+    public class UserScore
+    {
+        public int Mark { get; set; }
+        public string Degree { get; set; }
+    }
 
     class Program
     {
@@ -32,7 +40,8 @@ namespace exam_scores
                 if (input < min || input > max)
                 {
                     WriteLine($"Please input a value between {min} and {max}");
-                } else
+                }
+                else
                 {
                     break;
                 }
@@ -52,7 +61,8 @@ namespace exam_scores
                 if (input == value1 || input == value2)
                 {
                     break;
-                } else
+                }
+                else
                 {
                     WriteLine($"Please enter a {value1} or {value2}");
                 }
@@ -65,7 +75,7 @@ namespace exam_scores
         {
             List<ExamScore> examScores = new List<ExamScore>();
 
-            examScores.Add(new ExamScore (0, 35, "Fail"));
+            examScores.Add(new ExamScore(0, 35, "Fail"));
             examScores.Add(new ExamScore(35, 40, "Can be \"compensated\""));
             examScores.Add(new ExamScore(40, 50, "Third class degree - III"));
             examScores.Add(new ExamScore(50, 60, "Lower second class degree - II(ii)"));
@@ -74,22 +84,40 @@ namespace exam_scores
 
             string addAnotherScore;
 
+            var userScores = new List<UserScore>();
+
             do
             {
                 int score = NumberInput("Please enter your mark: ", 0, 100);
 
-                foreach (var item in examScores)
+                var scoreQuery = from ExamScore es in examScores
+                                 where es.MaxScore > score && score >= es.MinScore
+                                 select es;
+
+                var degreeName = "a";
+
+                foreach (ExamScore es in scoreQuery)
                 {
-                    if (score < item.MaxScore && score >= item.MinScore)
-                    {
-                        WriteLine(item.Classification);
-                    }
+                    WriteLine(es.Classification);
+                    degreeName = es.Classification;
                 }
+
+                userScores.Add(new UserScore { Mark = score, Degree = degreeName });
 
                 addAnotherScore = StringInput("Would you like to enter another mark? ( Y / N ): ", "Y", "N");
 
             } while (addAnotherScore == "Y");
+
+            string printScores = StringInput("Would you like to print the marks entered? ( Y / N ): ", "Y", "N");
+
+            if (printScores == "Y")
+            {
+                WriteLine("Mark\tDegree Classification");
+                foreach (var user in userScores)
+                {
+                    WriteLine(user.Mark + "\t" + user.Degree);
+                }
+            }
         }
     }
 }
-
