@@ -1,0 +1,11 @@
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema.deps.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema.runtimeconfig.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema.runtimeconfig.dev.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/bin/Debug/netcoreapp3.1/cinema.pdb
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/obj/Debug/netcoreapp3.1/cinema.csprojAssemblyReference.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/obj/Debug/netcoreapp3.1/cinema.AssemblyInfoInputs.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/obj/Debug/netcoreapp3.1/cinema.AssemblyInfo.cs
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/obj/Debug/netcoreapp3.1/cinema.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab2/KellyRedmond/cinema/cinema/obj/Debug/netcoreapp3.1/cinema.pdb
