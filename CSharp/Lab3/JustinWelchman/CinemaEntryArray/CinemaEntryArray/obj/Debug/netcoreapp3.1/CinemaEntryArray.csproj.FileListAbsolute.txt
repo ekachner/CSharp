@@ -1,0 +1,12 @@
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.deps.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.runtimeconfig.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.runtimeconfig.dev.json
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.pdb
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.csprojAssemblyReference.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.AssemblyInfoInputs.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.AssemblyInfo.cs
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.dll
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.pdb
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.csproj.CoreCompileInputs.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/JustinWelchman/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.genruntimeconfig.cache
