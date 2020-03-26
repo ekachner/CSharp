@@ -18,9 +18,6 @@ namespace CinemaEntryArray
                 anotherCustomer = AnotherCustomerPrompt();
             } while (anotherCustomer);
 
-
-           
-            
         }
 
         static int HowManyFilms()

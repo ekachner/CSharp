@@ -1,11 +1,13 @@
-﻿<Properties StartupConfiguration="{951E940D-F55C-4AF7-BA48-F315A52A3802}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{2C24EE69-43CB-4A76-A90D-D93C37FB10B4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CinemaEntryArray/Program.cs">
+    <Files>
+      <File FileName="CinemaEntryArray/Program.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="cinema" expanded="True">
-            <Node name="cinema" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+          <Node name="CinemaEntryArray" expanded="True">
+            <Node name="CinemaEntryArray" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -13,11 +15,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CinemaEntryArray FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.cinema PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

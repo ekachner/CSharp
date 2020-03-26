@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/CinemaEntryArray.csproj": {}
+    "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab4/BrettOwers/CricketManager/CricketManager/CricketManager.csproj": {}
   },
   "projects": {
-    "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/CinemaEntryArray.csproj": {
+    "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab4/BrettOwers/CricketManager/CricketManager/CricketManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/CinemaEntryArray.csproj",
-        "projectName": "CinemaEntryArray",
-        "projectPath": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/CinemaEntryArray.csproj",
+        "projectUniqueName": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab4/BrettOwers/CricketManager/CricketManager/CricketManager.csproj",
+        "projectName": "CricketManager",
+        "projectPath": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab4/BrettOwers/CricketManager/CricketManager/CricketManager.csproj",
         "packagesPath": "/Users/brettowers/.nuget/packages/",
-        "outputPath": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/",
+        "outputPath": "/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab4/BrettOwers/CricketManager/CricketManager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/brettowers/.config/NuGet/NuGet.Config"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
         }
       }
     }
