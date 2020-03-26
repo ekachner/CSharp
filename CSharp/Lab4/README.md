@@ -16,14 +16,14 @@ Submission are due no later than March 20th, 2020.
    ```
    git pull origin submission
    ```
-4. create a new directory with your name in snake case (e.g JasonHammock) under C# Lab1
+4. create a new directory with your name in snake case (e.g JasonHammock) under C# Lab4
    ```
-   cd CSharp/Lab1 && mkdir <YourNameHere> && cd <YourNameHere>
+   cd CSharp/Lab4 && mkdir <YourNameHere> && cd <YourNameHere>
    ```
-5. place your solution folder for lab1 in your named directory
+5. place your solution folder for lab4 in your named directory
 6. submit your work
    ```
    git add .
-   git commit -m '<your name> C# Lab1'
+   git commit -m '<your name> C# Lab4'
    git push origin submission
    ```

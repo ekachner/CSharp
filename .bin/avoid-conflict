@@ -1,2 +1,8 @@
-!/bin/bash
-git pull -X theirs $1 $2
+#!/bin/bash
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$BRANCH" = "submission" ];
+then
+  git pull -X theirs origin submission
+else
+  echo you must be on the submission branch
+fi;
