@@ -1,11 +1,14 @@
-﻿<Properties StartupConfiguration="{951E940D-F55C-4AF7-BA48-F315A52A3802}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{A14474E0-04C7-48B2-8487-56D79AE780B7}|Default">
+  <MonoDevelop.Ide.ItemProperties.CricketManager FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CricketManager/Program.cs">
+    <Files>
+      <File FileName="CricketManager/Program.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="cinema" expanded="True">
-            <Node name="cinema" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+          <Node name="CricketManager" expanded="True">
+            <Node name="CricketManager" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -19,5 +22,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.cinema PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
