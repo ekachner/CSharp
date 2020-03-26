@@ -4,5 +4,5 @@ if [ "$BRANCH" = "submission" ];
 then
   git pull -X theirs origin submission
 else
-  echo you must be on the submission branch
+  echo $(tput setaf 1)you must be on the submission branch$(tput sgr0)
 fi;
