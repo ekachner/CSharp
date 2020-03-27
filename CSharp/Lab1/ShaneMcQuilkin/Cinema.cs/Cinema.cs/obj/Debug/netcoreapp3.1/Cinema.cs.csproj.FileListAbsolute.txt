@@ -1,0 +1,11 @@
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs.deps.json
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs.runtimeconfig.json
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs.runtimeconfig.dev.json
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs.dll
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/bin/Debug/netcoreapp3.1/Cinema.cs.pdb
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/obj/Debug/netcoreapp3.1/Cinema.cs.csprojAssemblyReference.cache
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/obj/Debug/netcoreapp3.1/Cinema.cs.AssemblyInfoInputs.cache
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/obj/Debug/netcoreapp3.1/Cinema.cs.AssemblyInfo.cs
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/obj/Debug/netcoreapp3.1/Cinema.cs.dll
+/Users/shanemcquilkin/Projects/Cinema.cs/Cinema.cs/obj/Debug/netcoreapp3.1/Cinema.cs.pdb

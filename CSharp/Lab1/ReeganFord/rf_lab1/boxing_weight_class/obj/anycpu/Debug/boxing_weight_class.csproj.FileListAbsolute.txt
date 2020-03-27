@@ -1,0 +1,5 @@
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/ReeganFord/rf_lab1/boxing_weight_class/bin/Debug/boxing_weight_class.exe
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/ReeganFord/rf_lab1/boxing_weight_class/bin/Debug/boxing_weight_class.pdb
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/ReeganFord/rf_lab1/boxing_weight_class/obj/anycpu/Debug/boxing_weight_class.csprojAssemblyReference.cache
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/ReeganFord/rf_lab1/boxing_weight_class/obj/anycpu/Debug/boxing_weight_class.exe
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/ReeganFord/rf_lab1/boxing_weight_class/obj/anycpu/Debug/boxing_weight_class.pdb

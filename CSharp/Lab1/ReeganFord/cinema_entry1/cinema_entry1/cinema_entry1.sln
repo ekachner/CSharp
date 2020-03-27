@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cinema_entry1", "cinema_entry1.csproj", "{EB27945E-BB78-440C-9173-C54F8947AF12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB27945E-BB78-440C-9173-C54F8947AF12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB27945E-BB78-440C-9173-C54F8947AF12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB27945E-BB78-440C-9173-C54F8947AF12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB27945E-BB78-440C-9173-C54F8947AF12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
