@@ -122,7 +122,7 @@ namespace CinemaEntry
                 }
 
 
-                Console.Write("\nIf you like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:\n");
+                Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:\n");
                 roundAbout = Console.ReadLine();
 
 
