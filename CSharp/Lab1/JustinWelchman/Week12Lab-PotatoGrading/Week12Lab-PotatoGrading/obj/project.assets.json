@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "/Users/ericakachner/.nuget/packages/": {}
+    "/Users/gfyprototype/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading.csproj",
+      "projectUniqueName": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading.csproj",
       "projectName": "Week12Lab-PotatoGrading",
-      "projectPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading.csproj",
-      "packagesPath": "/Users/ericakachner/.nuget/packages/",
-      "outputPath": "/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/",
+      "projectPath": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading.csproj",
+      "packagesPath": "/Users/gfyprototype/.nuget/packages/",
+      "outputPath": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab1/JustinWelchman/Week12Lab-PotatoGrading/Week12Lab-PotatoGrading/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/ericakachner/.config/NuGet/NuGet.Config"
+        "/Users/gfyprototype/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

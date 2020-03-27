@@ -1,0 +1,11 @@
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.deps.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.runtimeconfig.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.runtimeconfig.dev.json
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/bin/Debug/netcoreapp3.1/CinemaEntryArray.pdb
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.csprojAssemblyReference.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.AssemblyInfoInputs.cache
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.AssemblyInfo.cs
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.dll
+/Users/brettowers/www/Apprenticeships/class-fullstack-19-20/CSharp/Lab3/CinemaEntryArray/CinemaEntryArray/obj/Debug/netcoreapp3.1/CinemaEntryArray.pdb
