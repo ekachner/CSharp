@@ -17,7 +17,7 @@ namespace CinemaEntry
                 age = int.Parse(ageString);
                 if (age > max || age < min)
                 {
-                    Console.WriteLine("Your age must be between " + min + " to " + max );
+                    Console.WriteLine("\tYour age must be between " + min + " to " + max );
                     Console.WriteLine();
                 }  
             } while (age > max || age < min);
@@ -39,7 +39,7 @@ namespace CinemaEntry
                 filmNumber = int.Parse(numberString);
                 if (filmNumber > max || filmNumber < min)
                 {
-                    Console.WriteLine("Please enter a valid film number between " + min + " to " + max);
+                    Console.WriteLine("\tPlease enter a valid film number between " + min + " to " + max);
                     Console.WriteLine();
                 }
             } while (filmNumber > max || filmNumber < min);
@@ -71,12 +71,12 @@ namespace CinemaEntry
                     try
                     {
                         filmNumber = ReadFilmNumber("Enter the corresponding film number wished to be viewed: ", 1, 6);
-                        Console.WriteLine("Film Number " + filmNumber + " chosen\n");
+                        Console.WriteLine("\tFilm Number " + filmNumber + " chosen\n");
                         
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("Error; " + e.Message);
+                        Console.WriteLine("\tError; " + e.Message);
                         Console.WriteLine();
                     }
                 } while (filmNumber < 1 || filmNumber > 6);
@@ -87,12 +87,12 @@ namespace CinemaEntry
                     try
                     {
                         age = ReadAge("Enter your age : ", 5, 120);
-                        Console.WriteLine("You say you are " + age + " years old...\n");
+                        Console.WriteLine("\tYou say you are " + age + " years old...\n");
                         Console.WriteLine();
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("Error; " + e.Message);
+                        Console.WriteLine("\tError; " + e.Message);
                         Console.WriteLine();
                     }
                 } while (age < 5 || age > 120);
