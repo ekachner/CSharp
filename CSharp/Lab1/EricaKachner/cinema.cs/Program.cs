@@ -9,9 +9,11 @@ namespace erica_cinema.cs
             Console.WriteLine("Welcome to my Cineplex.\nWe are currently showing: ");
             Console.WriteLine("1. Onward (PG)\n2. Bloodshot (PG13)\n3. The Way Back (R)\n" +
                 "4. The Call of the Wild (PG)\n5. Jumanji the Next Level (PG13)\n6. 1917 (R)\n");
+
             Console.Write("Enter the corresponding number for the film you wish to see: ");
             string filmNumber = Console.ReadLine();
             int number = int.Parse(filmNumber);
+
             Console.Write("Enter your age: ");
             string ageText = Console.ReadLine();
             int age = int.Parse(ageText);
