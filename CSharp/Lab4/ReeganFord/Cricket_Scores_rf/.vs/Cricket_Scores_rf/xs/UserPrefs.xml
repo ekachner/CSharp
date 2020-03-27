@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{CF791247-88ED-425F-9D59-ED6743A5945A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cricket_Scores_rf/Program.cs">
+    <Files>
+      <File FileName="Cricket_Scores_rf/Program.cs" Line="34" Column="41" />
+      <File FileName="Cricket_Scores_rf/Player.cs" Line="18" Column="2" />
+      <File FileName="Cricket_Scores_rf/String_Helper.cs" Line="31" Column="2" />
+      <File FileName="Cricket_Scores_rf/Average_Scores.cs" Line="23" Column="2" />
+      <File FileName="Cricket_Scores_rf/List_Queries.cs" Line="15" Column="43" />
+      <File FileName="Cricket_Scores_rf/Sort_Options.cs" Line="85" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cricket_Scores_rf" expanded="True">
+            <Node name="Cricket_Scores_rf" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.Cricket__Scores__rf PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

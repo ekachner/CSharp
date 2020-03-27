@@ -1,0 +1,5 @@
+/Users/reeganford/Projects/Cricket_Scores_rf/Cricket_Scores_rf/bin/Debug/Cricket_Scores_rf.exe
+/Users/reeganford/Projects/Cricket_Scores_rf/Cricket_Scores_rf/bin/Debug/Cricket_Scores_rf.pdb
+/Users/reeganford/Projects/Cricket_Scores_rf/Cricket_Scores_rf/obj/Debug/Cricket_Scores_rf.csprojAssemblyReference.cache
+/Users/reeganford/Projects/Cricket_Scores_rf/Cricket_Scores_rf/obj/Debug/Cricket_Scores_rf.exe
+/Users/reeganford/Projects/Cricket_Scores_rf/Cricket_Scores_rf/obj/Debug/Cricket_Scores_rf.pdb
