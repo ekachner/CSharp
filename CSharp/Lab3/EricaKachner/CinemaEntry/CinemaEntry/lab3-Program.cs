@@ -19,9 +19,6 @@ namespace CinemaEntry
                 {
                     Console.WriteLine("Your age must be between " + min + " to " + max );
                     Console.WriteLine();
-                } else
-                {
-                    break;
                 }  
             } while (age > max || age < min);
 
@@ -45,14 +42,9 @@ namespace CinemaEntry
                     Console.WriteLine("Please enter a valid film number between " + min + " to " + max);
                     Console.WriteLine();
                 }
-                else
-                {
-                    break;
-                }
             } while (filmNumber > max || filmNumber < min);
 
-            return filmNumber;
-            
+            return filmNumber;           
         }
 
 
@@ -60,15 +52,17 @@ namespace CinemaEntry
 
         static void Main(string[] args)
         {
-            int filmNumber = 0;
-            int age = 0;
+            
             string roundAbout;
 
-            Console.WriteLine("\nWelcome to Cineplex.\nWe are currently showing: ");
+            Console.WriteLine("\nWelcome to Cineplex!\n");
 
             do
             {
-                Console.WriteLine("1. Onward (PG)\n2. Bloodshot (PG13)\n3. The Way Back (R)\n" +
+                int filmNumber = 0;
+                int age = 0;
+
+                Console.WriteLine("We are currently showing:\n1. Onward (PG)\n2. Bloodshot (PG13)\n3. The Way Back (R)\n" +
                     "4. The Call of the Wild (PG)\n5. Jumanji the Next Level (PG13)\n6. 1917 (R)\n");
 
 
@@ -122,9 +116,9 @@ namespace CinemaEntry
                 }
 
 
-                Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:\n");
+                Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
                 roundAbout = Console.ReadLine();
-
+                Console.WriteLine();
 
             } while (roundAbout.ToUpper() == "Y");
 
