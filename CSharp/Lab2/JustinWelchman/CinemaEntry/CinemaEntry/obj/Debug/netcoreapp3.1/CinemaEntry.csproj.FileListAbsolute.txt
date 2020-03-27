@@ -8,3 +8,5 @@
 /Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/Debug/netcoreapp3.1/CinemaEntry.AssemblyInfo.cs
 /Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/Debug/netcoreapp3.1/CinemaEntry.dll
 /Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/Debug/netcoreapp3.1/CinemaEntry.pdb
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/Debug/netcoreapp3.1/CinemaEntry.csproj.CoreCompileInputs.cache
+/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/Debug/netcoreapp3.1/CinemaEntry.genruntimeconfig.cache
