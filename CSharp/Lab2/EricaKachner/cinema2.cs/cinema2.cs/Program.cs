@@ -7,10 +7,10 @@ namespace erica_cinema.cs
 
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to Cineplex.\nWe are currently showing: ");
             Console.WriteLine("1. Onward (PG)\n2. Bloodshot (PG13)\n3. The Way Back (R)\n" +
                 "4. The Call of the Wild (PG)\n5. Jumanji the Next Level (PG13)\n6. 1917 (R)\n");
-
 
             int number = 0;
             int age = 0;
