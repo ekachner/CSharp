@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "/Users/gfyprototype/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/thomasharrison/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/CinemaEntry.csproj",
+      "projectUniqueName": "/Users/thomasharrison/Projects/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/CinemaEntry.csproj",
       "projectName": "CinemaEntry",
-      "projectPath": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/CinemaEntry.csproj",
-      "packagesPath": "/Users/gfyprototype/.nuget/packages/",
-      "outputPath": "/Users/gfyprototype/Projects/School/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/",
+      "projectPath": "/Users/thomasharrison/Projects/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/CinemaEntry.csproj",
+      "packagesPath": "/Users/thomasharrison/.nuget/packages/",
+      "outputPath": "/Users/thomasharrison/Projects/class-fullstack-19-20/CSharp/Lab2/JustinWelchman/CinemaEntry/CinemaEntry/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/gfyprototype/.config/NuGet/NuGet.Config"
+        "/Users/thomasharrison/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -60,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
       }
     }
   }
