@@ -1,0 +1,12 @@
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/bin/Debug/netcoreapp3.1/CricketPlayerScores.deps.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/bin/Debug/netcoreapp3.1/CricketPlayerScores.runtimeconfig.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/bin/Debug/netcoreapp3.1/CricketPlayerScores.runtimeconfig.dev.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/bin/Debug/netcoreapp3.1/CricketPlayerScores.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/bin/Debug/netcoreapp3.1/CricketPlayerScores.pdb
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.csprojAssemblyReference.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.csproj.CoreCompileInputs.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.AssemblyInfoInputs.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.AssemblyInfo.cs
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.pdb
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab6/KellyRedmond/CricketPlayerScores/CricketPlayerScores/obj/Debug/netcoreapp3.1/CricketPlayerScores.genruntimeconfig.cache

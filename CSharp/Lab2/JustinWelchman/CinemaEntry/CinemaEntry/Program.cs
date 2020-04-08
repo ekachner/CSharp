@@ -7,7 +7,6 @@ namespace CinemaEntry
         static void Main(string[] args)
         {
             char anotherTicket = 'Y';
-            int maxMovie = 5;
 
             do
             {
@@ -19,29 +18,33 @@ namespace CinemaEntry
                 Console.WriteLine("3. Thor: The Dark World (12A)");
                 Console.WriteLine("4. Filth (18)");
                 Console.WriteLine("5. Planes (U)");
+                
+                int FilmNo;
 
-                Console.WriteLine("Enter the number of the film you want to see:");
-
-                string FilmInput = Console.ReadLine();
-                int FilmNo = int.Parse(FilmInput);
-
-                if (FilmNo < 1 || FilmNo > maxMovie)
+                do 
                 {
-                    Console.WriteLine("Invalid movie number!");
                     Console.WriteLine("Enter the number of the film you want to see:");
-                    FilmInput = Console.ReadLine();
-                }
+                    string FilmInput = Console.ReadLine();
+                    FilmNo = int.Parse(FilmInput);
 
-                Console.WriteLine("Please enter your age:");
-                string AgeInput = Console.ReadLine();
-                int Age = int.Parse(AgeInput);
+                    if (FilmNo < 1 || FilmNo > 5)
+                    {
+                        Console.WriteLine("Invalid movie number!");
+                    }
+                } while (FilmNo < 1 || FilmNo > 5);
 
-                if (Age < 5 || Age > 110)
+                int Age;
+
+                do 
                 {
-                    Console.WriteLine("Invalid Age!");
                     Console.WriteLine("Please enter your age:");
-                    AgeInput = Console.ReadLine();
-                }
+                    string AgeInput = Console.ReadLine();
+                    Age = int.Parse(AgeInput);
+                    if (Age < 5 || Age > 110)
+                    {
+                        Console.WriteLine("Invalid Age!");
+                    }
+                } while (Age < 5 || Age > 110);
 
                 if (FilmNo == 1 && Age >= 15)
                 {
@@ -69,16 +72,22 @@ namespace CinemaEntry
                 }
                 Console.WriteLine("Would you like to purchase another ticket? Y/N");
                 anotherTicket = char.ToUpper(Console.ReadLine()[0]);
+
                 if (anotherTicket == 'N')
                 {
                     Console.WriteLine("Thank you for choosing us! Beverages will be on the next counter. Enjoy your film!");
 
-                } else
+                } else if (anotherTicket == 'Y')
+                {
+                    continue;
+                }
+                else
                 {
                     Console.WriteLine("Invalid response!");
                     Console.WriteLine("Would you like to purchase another ticket? Y/N");
                     anotherTicket = char.ToUpper(Console.ReadLine()[0]);
                 }
+
             } while (anotherTicket == 'Y');
         }
     }

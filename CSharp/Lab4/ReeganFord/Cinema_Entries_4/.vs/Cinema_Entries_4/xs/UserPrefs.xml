@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{0A769BB3-3C37-4B6D-A9E4-6A6C58ECAD98}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cinema_Entries_4/Program.cs">
+    <Files>
+      <File FileName="Cinema_Entries_4/Program.cs" Line="1" Column="14" />
+      <File FileName="Cinema_Entries_4/ReadNumber.cs" Line="2" Column="1" />
+      <File FileName="Cinema_Entries_4/Movie.cs" Line="72" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cinema_Entries_4" expanded="True">
+            <Node name="Cinema_Entries_4" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.Cinema__Entries__4 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

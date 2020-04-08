@@ -1,0 +1,5 @@
+/Users/reeganford/Projects/Cinema_Entries_4/Cinema_Entries_4/bin/Debug/Cinema_Entries_4.exe
+/Users/reeganford/Projects/Cinema_Entries_4/Cinema_Entries_4/bin/Debug/Cinema_Entries_4.pdb
+/Users/reeganford/Projects/Cinema_Entries_4/Cinema_Entries_4/obj/Debug/Cinema_Entries_4.csprojAssemblyReference.cache
+/Users/reeganford/Projects/Cinema_Entries_4/Cinema_Entries_4/obj/Debug/Cinema_Entries_4.exe
+/Users/reeganford/Projects/Cinema_Entries_4/Cinema_Entries_4/obj/Debug/Cinema_Entries_4.pdb
