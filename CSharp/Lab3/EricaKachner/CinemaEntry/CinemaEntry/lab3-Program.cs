@@ -94,30 +94,6 @@ namespace CinemaEntry
 
 
 
-        static string FilterAge(int age, int filmNumber)
-        {
-            
-            if (filmNumber == 1 || filmNumber == 4)
-            {
-                Console.WriteLine("Enjoy the film!");
-            }
-
-
-            if (filmNumber == 2 || filmNumber == 5)
-            {
-                Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");                
-            }
-
-
-            if (filmNumber == 3 || filmNumber == 6)
-            {
-                Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-                
-            }
-            
-            return FilterAge(age, filmNumber);            
-        }
-
 
         static void Main(string[] args)
         {
@@ -138,23 +114,23 @@ namespace CinemaEntry
 
 
 
-                //if (filmNumber == 1 || filmNumber == 4)
-                //{
-                //    Console.WriteLine("Enjoy the film!");
-                //}
+                if (filmNumber == 1 || filmNumber == 4)
+                {
+                    Console.WriteLine("Enjoy the film!");
+                }
 
 
-                //if (filmNumber == 2 || filmNumber == 5)
-                //{
-                //    Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-                //}
+                if (filmNumber == 2 || filmNumber == 5)
+                {
+                    Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
+                }
 
 
-                //if (filmNumber == 3 || filmNumber == 6)
-                //{
-                //    Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-                //}
-                FilterAge(age, filmNumber);
+                if (filmNumber == 3 || filmNumber == 6)
+                {
+                    Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
+                }
+                
 
 
                 Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
