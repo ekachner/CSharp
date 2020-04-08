@@ -42,17 +42,15 @@ namespace CricketPlayerScores
                 count++;
             }
 
-            PrintRoster(players);
-
             return players;
         }
 
         public static void PrintRoster(Player[] players)
         {
-            Console.WriteLine("Team Roster - Average Score: {0}\nName\tScore", PrintAverageScore(players));
+            Console.WriteLine("Team Roster - Average Score: {0}\nScore\tName", PrintAverageScore(players));
             foreach (var player in players)
             {
-                Console.WriteLine($"{player.Name}\t{Player.IsDuck(player.Score)}");
+                Console.WriteLine($"{Player.IsDuck(player.Score)}\t{player.Name}");
             }
             Console.WriteLine();
         }

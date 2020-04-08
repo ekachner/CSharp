@@ -10,31 +10,31 @@ namespace CricketPlayerScores
 
             while (sortAgain == "Y")
             {
-                int userSort = Methods.IsNumber("Roster order options" +
-                "\n\t1. Player Score High to Low\n\t2. Player Score Low to High" +
-                "\n\t3. Player Name A to Z\n\t4. Player Name Z to A\n", 1, 4, "selection");
+                string nameScore = Methods.StringInput("Do you want to sort by names or scores? (enter N or S): ", "N", "S");
 
-                switch(userSort)
+                if (nameScore == "N")
                 {
-                    case 1:
-                        ScoreHighLow(players);
-                        break;
-
-                    case 2:
-                        ScoreLowHigh(players);
-                        break;
-
-                    case 3:
+                    string nameSort = Methods.StringInput("Do you want to start at A or Z? (enter A or Z): ", "A", "Z");
+                    if (nameSort == "A")
+                    {
                         AtoZ(players);
-                        break;
-
-                    case 4:
+                    }
+                    else
+                    {
                         ZtoA(players);
-                        break;
-
-                    default:
-                        Console.WriteLine("Entry not accepted, please restart program");
-                        break;
+                    }
+                }
+                else
+                {
+                    string scoreSort = Methods.StringInput("Do you want to start at the high score or low score? (enter H or L): ", "H", "L");
+                    if (scoreSort == "H")
+                    {
+                        ScoreHighLow(players);
+                    }
+                    else
+                    {
+                        ScoreLowHigh(players);
+                    }
                 }
 
                 Team.PrintRoster(players);
@@ -116,5 +116,48 @@ namespace CricketPlayerScores
                 }
             }
         }
+
+        //public static void PickSort(Player[] players)
+        //{
+        //    string sortAgain = "Y";
+
+        //    while (sortAgain == "Y")
+        //    {
+        //        int userSort = Methods.IsNumber("Roster order options" +
+        //        "\n\t1. Player Score High to Low\n\t2. Player Score Low to High" +
+        //        "\n\t3. Player Name A to Z\n\t4. Player Name Z to A\n", 1, 4, "selection");
+
+        //        switch (userSort)
+        //        {
+        //            case 1:
+        //                ScoreHighLow(players);
+        //                break;
+
+        //            case 2:
+        //                ScoreLowHigh(players);
+        //                break;
+
+        //            case 3:
+        //                AtoZ(players);
+        //                break;
+
+        //            case 4:
+        //                ZtoA(players);
+        //                break;
+
+        //            default:
+        //                Console.WriteLine("Entry not accepted, please restart program");
+        //                break;
+        //        }
+
+        //        Team.PrintRoster(players);
+
+        //        sortAgain = Methods.StringInput("Would you like to sort another way? ( Y / N ): ", "Y", "N");
+
+        //        if (sortAgain == "Y")
+        //        {
+        //            Console.Clear();
+        //        }
+        //    }
     }
 }
