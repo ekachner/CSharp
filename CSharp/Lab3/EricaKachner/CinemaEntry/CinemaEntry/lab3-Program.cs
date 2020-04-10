@@ -5,10 +5,6 @@ namespace CinemaEntry
     class Program
     {
 
-
-        
-
-
         static int FilmNumberPrompt()
         {
             int filmNumber = 0;
@@ -29,6 +25,7 @@ namespace CinemaEntry
             } while (filmNumber < 1 || filmNumber > 6);
             return filmNumber;
         }
+
 
 
         static int ReadFilmNumber(string prompt, int min, int max)
@@ -94,6 +91,28 @@ namespace CinemaEntry
 
 
 
+        static void FilterAge(int age, int filmNumber)
+		{
+            if (filmNumber == 1 || filmNumber == 4)
+            {
+                Console.WriteLine("Enjoy the film!");
+            }
+
+
+            if (filmNumber == 2 || filmNumber == 5)
+            {
+                Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
+            }
+
+
+            if (filmNumber == 3 || filmNumber == 6)
+            {
+                Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
+            }
+        }
+
+
+
 
         static void Main(string[] args)
         {
@@ -112,31 +131,13 @@ namespace CinemaEntry
                 int filmNumber = FilmNumberPrompt();
                 int age = AgePrompt();
 
+               
+                FilterAge(age, filmNumber);
 
 
-                if (filmNumber == 1 || filmNumber == 4)
-                {
-                    Console.WriteLine("Enjoy the film!");
-                }
-
-
-                if (filmNumber == 2 || filmNumber == 5)
-                {
-                    Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-                }
-
-
-                if (filmNumber == 3 || filmNumber == 6)
-                {
-                    Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-                }
-                
-
-
-                Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
+				Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
                 roundAbout = Console.ReadLine();
-                Console.WriteLine();
-
+ 
             } while (roundAbout.ToUpper() == "Y");
 
 
