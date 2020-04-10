@@ -5,6 +5,8 @@ namespace CinemaEntryArray
     class Program
     {
 
+
+
         //reads film inputs
         static int ReadNumber(string prompt, int min, int max)
         {
@@ -17,20 +19,34 @@ namespace CinemaEntryArray
                 number = int.Parse(numberString);
                 if (number > max || number < min)
                 {
-                    Console.WriteLine("\tPlease enter a valid number between " + min + " to " + max);
-                    Console.WriteLine();
+                    Console.WriteLine("\tPlease enter a valid number between " + min + " to " + max);                   
                 }
             } while (number > max || number < min);
             return number;
         }
 
 
+
+        // SOMETHING TO WORK ON AT A LATER TIME
+        ////gives the flexible number of movies depending on what was entered
+        //public int NumberOfMovies
+        //{
+        //    int readNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
+        //    int numberOfMovies = readNumber;
+        //    return numberOfMovies;
+        //}
+        
+
+        
+
+
         //reads films the user inputs
         static string[] ReadFilmNames()
         {
-            int moviesNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
-            int numberOfMovies;
-            numberOfMovies = moviesNumber;
+            int readNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
+            int numberOfMovies = readNumber;
+            
+            //int numberOfMovies = NumberOfMovies();
             string[] filmNames = new string[numberOfMovies];
 
            
@@ -54,10 +70,12 @@ namespace CinemaEntryArray
                     {
                         Console.WriteLine($"\tError; Make sure the film name ends with a rating");
                     }
+
                 } while (ValidateFilmName(filmName) == false) ;
             }                                               
             return filmNames;
         }
+
 
 
         //checks to make sure films contain a proper rating
@@ -66,6 +84,7 @@ namespace CinemaEntryArray
             var trimmedFilm = filmName.Trim();
             return (trimmedFilm.EndsWith("(PG)") || trimmedFilm.EndsWith("(PG-13)") || trimmedFilm.EndsWith("(R)"));            
         }
+
 
 
         //list film inputs
@@ -78,6 +97,7 @@ namespace CinemaEntryArray
                 Console.WriteLine(number + ". " + filmName[i]);
             }
         }
+
 
 
         //returns age of user
@@ -103,10 +123,11 @@ namespace CinemaEntryArray
         }
        
 
+
         //filters whether the person is old enough to view the film based on the age of user
         static void FilterAges(string[] filmName, int chosenNumber, int age)
         {
-            chosenNumber = chosenNumber - 1;
+            chosenNumber -= 1;
             if (filmName[chosenNumber].EndsWith("(PG)"))
             {
                 Console.WriteLine("Enjoy the film!");
@@ -127,9 +148,9 @@ namespace CinemaEntryArray
 
         static void Main(string[] args)
         {
-
+            
             string roundAbout;
-            int age; 
+            int age;
             
 
             Console.WriteLine("\nWelcome to Cineplex!\n");            
@@ -138,8 +159,9 @@ namespace CinemaEntryArray
             do
             {
                 WriteFilmNames(filmName);
-                
-                
+
+                //ANOTHER SOMETHING TO WORK ON LATER
+                //int chosenNumber = ReadNumber("Please select a movie number: ", 1, numberOfMovies);
                 Console.Write("Please select a movie number: ");
                 string chosenNumberString = Console.ReadLine();
                 int chosenNumber = int.Parse(chosenNumberString);
