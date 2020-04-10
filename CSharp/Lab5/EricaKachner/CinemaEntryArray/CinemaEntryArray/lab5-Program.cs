@@ -53,51 +53,16 @@ namespace CinemaEntryArray
         }
  
 
-        //static void FilterAge(int age, int filmNumber)
-        //{
-        //    if (filmNumber == 1 || filmNumber == 4)
-        //    {
-        //        Console.WriteLine("Enjoy the film!");
-        //    }
-
-        //    if (filmNumber == 2 || filmNumber == 5)
-        //    {
-        //        Console.WriteLine(age >= 13 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-        //    }
-
-        //    if (filmNumber == 3 || filmNumber == 6)
-        //    {
-        //        Console.WriteLine(age >= 18 ? "Enjoy the film!" : "Access denied - You are too young to view this film.");
-        //    }
-        //}
-
-
-
-
-
-        //try
-        //        {
-        //            age = ReadNumber("Enter your age : ", 5, 120);
-        //Console.WriteLine("\tYou say you are " + age + " years old...\n");
-        //            Console.WriteLine();
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine("\tError; " + e.Message);
-        //            Console.WriteLine();
-        //        }
+        
 
 
         static string[] ReadFilmNames()
         {
+            int moviesNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
             int numberOfMovies;
-            //string filmName;
+            //int filmNumber;
 
-            Console.Write("How many movies do you wish to insert?:");
-            string answerString = Console.ReadLine();
-            int answer = int.Parse(answerString);
-            numberOfMovies = answer;
-
+            numberOfMovies = moviesNumber;
             string[] filmNames = new string[numberOfMovies];
 
            
@@ -105,9 +70,12 @@ namespace CinemaEntryArray
             for (int i = 0; i < filmNames.Length; i++)
             {
                 int displayNumber = i + 1;
-                
-                Console.Write($"Enter the name of film number {displayNumber}: ");                
+
+
+
+                Console.Write($"Enter the name of film number {displayNumber}: ");
                 string filmName = Console.ReadLine();
+
                 if (ValidateFilmName(filmName))
                 {
                     filmNames[i] = filmName;
@@ -196,31 +164,33 @@ namespace CinemaEntryArray
 
 
             //int chosenFilm = number - 1;
-            //int chosenFilm;
+
 
             Console.WriteLine("\nWelcome to Cineplex!\n");
-            string[] filmNames = ReadFilmNames();
+            //string[] filmNames;
 
             do
             {
-                WriteFilmNames();
+                //WriteFilmNames();
+                string[] filmName = ReadFilmNames();
 
-                Console.WriteLine("Please select a Movie: ");
+                Console.WriteLine($"We are currently showing: ");
+                for (int i = 0; i < filmName.Length; i++)
+                {
+                    int number = i + 1;
+                    Console.WriteLine(number + ". " + filmName[i]);
+                }
+
+                Console.Write("Please select a movie number: ");
                 string chosenNumberString = Console.ReadLine();
                 int chosenNumber = int.Parse(chosenNumberString);
 
-                for(var i = 0; i < filmNames.Length; i++)
-                {
-                    chosenNumber = i + 1;
-                    Console.Write(chosenNumber.ToString() + ": " + filmNames[i]);
-                }
 
-                //int filmNumber = FilmNumberPrompt();
-                //int age = AgePrompt();
+                Console.WriteLine("You have chosen " + chosenNumber.ToString() + ": " + filmName[chosenNumber - 1]);
+                
 
-                //FilterAge(age, filmNumber);
 
-                //look for end of string to filter rating
+
 
 
                 Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
