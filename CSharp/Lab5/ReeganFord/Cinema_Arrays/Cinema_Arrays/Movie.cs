@@ -6,7 +6,7 @@ namespace Cinema_Arrays
         public Movie[] Movies;
         public int MovieNumber;
         public string MovieName;
-        public string rating;
+        private string rating;
         public int AgeLimit;
 
         public Movie(int movieNumber, string movieName, string rating, int ageLimit)

@@ -4,7 +4,7 @@ namespace CricketScores
 {
     public class ListQueries
     {
-        public static void ListOrder(Player[] arr)
+        public static void Roster(Player[] arr)
         {
             int playerNum = 0;
             foreach (var Player in arr)
@@ -12,7 +12,7 @@ namespace CricketScores
                 playerNum++;
                 Console.WriteLine("{0}. {1} {2}: {3} points", playerNum, Player.FirstName, Player.LastName, Player.Score);
             }
-            AverageScore.FindAverage(arr);
+            Player.FindAverage(arr);
         }
 
         public static void SortList(Player[] arr)
@@ -22,27 +22,23 @@ namespace CricketScores
             {
                 listQuery = false;
 
-                Console.Write("Sort by name or by score? [N or S]: ");
-                char sortBy = char.ToUpper(Console.ReadLine()[0]);
+                char sortBy = Inputs.ReadString("Sort by name or by score? [N or S]: ")[0];
 
                 while (sortBy != 'N' && sortBy != 'S')
                 {
                     Console.WriteLine("Invalid sort option. Please try again.");
-                    Console.Write("Sort by name or by score? [N or S]: ");
-                    sortBy = char.ToUpper(Console.ReadLine()[0]);
+                    sortBy = Inputs.ReadString("Sort by name or by score? [N or S]: ")[0];
                 }
 
                 if (sortBy == 'N')
                 {
                     Console.Clear();
-                    Console.Write("By first or last name? [F or L]: ");
-                    char fl = char.ToUpper(Console.ReadLine()[0]);
-
+                    char fl = Inputs.ReadString("By first name or last name? [F or L]: ")[0];
+                    
                     while (fl != 'F' && fl != 'L')
                     {
                         Console.WriteLine("Invalid sort option. Please try again.");
-                        Console.Write("By first or last name? [F or L]: ");
-                        fl = char.ToUpper(Console.ReadLine()[0]);
+                        fl = Inputs.ReadString("By first name or last name? [F or L]: ")[0];
                     }
 
                     if (fl == 'F')
@@ -50,14 +46,14 @@ namespace CricketScores
                         SortOptions.ByFirstName(arr);
                         Console.WriteLine("By first name:");
 
-                        ListOrder(arr);
+                        Roster(arr);
                     }
                     else
                     {
                         SortOptions.ByLastName(arr);
                         Console.WriteLine("By last name:");
 
-                        ListOrder(arr);
+                        Roster(arr);
                     }
                     listQuery = true;
                 }
@@ -65,14 +61,12 @@ namespace CricketScores
                 if (sortBy == 'S')
                 {
                     Console.Clear();
-                    Console.Write("Should the list begin with the highest or the lowest score? [H or L]: ");
-                    char hl = char.ToUpper(Console.ReadLine()[0]);
+                    char hl = Inputs.ReadString("Should the list begin with the Highest or the Lowest score? [H or L]: ")[0];
 
                     while (hl != 'H' && hl != 'L')
                     {
                         Console.WriteLine("Invalid sort option. Please try again.");
-                        Console.Write("Should the list begin with the highest or the lowest score? [H or L]: ");
-                        hl = char.ToUpper(Console.ReadLine()[0]);
+                        hl = Inputs.ReadString("Should the list begin with the Highest or the Lowest score? [H or L]: ")[0];
                     }
 
                     if (hl == 'H')
@@ -80,14 +74,14 @@ namespace CricketScores
                         SortOptions.HighToLow(arr);
                         Console.WriteLine("High to Low:");
 
-                        ListOrder(arr);
+                        Roster(arr);
                     }
                     else
                     {
                         SortOptions.LowToHigh(arr);
                         Console.WriteLine("Low to High:");
 
-                        ListOrder(arr);
+                        Roster(arr);
                     }
                     listQuery = true;
                 }
