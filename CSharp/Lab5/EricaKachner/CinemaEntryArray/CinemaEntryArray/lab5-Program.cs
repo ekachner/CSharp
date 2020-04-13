@@ -5,8 +5,6 @@ namespace CinemaEntryArray
     class Program
     {
 
-
-
         //reads film inputs
         static int ReadNumber(string prompt, int min, int max)
         {
@@ -27,28 +25,21 @@ namespace CinemaEntryArray
 
 
 
-        // SOMETHING TO WORK ON AT A LATER TIME
-        ////gives the flexible number of movies depending on what was entered
-        //public int NumberOfMovies
-        //{
-        //    int readNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
-        //    int numberOfMovies = readNumber;
-        //    return numberOfMovies;
-        //}
         
-
-        
-
-
-        //reads films the user inputs
-        static string[] ReadFilmNames()
+        //gives the flexible number of movies depending on what was entered
+        static int NumberOfMovies()
         {
             int readNumber = ReadNumber("How many movies do you wish to insert?: ", 1, 15);
             int numberOfMovies = readNumber;
-            
-            //int numberOfMovies = NumberOfMovies();
-            string[] filmNames = new string[numberOfMovies];
+            return numberOfMovies;
+        }
 
+
+
+        //reads films the user inputs
+        static string[] ReadFilmNames(int numberOfMovies)
+        {            
+            string[] filmNames = new string[numberOfMovies];
            
             //this reads in the film names
             for (int i = 0; i < filmNames.Length; i++)
@@ -148,35 +139,28 @@ namespace CinemaEntryArray
 
         static void Main(string[] args)
         {
-            
             string roundAbout;
-            int age;
-            
+            int age;            
 
             Console.WriteLine("\nWelcome to Cineplex!\n");            
-            string[] filmName = ReadFilmNames();
+            int numberOfMovies = NumberOfMovies();
+            string[] filmName = ReadFilmNames(numberOfMovies);
 
             do
             {
                 WriteFilmNames(filmName);
-
-                //ANOTHER SOMETHING TO WORK ON LATER
-                //int chosenNumber = ReadNumber("Please select a movie number: ", 1, numberOfMovies);
-                Console.Write("Please select a movie number: ");
-                string chosenNumberString = Console.ReadLine();
-                int chosenNumber = int.Parse(chosenNumberString);
+                
+                int chosenNumber = ReadNumber("Please select a movie number: ", 1, numberOfMovies);               
                 Console.WriteLine("You have chosen " + chosenNumber.ToString() + ": " + filmName[chosenNumber - 1]);
 
                 age = AgePrompt();
                 FilterAges(filmName, chosenNumber, age);
-
 
                 Console.Write("\nIf you would like to add another person to your party, enter \"Y\" OR press \"return\" to end this session:");
                 roundAbout = Console.ReadLine();
                 Console.WriteLine();
 
             } while (roundAbout.ToUpper() == "Y");
-
 
             Console.WriteLine("\nThank you for choosing Cineplex to enjoy all your box office hits.");
         }
