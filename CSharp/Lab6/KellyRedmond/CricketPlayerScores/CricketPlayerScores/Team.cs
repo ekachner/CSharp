@@ -8,10 +8,10 @@ namespace CricketPlayerScores
 
         public static Player[] PlayerEntry()
         {
-            //int numPlayers = Methods.IsNumber("Enter the number of players: ", 0, NUMBEROFPLAYERS);
-            //Player[] players = new Player[numPlayers];
+            int numPlayers = Methods.IsNumber("Enter the number of players: ", 0, NUMBEROFPLAYERS);
+            Player[] players = new Player[numPlayers];
 
-            Player[] players = new Player[NUMBEROFPLAYERS];
+            //Player[] players = new Player[NUMBEROFPLAYERS];
 
             int count = 1;
 
@@ -22,8 +22,8 @@ namespace CricketPlayerScores
                 while (playerCorrect == "N")
                 {
                     Console.WriteLine($"Player {count}");
-                    string playerName = Player.EnterName();
-                    int playerScore = Player.EnterScore(playerName);
+                    string playerName = CreatePlayer.EnterName();
+                    int playerScore = CreatePlayer.EnterScore(playerName);
 
                     Console.Clear();
 
@@ -47,10 +47,11 @@ namespace CricketPlayerScores
 
         public static void PrintRoster(Player[] players)
         {
-            Console.WriteLine("Team Roster - Average Score: {0}\nScore\tName", PrintAverageScore(players));
+            Console.WriteLine("\n   Team Roster - Average Score: {0}\n\t   {1,-20}\t{2,5}", PrintAverageScore(players), "Name", "Score");
             foreach (var player in players)
             {
-                Console.WriteLine($"{Player.IsDuck(player.Score)}\t{player.Name}");
+                var playerNo = Array.FindIndex(players, x => x.Equals(player)) + 1;
+                Console.WriteLine($"\t{playerNo}. {player.Name, -20}\t{Player.IsDuck(player.Score), 5}");
             }
             Console.WriteLine();
         }
