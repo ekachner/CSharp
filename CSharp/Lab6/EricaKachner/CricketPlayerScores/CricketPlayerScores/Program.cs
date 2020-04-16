@@ -9,15 +9,15 @@ namespace CricketPlayerScores
         public static void Main(string[] args)
         {
             Player[] players = new Player[3];
-
+            
 
             EnterTeamStats(players);
 
-            ChooseBetween("How do you wish to sort your list? By the names of the players or by their scores (Enter: N or S): ", "N", "S");
+            string sortOption = ChooseBetween("How do you wish to sort your list? By the names of the players or by their scores (Enter: N or S): ", "N", "S");
 
-            PrintPlayers(players);
+            PrintPlayers(players, sortOption);
 
-            
+
 
         }
 
@@ -123,11 +123,26 @@ namespace CricketPlayerScores
 
 
 
-        static void PrintPlayers(Player[] players)
+        static void PrintPlayers(Player[] players, string chooseBetweenOption)
         {
-            for (int i = 0; i < players.Length; i++)
+            if(chooseBetweenOption == "N")
             {
-                Console.WriteLine($"{players[i].Name} scored {players[i].Score} points.");
+                SortByName(players);
+
+                for (int i = 0; i < players.Length; i++)
+                {
+                    Console.WriteLine($"{players[i].Name} scored {players[i].Score} points.");
+                }
+            }
+
+            if(chooseBetweenOption == "S")
+            {
+                SortByScores(players);
+
+                for (int i = 0; i < players.Length; i++)
+                {
+                    Console.WriteLine($"{players[i].Name} scored {players[i].Score} points.");
+                }
             }
 
             //foreach(Player p in players)
@@ -167,19 +182,33 @@ namespace CricketPlayerScores
 
         static void SortByName(Player[] players)
         {
-
+            for(int i = 0; i < players.Length - 1; i = i + 1)
+            {
+                Array.Sort(players);
+            }
         }
 
+
+
+        //BUBBLE SWAP: sorts scores highest to lowest
         static void SortByScores(Player[] players)
         {
-            double temp;
-            for(int i = 0; i < players.Length - 1; i++)
-            {
-                for(int j = 0; j < players.Length - (1 + i); j++)
-                {
+            bool doneSwap;
 
+            do
+            {
+                doneSwap = false;
+                for (int i = 0; i < players.Length - 1; i++)
+                {
+                    if (players[i].Score < players[i + 1].Score)
+                    {
+                        Player temp = players[i];
+                        players[i] = players[i + 1];
+                        players[i + 1] = temp;
+                        doneSwap = true;
+                    }
                 }
-            }
+            } while (doneSwap);
         }
 
 
