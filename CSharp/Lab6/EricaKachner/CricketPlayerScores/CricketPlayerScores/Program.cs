@@ -15,6 +15,8 @@ namespace CricketPlayerScores
 
             string sortOption = ChooseBetween("How do you wish to sort your list? By the names of the players or by their scores (Enter: N or S): ", "N", "S");
 
+
+            
             PrintPlayers(players, sortOption);
 
 
@@ -180,24 +182,18 @@ namespace CricketPlayerScores
         //}
 
 
-        static void SortByName(Player[] players)
-        {
-            for(int i = 0; i < players.Length - 1; i = i + 1)
-            {
-                Array.Sort(players);
-            }
-        }
+        
 
 
 
         //BUBBLE SWAP: sorts scores highest to lowest
         static void SortByScores(Player[] players)
         {
-            bool doneSwap;
+            bool doneSwapping;
 
             do
             {
-                doneSwap = false;
+                doneSwapping = false;
                 for (int i = 0; i < players.Length - 1; i++)
                 {
                     if (players[i].Score < players[i + 1].Score)
@@ -205,31 +201,49 @@ namespace CricketPlayerScores
                         Player temp = players[i];
                         players[i] = players[i + 1];
                         players[i + 1] = temp;
-                        doneSwap = true;
+                        doneSwapping = true;
                     }
                 }
-            } while (doneSwap);
+            } while (doneSwapping);
         }
 
 
 
 
 
+        static void SortByName(Player[] players)
+        {
+            bool doneSwapping;
+            do
+            {
+                doneSwapping = false;
+                for (int i = 0; i < players.Length - 1; i++)
+                {
+                    if (players[i].Name.CompareTo(players[i + 1].Name) > 0)
+                    {
+                        Player temp = players[i];
+                        players[i] = players[i + 1];
+                        players[i + 1] = temp;
+                        doneSwapping = true;
+                    }
+                }
+            } while (doneSwapping);
+        }
 
 
+        //        //* Then create method to sort by names of players. 
+        //        //(Use CompareTo method). 
+        //        string a = “Fred”;
+        //        string b = “Jim”;
+        //        if(a.CompareTo(b) < 0)
+        //        {
+        //            Console.WriteLine($“{ a} is before { b}”);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($”{ b} is before { a }”);
+        //        }
 
-        //* Then create method to sort by names of players. 
-        //(Use CompareTo method). 
-        //string a = “Fred”;
-        //string b = “Jim”;
-        //if(a.CompareTo(b) < 0)
-        //{
-        //    Console.WriteLine($“{ a} is before { b }”);
-        //}
-        //else
-        //{
-        //    Console.WriteLine($”{ b} is before { a }”);
-        //}
     }
 }
 
