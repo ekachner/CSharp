@@ -8,44 +8,50 @@ namespace CricketPlayerScores
 
         public static void Main(string[] args)
         {
-            string[] players = new[] { "Ricky", "Allan", "Bobby", "Dillon", "Trevor", "Bryce", "Donovan", "Asher", "Marvin", "Tommy", "Billy" };
-            int[] scores = new int[11];
+            Player[] players = new Player[3];
 
 
-            EnterScore(0, 500, players, scores);
+            EnterTeamStats(players);
 
-            PrintPlayers(players, scores);
+            ChooseBetween("How do you wish to sort your list? By the names of the players or by their scores (Enter: N or S): ", "N", "S");
 
+            PrintPlayers(players);
 
-            //ChooseBetween("How do you wish to sort your list? By the name of player or by their score (Enter: N or S): ", "N", "S");
+            
+
         }
 
 
 
 
-        static int[] EnterScore(int min, int max, string[] players, int[] scores)
+        
+
+
+
+        struct Player
         {
-            int result;            
-
-            for(int i = 0; i < players.Length; i++)
-            {                
-                result = ReadInteger($"Please enter a score for player {players[i]}", min, max);
-                scores[i] = result;
-                Console.WriteLine($"Player {players[i]} scored: {scores[i]}");                
-            }
-            return scores;
+            public string Name;
+            public int Score;
         }
 
 
-
-        static void PrintPlayers(string[] players, int[] scores)
+        static void EnterTeamStats(Player[] players)
         {
             for (int i = 0; i < players.Length; i++)
-            {                
-                    Console.WriteLine($"Player {i + 1}: " + players[i] + "\nScore: " + scores[i] + "\n");                
+            {
+                string name = EnterPlayerName();
+                int score = EnterScore(0, 500);
+                players[i] = new Player { Name = name, Score = score };
             }
         }
 
+
+
+        static string EnterPlayerName()
+        {
+            string name = ReadString("Please enter a player's name: ");
+            return name;
+        }
 
 
         static string ReadString(string prompt)
@@ -55,8 +61,21 @@ namespace CricketPlayerScores
             {
                 Console.Write(prompt);
                 result = Console.ReadLine();
+                if(result == "")
+                {
+                    Console.WriteLine("Please enter the player's name: ");
+                }
             } while (result == "");
             return result;
+        }
+
+
+
+        static int EnterScore(int min, int max)
+        {
+
+            int score = ReadInteger($"Please enter his score: ", min, max);
+            return score;
         }
 
 
@@ -70,6 +89,10 @@ namespace CricketPlayerScores
                 {
                     string intString = ReadString(prompt);
                     result = int.Parse(intString);
+                    if(result < min || result > max)
+                    {
+                        Console.WriteLine($"Please list a score between {min} and {max}");
+                    }
                 }
                 catch (Exception e)
                 {
@@ -79,7 +102,7 @@ namespace CricketPlayerScores
             return result;
         }
 
-        
+
 
         static string ChooseBetween(string prompt, string option1, string option2)
         {
@@ -100,6 +123,84 @@ namespace CricketPlayerScores
 
 
 
+        static void PrintPlayers(Player[] players)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                Console.WriteLine($"{players[i].Name} scored {players[i].Score} points.");
+            }
+
+            //foreach(Player p in players)
+            //{
+            //    Console.WriteLine($"{p.Name} scored {p.Score} points");
+            //}
+        }
+
+
+
+
+
+
+
+        //static int[] EnterScore(int min, int max, string[] players, int[] scores)
+        //{
+        //    int result;
+
+        //    for (int i = 0; i < players.Length; i++)
+        //    {
+        //        result = ReadInteger($"Please enter a score for player {players[i]}", min, max);
+        //        scores[i] = result;
+        //        Console.WriteLine($"Player {players[i]} scored: {scores[i]}");
+        //    }
+        //    return scores;
+        //}
+
+
+        //static void PrintPlayers(string[] players, int[] scores)
+        //{
+        //    for (int i = 0; i < players.Length; i++)
+        //    {                
+        //            Console.WriteLine($"Player {i + 1}: " + players[i] + "\nScore: " + scores[i] + "\n");                
+        //    }
+        //}
+
+
+        static void SortByName(Player[] players)
+        {
+
+        }
+
+        static void SortByScores(Player[] players)
+        {
+            double temp;
+            for(int i = 0; i < players.Length - 1; i++)
+            {
+                for(int j = 0; j < players.Length - (1 + i); j++)
+                {
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+        //* Then create method to sort by names of players. 
+        //(Use CompareTo method). 
+        //string a = “Fred”;
+        //string b = “Jim”;
+        //if(a.CompareTo(b) < 0)
+        //{
+        //    Console.WriteLine($“{ a} is before { b }”);
+        //}
+        //else
+        //{
+        //    Console.WriteLine($”{ b} is before { a }”);
+        //}
     }
 }
 
@@ -122,18 +223,6 @@ namespace CricketPlayerScores
 
 //* Print cricket scores in order from largest to smallest (Bubble Sort)
 
-//* Then create method to sort by names of players. 
-//(Use CompareTo method). 
-//string a = “Fred”;
-//string b = “Jim”;
-//if(a.CompareTo(b) < 0)
-//{
-//    Console.WriteLine($“{ a} is before { b }”);
-//}
-//else
-//{
-//    Console.WriteLine($”{ b} is before { a }”);
-//}
 
 
 
