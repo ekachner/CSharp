@@ -15,6 +15,7 @@ namespace CricketPlayerScores
         }
 
 
+
         //creation of new "type" to make array of two type values
         struct Player
         {
