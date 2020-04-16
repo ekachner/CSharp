@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{40850051-8E80-4668-B07A-E9692747828A}|Default">
   <MonoDevelop.Ide.ItemProperties.Cinema__Arrays PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Movie.cs">
     <Files>
-      <File FileName="Program.cs" Line="12" Column="13" />
-      <File FileName="Movie.cs" Line="70" Column="2" />
-      <File FileName="Inputs.cs" Line="25" Column="54" />
+      <File FileName="Program.cs" Line="36" Column="1" />
+      <File FileName="Movie.cs" Line="10" Column="29" />
+      <File FileName="Inputs.cs" Line="33" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Cinema_Arrays" expanded="True">
             <Node name="Cinema_Arrays" expanded="True">
-              <Node name="BuyTicket.cs" selected="True" />
+              <Node name="Movie.cs" selected="True" />
             </Node>
           </Node>
         </State>

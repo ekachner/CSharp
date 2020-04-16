@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace CricketScores
 {
     public class SortOptions

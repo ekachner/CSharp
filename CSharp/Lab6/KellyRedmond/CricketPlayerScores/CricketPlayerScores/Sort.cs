@@ -14,27 +14,11 @@ namespace CricketPlayerScores
 
                 if (nameScore == "N")
                 {
-                    string nameSort = Methods.StringInput("Do you want to start at A or Z? (enter A or Z): ", "A", "Z");
-                    if (nameSort == "A")
-                    {
-                        AtoZ(players);
-                    }
-                    else
-                    {
-                        ZtoA(players);
-                    }
+                    NameSort(players);
                 }
                 else
                 {
-                    string scoreSort = Methods.StringInput("Do you want to start at the high score or low score? (enter H or L): ", "H", "L");
-                    if (scoreSort == "H")
-                    {
-                        ScoreHighLow(players);
-                    }
-                    else
-                    {
-                        ScoreLowHigh(players);
-                    }
+                    ScoreSort(players);
                 }
 
                 Team.PrintRoster(players);
@@ -48,7 +32,33 @@ namespace CricketPlayerScores
             }
         }
 
-        public static void ScoreHighLow(Player[] players)
+        private static void NameSort(Player[] players)
+        {
+            string nameSort = Methods.StringInput("Do you want to start at A or Z? (enter A or Z): ", "A", "Z");
+            if (nameSort == "A")
+            {
+                AtoZ(players);
+            }
+            else
+            {
+                ZtoA(players);
+            }
+        }
+
+        private static void ScoreSort(Player[] players)
+        {
+            string scoreSort = Methods.StringInput("Do you want to start at the high score or low score? (enter H or L): ", "H", "L");
+            if (scoreSort == "H")
+            {
+                ScoreHighLow(players);
+            }
+            else
+            {
+                ScoreLowHigh(players);
+            }
+        }
+
+        private static void ScoreHighLow(Player[] players)
         {
             Player temp;
             bool trade = true;
@@ -69,13 +79,13 @@ namespace CricketPlayerScores
             }
         }
 
-        public static void ScoreLowHigh(Player[] players)
+        private static void ScoreLowHigh(Player[] players)
         {
             ScoreHighLow(players);
             Array.Reverse(players);
         }
 
-        public static void AtoZ(Player[] players)
+        private static void AtoZ(Player[] players)
         {
             string[] arrKeys = new string[players.Length];
             string[] arrValues = new string[players.Length];
@@ -96,7 +106,7 @@ namespace CricketPlayerScores
             }
         }
 
-        public static void ZtoA(Player[] players)
+        private static void ZtoA(Player[] players)
         {
             Player temp;
             bool trade = true;
