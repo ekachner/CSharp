@@ -7,7 +7,7 @@ namespace CricketPlayerScores
 
         public static void Main(string[] args)
         {
-            Player[] players = new Player[3];           
+            Player[] players = new Player[11];           
 
             EnterTeamStats(players);
             string sortOption = ChooseBetween("How do you wish to sort your list? By the names of the players or by their scores (Enter: N or S): ", "N", "S");
