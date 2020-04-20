@@ -10,7 +10,12 @@ namespace HyperspaceCheeseBattle
 
         static void Main(string[] args)
         {
-            ResetGame();
+            
+            
+
+            ResetGame(numberOfPlayers, players);
+
+
         }
 
 
@@ -46,6 +51,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
+
         // reads in the player information for a new game
         static void ResetGame()
         {
@@ -54,7 +60,7 @@ namespace HyperspaceCheeseBattle
             // 1D array that holds the player information
             Player[] players = new Player[numberOfPlayers];
 
-            if(numberOfPlayers == 2)
+            if (numberOfPlayers == 2)
             {
                 players[0] = new Player
                 {
