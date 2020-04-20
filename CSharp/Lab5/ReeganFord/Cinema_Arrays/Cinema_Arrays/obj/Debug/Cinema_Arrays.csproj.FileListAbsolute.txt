@@ -1,0 +1,5 @@
+/Users/reeganford/Projects/class-fullstack-19-20/CSharp/Lab5/ReeganFord/Cinema_Arrays/Cinema_Arrays/bin/Debug/Cinema_Arrays.exe
+/Users/reeganford/Projects/class-fullstack-19-20/CSharp/Lab5/ReeganFord/Cinema_Arrays/Cinema_Arrays/bin/Debug/Cinema_Arrays.pdb
+/Users/reeganford/Projects/class-fullstack-19-20/CSharp/Lab5/ReeganFord/Cinema_Arrays/Cinema_Arrays/obj/Debug/Cinema_Arrays.csprojAssemblyReference.cache
+/Users/reeganford/Projects/class-fullstack-19-20/CSharp/Lab5/ReeganFord/Cinema_Arrays/Cinema_Arrays/obj/Debug/Cinema_Arrays.exe
+/Users/reeganford/Projects/class-fullstack-19-20/CSharp/Lab5/ReeganFord/Cinema_Arrays/Cinema_Arrays/obj/Debug/Cinema_Arrays.pdb

@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema_Arrays", "Cinema_Arrays.csproj", "{40850051-8E80-4668-B07A-E9692747828A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40850051-8E80-4668-B07A-E9692747828A}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{40850051-8E80-4668-B07A-E9692747828A}.Debug|anycpu.Build.0 = Debug|anycpu
+		{40850051-8E80-4668-B07A-E9692747828A}.Release|anycpu.ActiveCfg = Release|anycpu
+		{40850051-8E80-4668-B07A-E9692747828A}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
