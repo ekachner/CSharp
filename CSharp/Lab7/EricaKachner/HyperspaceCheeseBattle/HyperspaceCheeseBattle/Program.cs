@@ -26,8 +26,7 @@ namespace HyperspaceCheeseBattle
             Left = 3,            
         }
 
-        Direction boardsquare;
-        boardsquare = Direction.Up;
+        
 
         // 1D array that holds the player information
         static Player[] players = new Player[4];
@@ -45,15 +44,42 @@ namespace HyperspaceCheeseBattle
             
 
             int roll = RollDice();
+            playerNo = roll;
 
-            switch(Direction)
-                case 0: Direction.Up + roll;
+            switch (Direction)
+            {
+                case 0:
+                    //MoveDown(roll);
+                    //boardsquare = Direction.Down + roll;
+                    break;
 
+                case 1:
+                    //MoveUp(roll);
+                    break;
 
-            
-            
+                case 2:
+                    //MoveRight(roll);
+                    break;
 
+                case 3:
+                    //MoveLeft(roll);
+                    break;
+
+                default:
+                    //cheese square
+                    break;
+            }          
         }
+
+
+        static int[] MoveDown(int roll)
+        {
+            Direction boardsquare;
+            boardsquare = Direction.Down;
+
+            //Y - roll
+        }
+
 
         // reads in the player information for a new game
         static void ResetGame()
