@@ -4,14 +4,13 @@ namespace HyperspaceCheeseBattle
 {
     class Program
     {
-        // 1D array that holds the player information
-        static Player[] players = new Player[4];
+        
 
 
 
         static void Main(string[] args)
         {
-            ResetGame(players);
+            ResetGame();
         }
 
 
@@ -48,35 +47,125 @@ namespace HyperspaceCheeseBattle
 
 
         // reads in the player information for a new game
-        static void ResetGame(Player[] players)
+        static void ResetGame()
         {
-            players[0] = new Player
-            {
-                Name = "Player1",
-                PositionX = 0,
-                PositionY = 0
-            };
+            int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
 
-            players[1] = new Player
-            {
-                Name = "Player2",
-                PositionX = 0,
-                PositionY = 0
-            };
+            // 1D array that holds the player information
+            Player[] players = new Player[numberOfPlayers];
 
-            players[2] = new Player
+            if(numberOfPlayers == 2)
             {
-                Name = "Player3",
-                PositionX = 0,
-                PositionY = 0
-            };
+                players[0] = new Player
+                {
+                    Name = "Player1",
+                    PositionX = 0,
+                    PositionY = 0
+                };
 
-            players[3] = new Player
+                players[1] = new Player
+                {
+                    Name = "Player2",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                Console.WriteLine("You have selected 2 players");
+            }
+
+            if(numberOfPlayers == 3)
             {
-                Name = "Player4",
-                PositionX = 0,
-                PositionY = 0
-            };
+                players[0] = new Player
+                {
+                    Name = "Player1",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                players[1] = new Player
+                {
+                    Name = "Player2",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                players[2] = new Player
+                {
+                    Name = "Player3",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                Console.WriteLine("You have selected 3 players");
+            }
+
+            if(numberOfPlayers == 4)
+            {
+                players[0] = new Player
+                {
+                    Name = "Player1",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                players[1] = new Player
+                {
+                    Name = "Player2",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                players[2] = new Player
+                {
+                    Name = "Player3",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                players[3] = new Player
+                {
+                    Name = "Player4",
+                    PositionX = 0,
+                    PositionY = 0
+                };
+
+                Console.WriteLine("You have selected 4 players");
+            }
+        }
+
+
+        public static int ReadInteger(string prompt, int min, int max)
+        {
+            int result = min - 1;
+            do
+            {
+                try
+                {
+                    string intString = ReadString(prompt);
+                    result = int.Parse(intString);
+                    if (result < min || result > max)
+                    {
+                        Console.WriteLine($"Please list a value between {min} and {max}. ");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error: " + (e.Message) + $" Please enter a valid number between {min} and {max}");
+                }
+            } while ((result < min) || (result > max));
+            return result;
+        }
+
+
+        public static string ReadString(string prompt)
+        {
+            string result;
+            do
+            {
+                Console.Write(prompt);
+                result = Console.ReadLine();                
+            } while (result == "");
+            return result;
         }
 
 
@@ -95,10 +184,8 @@ namespace HyperspaceCheeseBattle
         // makes a move for the player given in playerNo
         private static void PlayerTurn(int playerNo)
         {
-
-
-            int roll = RollDice();
-            playerNo = roll;
+            int rollValue = RollDice();
+            
 
             //switch (Direction)
             //{
@@ -157,8 +244,7 @@ namespace HyperspaceCheeseBattle
         // returns true if there is a rocket in the specified square
         static bool RocketInSquare(int X, int Y)
         {
-
-            return true;
+            return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4)) ? true : false;                       
         }
 
 
@@ -170,4 +256,4 @@ namespace HyperspaceCheeseBattle
 
 
 //how do I mark the cheese squares
-//
+//better way to loop through players 
