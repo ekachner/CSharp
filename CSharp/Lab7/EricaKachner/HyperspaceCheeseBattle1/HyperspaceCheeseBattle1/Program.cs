@@ -4,6 +4,15 @@ namespace HyperspaceCheeseBattle
 {
     class Program
     {
+        // 1D array that holds the player information
+        static Player[] players = new Player[4];
+
+
+
+        static void Main(string[] args)
+        {
+            ResetGame(players);
+        }
 
 
         // 2D array that holds the board
@@ -18,6 +27,8 @@ namespace HyperspaceCheeseBattle
             {2,2,1,0,1,1,3,3}, // row 6
             {1,1,1,1,1,1,1,1}  // row 7
         };
+
+
 
         private enum Direction
         {
@@ -35,6 +46,52 @@ namespace HyperspaceCheeseBattle
             public int PositionY;
         }
 
+
+        // reads in the player information for a new game
+        static void ResetGame(Player[] players)
+        {
+            players[0] = new Player
+            {
+                Name = "Player1",
+                PositionX = 0,
+                PositionY = 0
+            };
+
+            players[1] = new Player
+            {
+                Name = "Player2",
+                PositionX = 0,
+                PositionY = 0
+            };
+
+            players[2] = new Player
+            {
+                Name = "Player3",
+                PositionX = 0,
+                PositionY = 0
+            };
+
+            players[3] = new Player
+            {
+                Name = "Player4",
+                PositionX = 0,
+                PositionY = 0
+            };
+        }
+
+
+        // returns the value of the next dice throw
+        static int RollDice()
+        {
+            //Random random = new Random();
+            //int roll = random.Next(1, 7);
+            //Console.WriteLine("You just rolled: " + roll);
+            //return roll;
+
+            return 1;
+        }
+
+
         // makes a move for the player given in playerNo
         private static void PlayerTurn(int playerNo)
         {
@@ -43,28 +100,28 @@ namespace HyperspaceCheeseBattle
             int roll = RollDice();
             playerNo = roll;
 
-            switch (Direction)
-            {
-                case 0:
-                    MoveDown(roll);
-                    break;
+            //switch (Direction)
+            //{
+            //    case 0:
+            //        MoveDown(roll);
+            //        break;
 
-                case 1:
-                    //MoveUp(roll);
-                    break;
+            //    case 1:
+            //        //MoveUp(roll);
+            //        break;
 
-                case 2:
-                    //MoveRight(roll);
-                    break;
+            //    case 2:
+            //        //MoveRight(roll);
+            //        break;
 
-                case 3:
-                    //MoveLeft(roll);
-                    break;
+            //    case 3:
+            //        //MoveLeft(roll);
+            //        break;
 
-                default:
-                    //cheese square
-                    break;
-            }
+            //    default:
+            //        //cheese square
+            //        break;
+            //}
         }
 
 
@@ -93,22 +150,9 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        // reads in the player information for a new game
-        static void ResetGame()
-        {
-            //each player moves back to (0,0)
-        }
+        
 
-        // returns the value of the next dice throw
-        static int RollDice()
-        {
-            //Random random = new Random();
-            //int roll = random.Next(1, 7);
-            //Console.WriteLine("You just rolled: " + roll);
-            //return roll;
-
-            return 1;
-        }
+        
 
         // returns true if there is a rocket in the specified square
         static bool RocketInSquare(int X, int Y)
@@ -118,25 +162,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        static void Main(string[] args)
-        {
-            // 1D array that holds the player information
-            Player[] players = new Player[4];
-            players[0] = new Player
-            {
-
-            };
-
-            var player1 = new Player
-            {
-                Name = "Player1",
-                PositionX = 0,
-                PositionY = 0
-            };
-
-
-            //ResetGame();
-        }
+        
     }
 }
 
