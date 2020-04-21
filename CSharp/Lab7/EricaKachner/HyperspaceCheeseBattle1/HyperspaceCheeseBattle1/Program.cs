@@ -11,10 +11,7 @@ namespace HyperspaceCheeseBattle
         static void Main(string[] args)
         {
             
-            
-
-            ResetGame(numberOfPlayers, players);
-
+            ResetGame();
 
         }
 
@@ -22,19 +19,19 @@ namespace HyperspaceCheeseBattle
         // 2D array that holds the board
         static int[,] board = new int[,]
         {
-            {0,2,2,2,2,2,0,0}, // row 0
-            {2,2,1,0,1,2,3,3}, // row 1
-            {2,2,2,2,1,1,3,3}, // row 2
-            {2,2,2,2,1,1,3,3}, // row 3
-            {2,2,1,2,1,1,3,3}, // row 4
-            {2,2,1,2,3,2,3,3}, // row 5
-            {2,2,1,0,1,1,3,3}, // row 6
-            {1,1,1,1,1,1,1,1}  // row 7
+            {1,1,1,1,1,1,1,1}, //row 7
+            {2,2,1,0,1,1,3,3}, //row 6
+            {2,2,1,2,3,2,3,3}, //row 5
+            {2,2,1,2,1,1,3,3}, //row 4
+            {2,2,2,2,1,1,3,3}, //row 3
+            {2,2,2,2,1,1,3,3}, //row 2
+            {2,2,1,0,1,2,3,3}, //row 1
+            {0,2,2,2,2,2,0,0}, //row 0
         };
 
+        
 
-
-        private enum Direction
+    private enum Direction
         {
             Down = 0,
             Up = 1,
@@ -60,83 +57,19 @@ namespace HyperspaceCheeseBattle
             // 1D array that holds the player information
             Player[] players = new Player[numberOfPlayers];
 
-            if (numberOfPlayers == 2)
+            Console.WriteLine($"You have selected {players.Length} players");
+
+            for (int i = 0; i < players.Length; i++)
             {
-                players[0] = new Player
+                players[i] = new Player
                 {
-                    Name = "Player1",
+                    Name = $"Player{i + 1}",
                     PositionX = 0,
                     PositionY = 0
                 };
 
-                players[1] = new Player
-                {
-                    Name = "Player2",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                Console.WriteLine("You have selected 2 players");
-            }
-
-            if(numberOfPlayers == 3)
-            {
-                players[0] = new Player
-                {
-                    Name = "Player1",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                players[1] = new Player
-                {
-                    Name = "Player2",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                players[2] = new Player
-                {
-                    Name = "Player3",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                Console.WriteLine("You have selected 3 players");
-            }
-
-            if(numberOfPlayers == 4)
-            {
-                players[0] = new Player
-                {
-                    Name = "Player1",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                players[1] = new Player
-                {
-                    Name = "Player2",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                players[2] = new Player
-                {
-                    Name = "Player3",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                players[3] = new Player
-                {
-                    Name = "Player4",
-                    PositionX = 0,
-                    PositionY = 0
-                };
-
-                Console.WriteLine("You have selected 4 players");
-            }
+                Console.WriteLine($"{players[i].Name}");
+            }           
         }
 
 
@@ -151,7 +84,7 @@ namespace HyperspaceCheeseBattle
                     result = int.Parse(intString);
                     if (result < min || result > max)
                     {
-                        Console.WriteLine($"Please list a value between {min} and {max}. ");
+                        Console.WriteLine($"\nPlease list a value between {min} and {max}. ");
                     }
                 }
                 catch (Exception e)
@@ -188,57 +121,65 @@ namespace HyperspaceCheeseBattle
 
 
         // makes a move for the player given in playerNo
-        private static void PlayerTurn(int playerNo)
+        private static void PlayerTurn(Player[] players)
         {
-            int rollValue = RollDice();
-            
+            for (int i = 0; i < players.Length; i++)
+            {
 
-            //switch (Direction)
-            //{
-            //    case 0:
-            //        MoveDown(roll);
-            //        break;
+                int rollValue = RollDice();
 
-            //    case 1:
-            //        //MoveUp(roll);
-            //        break;
+                //switch (players[i].PositionX, players[i].PositionY)
+                //{
+                //    case 0:
+                //        MoveDown(rollValue);
+                //        break;
 
-            //    case 2:
-            //        //MoveRight(roll);
-            //        break;
+                //    case 1:
+                //        //MoveUp(roll);
+                //        break;
 
-            //    case 3:
-            //        //MoveLeft(roll);
-            //        break;
+                //    case 2:
+                //        //MoveRight(roll);
+                //        break;
 
-            //    default:
-            //        //cheese square
-            //        break;
-            //}
+                //    case 3:
+                //        //MoveLeft(roll);
+                //        break;
+
+                //    default:
+                //        //cheese square
+                //        break;
+                //}
+
+
+                Console.WriteLine($"Player{i + 1} has landed on ({players[i].PositionX}, {players[i].PositionY}).");
+            }
+
+
         }
 
 
-        static int MoveDown(int roll, int PositionY)
+        static int MoveDown(int rollValue, int PositionY)
         {            
-            PositionY -= roll;
+            PositionY -= rollValue;
             return PositionY;
         }
 
-        static int MoveUp(int roll, int PositionY)
+        static int MoveUp(int rollValue, int PositionY)
         {
-            PositionY += roll;
+            PositionY += rollValue;
             return PositionY;
         }
 
-        static int MoveLeft(int roll, int PositionX)
+        static int MoveLeft(int rollValue, int PositionX)
         {
-            PositionX -= roll;
+            PositionX -= rollValue;
             return PositionX;
         }
 
-        static int MoveRight(int roll, int PositionX)
+        static int MoveRight(int rollValue, int PositionX)
         {
-            PositionX += roll;
+            PositionX += rollValue;
             return PositionX;
         }
 
@@ -261,5 +202,7 @@ namespace HyperspaceCheeseBattle
 
 
 
-//how do I mark the cheese squares
-//better way to loop through players 
+
+//better way to assign players in ResetGame()?
+//looping through players in playerTurn()
+//
