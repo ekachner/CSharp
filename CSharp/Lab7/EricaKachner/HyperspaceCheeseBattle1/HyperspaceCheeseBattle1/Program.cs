@@ -10,34 +10,36 @@ namespace HyperspaceCheeseBattle
 
         static void Main(string[] args)
         {
-            
-            ResetGame();
+            Player[] test = ResetGame();
 
+            PlayerTurn(test);
+            
         }
 
 
-        // 2D array that holds the board
+        // 2D array that holds the board and mirrored across the X axis to flip the Y values.
         static int[,] board = new int[,]
         {
-            {1,1,1,1,1,1,1,1}, //row 7
-            {2,2,1,0,1,1,3,3}, //row 6
-            {2,2,1,2,3,2,3,3}, //row 5
-            {2,2,1,2,1,1,3,3}, //row 4
-            {2,2,2,2,1,1,3,3}, //row 3
-            {2,2,2,2,1,1,3,3}, //row 2
-            {2,2,1,0,1,2,3,3}, //row 1
-            {0,2,2,2,2,2,0,0}, //row 0
+            {1,1,1,1,1,1,1,1}, //row 0
+            {2,2,1,0,1,1,3,3}, //row 1
+            {2,2,1,2,3,2,3,3}, //row 2
+            {2,2,1,2,1,1,3,3}, //row 3
+            {2,2,2,2,1,1,3,3}, //row 4
+            {2,2,2,2,1,1,3,3}, //row 5
+            {2,2,1,0,1,2,3,3}, //row 6
+            {0,2,2,2,2,2,0,0}, //row 7
         };
 
         
 
-    private enum Direction
+        private enum Direction
         {
             Down = 0,
             Up = 1,
             Right = 2,
             Left = 3,
         }
+
 
 
         struct Player
@@ -48,9 +50,8 @@ namespace HyperspaceCheeseBattle
         }
 
 
-
         // reads in the player information for a new game
-        static void ResetGame()
+        static Player[] ResetGame()
         {
             int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
 
@@ -69,8 +70,84 @@ namespace HyperspaceCheeseBattle
                 };
 
                 Console.WriteLine($"{players[i].Name}");
-            }           
+            }
+            return players;            
         }
+
+
+        // returns the value of the next dice throw
+        static int RollDice()
+        {
+            Random random = new Random();
+            int roll = random.Next(1, 7);            
+            return roll;
+
+            //return 1;
+        }
+
+
+        // makes a move for the player given in playerNo
+        private static void PlayerTurn(Player[] players)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                Console.WriteLine($"It's {players[i].Name}'s turn");
+                int rollValue = RollDice();
+                Console.WriteLine($"{players[i].Name} rolled {rollValue}");
+
+                //if(RocketInSquare(players[i].PositionX, players[i].PositionY) == true)
+                //{
+                //    //do something
+                //}
+
+                if (players[i].PositionX + rollValue < 7 || players[i].PositionX - rollValue > 0 || players[i].PositionY + rollValue < 7 || players[i].PositionY - rollValue > 0)
+                {
+                    switch (board[players[i].PositionX, players[i].PositionY])
+                    {
+                        case 0:
+                            players[i].PositionY = MoveDown(rollValue, players[i].PositionY);
+                            break;
+
+                        case 1:
+                            players[i].PositionY = MoveUp(rollValue, players[i].PositionY);
+                            break;
+
+                        case 2:
+                            players[i].PositionX = MoveRight(rollValue, players[i].PositionX);
+                            break;
+
+                        case 3:
+                            players[i].PositionX = MoveLeft(rollValue, players[i].PositionX);
+                            break;                        
+                    }
+                }
+            Console.WriteLine($"Player{i + 1} has landed on boardsquare ({players[i].PositionX}, {players[i].PositionY}).\n");
+            }
+        }
+
+
+        //// returns true if there is a rocket in the specified square
+        //static bool RocketInSquare(Player[] players)
+        //{
+        //    for (int i = 0; i < players.Length; i++)
+        //    {
+        //        if ((board[players[i].PositionX, players[i].PositionY]) == OCCUPIED)  
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    
+        //}
+
+
+
+
+
+
+
+
+
+
 
 
         public static int ReadInteger(string prompt, int min, int max)
@@ -95,72 +172,19 @@ namespace HyperspaceCheeseBattle
             return result;
         }
 
-
         public static string ReadString(string prompt)
         {
             string result;
             do
             {
                 Console.Write(prompt);
-                result = Console.ReadLine();                
+                result = Console.ReadLine();
             } while (result == "");
             return result;
         }
 
-
-        // returns the value of the next dice throw
-        static int RollDice()
-        {
-            //Random random = new Random();
-            //int roll = random.Next(1, 7);
-            //Console.WriteLine("You just rolled: " + roll);
-            //return roll;
-
-            return 1;
-        }
-
-
-        // makes a move for the player given in playerNo
-        private static void PlayerTurn(Player[] players)
-        {
-            for (int i = 0; i < players.Length; i++)
-            {
-
-                int rollValue = RollDice();
-
-                //switch (players[i].PositionX, players[i].PositionY)
-                //{
-                //    case 0:
-                //        MoveDown(rollValue);
-                //        break;
-
-                //    case 1:
-                //        //MoveUp(roll);
-                //        break;
-
-                //    case 2:
-                //        //MoveRight(roll);
-                //        break;
-
-                //    case 3:
-                //        //MoveLeft(roll);
-                //        break;
-
-                //    default:
-                //        //cheese square
-                //        break;
-                //}
-
-
-                Console.WriteLine($"Player{i + 1} has landed on ({players[i].PositionX}, {players[i].PositionY}).");
-            }
-
-
-        }
-
-
         static int MoveDown(int rollValue, int PositionY)
-        {            
+        {
             PositionY -= rollValue;
             return PositionY;
         }
@@ -183,26 +207,11 @@ namespace HyperspaceCheeseBattle
             return PositionX;
         }
 
-
-        
-
-        
-
-        // returns true if there is a rocket in the specified square
-        static bool RocketInSquare(int X, int Y)
-        {
-            return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4)) ? true : false;                       
-        }
-
-
-        
+        //// returns true if there is cheese in the specified square
+        //static bool CheeseInSquare(int X, int Y)
+        //{
+        //    return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4));
+        //}
     }
 }
 
-
-
-
-
-//better way to assign players in ResetGame()?
-//looping through players in playerTurn()
-//
