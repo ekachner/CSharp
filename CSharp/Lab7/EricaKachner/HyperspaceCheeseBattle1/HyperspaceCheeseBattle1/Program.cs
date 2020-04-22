@@ -12,7 +12,7 @@ namespace HyperspaceCheeseBattle
 
             for(var i = 0; i < players.Length; i++)
             {
-                PlayerTurn(players[i]);
+                players[i] = PlayerTurn(players[i]);
             }
 
         }
@@ -48,18 +48,25 @@ namespace HyperspaceCheeseBattle
             public int PositionX;
             public int PositionY;
         }
-        static Player[] players = new Player[4];
+
+        static Player[] players = new Player[GetNumberOfPlayers()];
+
+        static int GetNumberOfPlayers()
+        {
+            int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
+            return numberOfPlayers;
+        }
 
 
         // reads in the player information for a new game
         static void ResetGame()
         {
-            //int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
 
-            //// 1D array that holds the player information
+
+            //1D array that holds the player information
             //Player[] players = new Player[numberOfPlayers];
 
-            //Console.WriteLine($"You have selected {players.Length} players");
+            Console.WriteLine($"You have selected {players.Length} players");
 
             for (int i = 0; i < players.Length; i++)
             {
@@ -88,88 +95,139 @@ namespace HyperspaceCheeseBattle
 
 
         // makes a move for the player given in playerNo
-        private static void PlayerTurn(Player p)
+        private static Player PlayerTurn(Player p)
         {         
             Console.WriteLine($"It's {p.Name}'s turn");
             int rollValue = RollDice();
             Console.WriteLine($"{p.Name} rolled {rollValue}");
-            Direction direction = (Direction)board[p.PositionX, p.PositionY];
+            Direction direction = (Direction)board[p.PositionY, p.PositionX];
 
             int newX;
             int newY;
 
-            if (p.PositionX + rollValue <= 7 || p.PositionX - rollValue >= 0 || p.PositionY + rollValue <= 7 || p.PositionY - rollValue >= 0)
+            string loseTurn = "Abandon move, this roll value will cause you to fall off the board.";
+
+            if (direction == Direction.Up)
             {
-                if (direction == Direction.Up)
+                if(p.PositionY + rollValue <= 7)
                 {
                     newX = p.PositionX;  //0
                     newY = p.PositionY + rollValue;  //1
                 }
-                else if (direction == Direction.Down)
+                else
+                {
+                    Console.WriteLine(loseTurn);
+                }
+            }
+            else if (direction == Direction.Down)
+            {
+                if(p.PositionY - rollValue >= 0)
                 {
                     newX = p.PositionX;
                     newY = p.PositionY - rollValue;
                 }
-                else if (direction == Direction.Right)
+                else
                 {
+                    Console.WriteLine(loseTurn);
+                }
+            }
+            else if (direction == Direction.Right)
+            {
+                if(p.PositionX + rollValue <= 7)
+                {                    
                     newX = p.PositionX + rollValue;
                     newY = p.PositionY;
                 }
-                else // left
+                else
+                {
+                    Console.WriteLine(loseTurn);
+                }
+            }
+            else //left
+            {
+                if(p.PositionX - rollValue >= 0)
                 {
                     newX = p.PositionX - rollValue;
                     newY = p.PositionY;
                 }
-
-                Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX}, {newY})");
-
-                bool rocketInSquare = RocketInSquare(newX, newY);
-
-                do
+                else
                 {
-                    direction = (Direction)board[newX, newY];
-
-                    if (direction == Direction.Up)
-                    {                        
-                        newY += 1;
-                    }
-                    else if (direction == Direction.Down)
-                    {
-                        newY -= 1;
-                    }
-                    else if (direction == Direction.Right)
-                    {
-                        newX += 1;
-                    }
-                    else //left
-                    {
-                        newX -= 1;
-                    }
-                } while (rocketInSquare);
-
-            }
-            else
-            {
-                newX = p.PositionX;
-                newY = p.PositionY;
-                Console.WriteLine("Abandon move, this roll value will cause you to fall off the board.");
+                    Console.WriteLine(loseTurn);
+                }
             }
 
-            Console.WriteLine($"{p.Name} has landed on boardsquare ({newX}, {newY}).\n");            
+
+            Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX}, {newY})");
+
+
+            bool rocketInSquare = RocketInSquare(newX, newY);
+            Console.WriteLine("bool rocketInSquare " + rocketInSquare);
+
+
+                if (rocketInSquare == true)
+                {
+                    do
+                    {
+                        rocketInSquare = false;
+                        Console.WriteLine("in the while loop");
+
+
+                        direction = (Direction)board[newY, newX];
+                        Console.WriteLine($"direction in do while loop  is {direction} coordinates: ({newX}, {newY} )" );
+
+                        if (direction == Direction.Up)
+                        {
+                            Console.WriteLine("move direction is up");
+                            newY += 1;
+                        }
+                        else if (direction == Direction.Down)
+                        {
+                            Console.WriteLine("move direction is down");
+                            newY -= 1;
+                        }
+                        else if (direction == Direction.Right)
+                        {
+                            Console.WriteLine("move direction is right");
+                            newX += 1;
+                        }
+                        else //left
+                        {
+                            Console.WriteLine("move direction is left");
+                            newX -= 1;
+                        }
+
+                    
+
+                    rocketInSquare = RocketInSquare(newX, newY);
+                    Console.WriteLine("while loop after rocketInSquare " + rocketInSquare);
+                    
+
+                    } while (rocketInSquare == true);
+                }
+
+
+            p.PositionX = newX;
+            p.PositionY = newY;
+            Console.WriteLine($"{p.Name} has landed on boardsquare ({p.PositionX}, {p.PositionY}).\n");
+            return p;
         }
 
 
         // returns true if there is a rocket in the specified square
         static bool RocketInSquare(int newX, int newY)
         {
-            
+
             for (int i = 0; i < players.Length; i++)
             {
-                if ((board[players[i].PositionX, players[i].PositionY]) == board[newX, newY])
+                Console.WriteLine($"player{i + 1}: {players[i].PositionX}, player{i + 1}: {players[i].PositionY}");
+
+                if(players[i].PositionX == newX && players[i].PositionY == newY)
                 {
+                    Console.WriteLine("rocket in square = true");
                     return true;
                 }
             }
+            Console.WriteLine("rocket in square false");
             return false;
         }
 
