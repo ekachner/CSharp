@@ -4,13 +4,13 @@ namespace HyperspaceCheeseBattle
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
 
             ResetGame();
 
-            for(var i = 0; i < players.Length; i++)
+            for (var i = 0; i < players.Length; i++)
             {
                 players[i] = PlayerTurn(players[i]);
             }
@@ -28,16 +28,17 @@ namespace HyperspaceCheeseBattle
             {2,2,2,2,1,1,3,3}, //row 4
             {2,2,2,2,1,1,3,3}, //row 5
             {2,2,1,0,1,2,3,3}, //row 6
-            {0,2,2,2,2,2,0,0}, //row 7
+            {0,2,2,2,2,2,0,4}, //row 7
         };
 
-        
+
         private enum Direction
         {
             Down = 0,
             Up = 1,
             Right = 2,
-            Left = 3            
+            Left = 3,
+            GameOver = 4
         }
 
 
@@ -74,7 +75,7 @@ namespace HyperspaceCheeseBattle
                 };
 
                 Console.WriteLine($"{players[i].Name}");
-            }                       
+            }
         }
 
 
@@ -90,7 +91,7 @@ namespace HyperspaceCheeseBattle
 
         // makes a move for the player given in playerNo
         private static Player PlayerTurn(Player p)
-        {         
+        {
             Console.WriteLine($"\nIt's {p.Name}'s turn");
             int rollValue = RollDice();
             Console.WriteLine($"{p.Name} rolled {rollValue}");
@@ -103,7 +104,7 @@ namespace HyperspaceCheeseBattle
 
             if (direction == Direction.Up)
             {
-                if(p.PositionY + rollValue <= 7)
+                if (p.PositionY + rollValue <= 7)
                 {
                     newY += rollValue;  //1
                 }
@@ -114,7 +115,7 @@ namespace HyperspaceCheeseBattle
             }
             else if (direction == Direction.Down)
             {
-                if(p.PositionY - rollValue >= 0)
+                if (p.PositionY - rollValue >= 0)
                 {
                     newY -= rollValue;
                 }
@@ -125,7 +126,7 @@ namespace HyperspaceCheeseBattle
             }
             else if (direction == Direction.Right)
             {
-                if(p.PositionX + rollValue <= 7)
+                if (p.PositionX + rollValue <= 7)
                 {
                     newX += rollValue;
                 }
@@ -136,7 +137,7 @@ namespace HyperspaceCheeseBattle
             }
             else //left
             {
-                if(p.PositionX - rollValue >= 0)
+                if (p.PositionX - rollValue >= 0)
                 {
                     newX -= rollValue;
                 }
@@ -148,17 +149,17 @@ namespace HyperspaceCheeseBattle
 
             Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX}, {newY})");
 
-                
+
             bool rocketInSquare = RocketInSquare(newX, newY);
-           
+
             if (rocketInSquare == true)
             {
                 do
-                {                    
+                {
                     Console.WriteLine("in the while loop");
 
                     direction = (Direction)board[newY, newX];
-                    Console.WriteLine($"direction in do while loop moves {direction} for coordinates: ({newX},{newY})" );
+                    Console.WriteLine($"direction in do while loop moves {direction} for coordinates: ({newX},{newY})");
 
                     if (direction == Direction.Up)
                     {
@@ -177,7 +178,7 @@ namespace HyperspaceCheeseBattle
                         newX -= 1;
                     }
 
-                    Console.WriteLine($"New pending coordinates to test for ({newX},{newY})");   
+                    Console.WriteLine($"New pending coordinates to test for ({newX},{newY})");
 
                     rocketInSquare = RocketInSquare(newX, newY);
 
@@ -199,7 +200,7 @@ namespace HyperspaceCheeseBattle
             {
                 Console.WriteLine($"player{i + 1}: {players[i].PositionX}, player{i + 1}: {players[i].PositionY}");
 
-                if(players[i].PositionX == newX && players[i].PositionY == newY)
+                if (players[i].PositionX == newX && players[i].PositionY == newY)
                 {
                     Console.WriteLine("rocket in square = true");
                     return true;
