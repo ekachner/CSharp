@@ -10,10 +10,14 @@ namespace HyperspaceCheeseBattle
 
             ResetGame();
 
+            //keep going through looping through players WHILE GameOver == false            
             for (var i = 0; i < players.Length; i++)
             {
                 players[i] = PlayerTurn(players[i]);
             }
+            ShowStatus(players);
+
+
 
         }
 
@@ -50,7 +54,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        static Player[] players = new Player[NumberOfPlayers()];
+        static Player[] players = new Player[4];
 
         static int NumberOfPlayers()
         {
@@ -62,6 +66,7 @@ namespace HyperspaceCheeseBattle
         // reads in the player information for a new game
         static void ResetGame()
         {
+            //NumberOfPlayers();
             Console.WriteLine($"You have selected {players.Length} players");
 
             for (int i = 0; i < players.Length; i++)
@@ -78,19 +83,10 @@ namespace HyperspaceCheeseBattle
             }
         }
 
-
-        static int RollDice()
-        {
-            //Random random = new Random();
-            //int roll = random.Next(1, 7);
-            //return roll;
-
-            return 1;
-        }
+        
 
 
-        // makes a move for the player given in playerNo
-        private static Player PlayerTurn(Player p)
+        static Player PlayerTurn(Player p)
         {
             Console.WriteLine($"\nIt's {p.Name}'s turn");
             int rollValue = RollDice();
@@ -106,7 +102,7 @@ namespace HyperspaceCheeseBattle
             {
                 if (p.PositionY + rollValue <= 7)
                 {
-                    newY += rollValue;  //1
+                    newY += rollValue;  
                 }
                 else
                 {
@@ -135,7 +131,7 @@ namespace HyperspaceCheeseBattle
                     Console.WriteLine(loseTurn);
                 }
             }
-            else //left
+            else if (direction == Direction.Left)
             {
                 if (p.PositionX - rollValue >= 0)
                 {
@@ -146,8 +142,12 @@ namespace HyperspaceCheeseBattle
                     Console.WriteLine(loseTurn);
                 }
             }
+            else
+            {
+                Console.WriteLine("You have reached the final destination! You are the winner!!!");
+            }
 
-            Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX}, {newY})");
+            Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX},{newY})");
 
 
             bool rocketInSquare = RocketInSquare(newX, newY);
@@ -155,9 +155,7 @@ namespace HyperspaceCheeseBattle
             if (rocketInSquare == true)
             {
                 do
-                {
-                    Console.WriteLine("in the while loop");
-
+                {                  
                     direction = (Direction)board[newY, newX];
                     Console.WriteLine($"direction in do while loop moves {direction} for coordinates: ({newX},{newY})");
 
@@ -183,22 +181,41 @@ namespace HyperspaceCheeseBattle
                     rocketInSquare = RocketInSquare(newX, newY);
 
                 } while (rocketInSquare == true);
+            } //end if statement for do-while
+
+
+            bool cheeseInSquare = CheeseInSquare(newX, newY);
+
+            if(cheeseInSquare == true)
+            {
+                Console.WriteLine("You have landed on a cheese square!!!");
+                string decision = ChooseBetween("What would you like to do with your cheese power? " +
+                    "You may either roll again or you can fire a \"Cheezy Deathray\" at another player on the board. " +
+                    "(Roll again = R  OR  Deathray = D", "R", "D");
+                //do something with their answer.
+                //if roll again recall PlayerTurn() method.
+                //if deathray prompt which player they want to shoot, display each players coordinates and have them pick which player to shoot.
+                //prompt THAT player which unoccupied square on the bottom do they want to go to.
+                //end of this player's turn.
+
             }
+
 
             p.PositionX = newX;
             p.PositionY = newY;
             Console.WriteLine($"{p.Name} has landed on boardsquare ({p.PositionX}, {p.PositionY}).\n");
             return p;
-        }
+
+            
+        } // end PlayerTurn();
 
 
         // returns true if there is a rocket in the specified square
         static bool RocketInSquare(int newX, int newY)
         {
-
             for (int i = 0; i < players.Length; i++)
             {
-                Console.WriteLine($"player{i + 1}: {players[i].PositionX}, player{i + 1}: {players[i].PositionY}");
+                Console.WriteLine($"player{i + 1} ({players[i].PositionX},{players[i].PositionY})");
 
                 if (players[i].PositionX == newX && players[i].PositionY == newY)
                 {
@@ -211,6 +228,23 @@ namespace HyperspaceCheeseBattle
         }
 
 
+        // returns true if there is cheese in the specified square
+        static bool CheeseInSquare(int X, int Y)
+        {
+            return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4));
+        }
+
+
+        static bool GameOver(int newX, int newY)
+        {
+            if(newX == 7 && newY == 7)
+            {
+                Console.WriteLine("GameOver = true");
+                return true;
+            }
+            Console.WriteLine("GameOver = false");
+            return false;
+        }
 
 
 
@@ -218,16 +252,69 @@ namespace HyperspaceCheeseBattle
 
 
 
+        static void ShowStatus(Player[] players)
+        {
+            Console.WriteLine("Hyperspace Cheese Battle Report");
+            Console.WriteLine("===============================");
+            Console.WriteLine($"There are {players.Length} players in the game");
+            foreach(Player p in players)
+            {
+                Console.WriteLine($"{p.Name} is on square ({p.PositionX},{p.PositionY})");
+            }
+        }
 
-        //These are supplementary Methods to help out with funcationality of the other methods.
 
-        public static string EnterPlayerName()
+        static string EnterPlayerName()
         {
             string name = ReadString("Please enter a player's name: ");
             return name;
         }
 
-        public static int ReadInteger(string prompt, int min, int max)
+
+        static int[] diceValues = new int[] { 2, 2, 3, 3 };
+        static int diceValuePosition = 0;
+        static int RollDice()
+        {
+            {
+                int dots = diceValues[diceValuePosition];
+                diceValuePosition = diceValuePosition + 1;
+                if (diceValuePosition == diceValues.Length)
+                {
+                    diceValuePosition = 0;
+                }
+                return dots;
+            }
+        }
+
+
+        static int RandomDiceRoll()
+        {
+            Random random = new Random();
+            int roll = random.Next(1, 7);
+            return roll;
+        }
+
+
+        //asks user to choose between two values
+        static string ChooseBetween(string prompt, string option1, string option2)
+        {
+            do
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine().ToUpper().Trim();
+                if (input == option1 || input == option2)
+                {
+                    return input;
+                }
+                else
+                {
+                    Console.WriteLine($"Error: Please select {option1} or {option2}");
+                }
+            } while (true);
+        }
+
+
+        static int ReadInteger(string prompt, int min, int max)
         {
             int result = min - 1;
             do
@@ -249,7 +336,7 @@ namespace HyperspaceCheeseBattle
             return result;
         }
 
-        public static string ReadString(string prompt)
+        static string ReadString(string prompt)
         {
             string result;
             do
@@ -261,11 +348,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        //// returns true if there is cheese in the specified square
-        //static bool CheeseInSquare(int X, int Y)
-        //{
-        //    return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4));
-        //}
+        
     }
 }
 
