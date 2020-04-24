@@ -5,6 +5,7 @@ namespace HyperspaceCheeseBattle
     class Program
     {
         static bool winStatus = false;
+        static Player[] players;
 
         static void Main(string[] args)
         {
@@ -13,23 +14,27 @@ namespace HyperspaceCheeseBattle
             do
             {
                 ResetGame();
-
-                do
+                
+                while (winStatus == false)
                 {
                     for (var i = 0; i < players.Length; i++)
                     {
-                        players[i] = PlayerTurn(players[i]);                       
+                        PlayerTurn(players[i]);
+                        if(winStatus == true)
+                        {
+                            break;
+                        }
                     }
                     ShowStatus(players);
                 }
-                while (winStatus == false);
 
                 decision = ChooseBetween("\nWould you like to play again? (Y or N)", "Y", "N");
 
-            } while (decision == "Y");           
+            } while (decision == "Y");
+
+            Console.WriteLine("\nThank you for playing!");
         }
         
-
 
         // 2D array that holds the board and mirrored across the X axis to flip the Y values.
         static int[,] board = new int[,]
@@ -41,7 +46,7 @@ namespace HyperspaceCheeseBattle
             {2,2,2,2,1,1,3,3}, //row 4
             {2,2,2,2,1,1,3,3}, //row 5
             {2,2,1,0,1,2,3,3}, //row 6
-            {0,2,2,2,2,2,0,4}, //row 7
+            {0,2,2,2,2,2,0,5}, //row 7
         };
 
         
@@ -51,11 +56,11 @@ namespace HyperspaceCheeseBattle
             Up = 1,
             Right = 2,
             Left = 3,
-            GameOver = 4
+            Win = 5
         }
 
 
-        struct Player
+        class Player
         {
             public string Name;
             public int PositionX;
@@ -63,19 +68,12 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        static Player[] players = new Player[4]; //or "numberOfPlayers" and awaken method in Reset()
-
-        static int NumberOfPlayers()
-        {
-            int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
-            return numberOfPlayers;
-        }
-
-
         // reads in the player information for a new game
         static void ResetGame()
         {
-            //NumberOfPlayers();
+            int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
+            players = new Player[numberOfPlayers];
+
             Console.WriteLine($"\nYou have selected {players.Length} players");
 
             for (int i = 0; i < players.Length; i++)
@@ -90,43 +88,17 @@ namespace HyperspaceCheeseBattle
 
                 Console.WriteLine($"{players[i].Name}");
             }
-            winStatus = false;
-        }
-
-        
-        //static Player[] MakeMoves()
-        //{
-        //    int i;
-        //    for (i = 0; i < players.Length; i++)
-        //    {
-        //        players[i] = PlayerTurn(players[i]);
-        //    }
-
-        //    //ShowStatus(players);
-        //    return players;
-        //}
-
-
-        static int[] diceValues = new int[] { 2,2,2,3 };
-        static int diceValuePosition = 0;
-        static int RollDice()
-        {
-            {
-                int dots = diceValues[diceValuePosition];
-                diceValuePosition += 1;
-                if (diceValuePosition == diceValues.Length)
-                {
-                    diceValuePosition = 0;
-                }
-                return dots;
-            }
+            winStatus = false;            
         }
 
 
-        static Player PlayerTurn(Player p)
+        static void PlayerTurn(Player p)
         {
             Console.WriteLine($"\nIt's {p.Name}'s turn");
-            int rollValue = RollDice();
+            Console.Write($"{p.Name} please roll your dice (ENTER)");
+            Console.ReadLine();
+            Console.WriteLine("=========================================");
+            int rollValue = RandomDiceRoll();
             Console.WriteLine($"{p.Name} rolled {rollValue}");
             Direction direction = (Direction)board[p.PositionY, p.PositionX];
 
@@ -144,7 +116,7 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
-                    return p;
+                    return;
                 }
             }
             else if (direction == Direction.Down)
@@ -156,7 +128,7 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
-                    return p;
+                    return;
                 }
             }
             else if (direction == Direction.Right)
@@ -168,10 +140,10 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
-                    return p;
+                    return;
                 }
             }
-            else if (direction == Direction.Right) //left
+            else //left
             {
                 if (p.PositionX - rollValue >= 0)
                 {
@@ -180,15 +152,9 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
-                    return p;
+                    return;
                 }
-            }
-            else
-            {
-                Console.WriteLine("in Direction detection conditional, for ");
-            }
-            
-
+            }            
             Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX},{newY})");
 
 
@@ -223,13 +189,16 @@ namespace HyperspaceCheeseBattle
                     rocketInSquare = RocketInSquare(newX, newY);
 
                 } while (rocketInSquare == true);
-            } //end if statement for do-while
+            } 
+            p.PositionX = newX;
+            p.PositionY = newY;      
 
 
             bool cheeseInSquare = CheeseInSquare(newX, newY);
 
             if(cheeseInSquare == true)
             {
+                Console.WriteLine($"new coordinates = ({p.PositionX},{p.PositionY})");
                 Console.WriteLine("\nYou have landed on a cheese square!!!\nHere is the current status of your rivals:");
                 for (int i = 0; i < players.Length; i++)
                 {
@@ -242,6 +211,7 @@ namespace HyperspaceCheeseBattle
                         Console.WriteLine($"{players[i].Name} is on square ({players[i].PositionX},{players[i].PositionY})");
                     }
                 }
+
                 string decision = ChooseBetween("\nWhat would you like to do with your cheese power? " +
                     "You may either roll again or you can fire a \"Cheezy Deathray\" at another player on the board. " +
                     "(Roll again OR Deathray - Choose: R or D)", "R", "D");
@@ -250,96 +220,31 @@ namespace HyperspaceCheeseBattle
                     p.PositionX = newX;
                     p.PositionY = newY;                    
                     PlayerTurn(p);
-                    return p;
+                    return;
                 }
-                if(decision == "D")
+                if (decision == "D")
                 {
-                    //int[] rivalNumber = new int[players.Length - 1];
-                    //int j = 1;
-                    //int rivalNumberPosition = 0;
+                    int rivalChosen = ChooseRival(p);   //somehow need to ensure they choose one of the valid numbers
+                    Console.WriteLine($"You have chosen {players[rivalChosen].Name}");
 
-                    ////this generates the player[i] and a new array value 
-                    //Console.WriteLine("Which of your rivals do you wish to ZAP?");
-                    //for (int i = 0; i < players.Length; i++)
-                    //{
-                    //    if (players[i].Name == p.Name)
-                    //    {
-                    //        Console.Write("");
-                    //    }
-                    //    else
-                    //    {
-                    //        Console.WriteLine($"{players[i].Name} = {j}"); //somehow need the number to be assigned to the player displayed
-                    //        rivalNumber[i] = new int { };
-                    //        j++;
-                    //    }
-                    //}
-                    //string rivalChosen = Console.In.ReadLine();
-                    //Console.WriteLine($"You have chosen {rivalChosen}");
-
-
-                    //for(int i = 0; i < rivalNumber.Length; i++)
-                    //{
-                    //    int rivalNumberChosen = rivalNumber[i];
-                    //}
-
-                    //rivalNumberPosition += 1;
-                    //if (rivalNumberPosition == rivalNumber.Length)
-                    //{
-                        
-                    //}
-
-
-                    //this generates the player[i] and 
-                    Console.WriteLine("Which of your rivals do you wish to ZAP?");
-                    for (int i = 0; i < players.Length; i++)
-                    {
-                        if (players[i].Name == p.Name)
-                        {
-                            Console.Write("");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"{players[i].Name} = {i + 1}");
-                        }
-                    }
-                    int rivalChosen = Convert.ToInt32(Console.In.ReadLine());   //somehow need to ensure they choose one of the valid numbers
-                    Console.WriteLine($"You have chosen {players[rivalChosen]}");
-
-                    Console.Write($"\n{players[rivalChosen].Name} which column of row 1 do you wish to move to?: ");
-                    Console.ReadLine();
-                    //create switch statement for column cases and determine whether they are open or not. Use rocketInSquare method
-                    //but instead of taking them to the do while loop, keep prompting them till they choose a column that is empty.
-
-                    
-
-
-                }
-                //if deathray prompt which player they want to shoot, display each players coordinates and have them pick which player to shoot.
-                //prompt THAT player and ask them which unoccupied column of row 1 they would like to go to. run the test for rocketInSquare again.
-                //end of this player's turn. RocketInSquare(players[rivalChosen].PositionX, players[rivalChosen].PositionY);
-
-            } //end of dealing with cheese power for CheeseInSquare method
-
+                    ChooseColumnNumber(players[rivalChosen]);                                    
+                }                
+            }
 
             p.PositionX = newX;
             p.PositionY = newY;
             Console.WriteLine($"{p.Name} has landed on boardsquare ({p.PositionX}, {p.PositionY}).\n");
 
-
             winStatus = GameOver(p.PositionX, p.PositionY);
-
             
             if (winStatus == true)
             {               
-                Console.WriteLine($"In PlayerTurn {p.Name} has won the game!");
+                Console.WriteLine($"{p.Name} has won the game!");
             }
-
-            return p;
-            
+            return;            
         } // end PlayerTurn() method;
 
-
-        // returns true if there is a rocket in the specified square
+       
         static bool RocketInSquare(int newX, int newY)
         {
             for (int i = 0; i < players.Length; i++)
@@ -357,13 +262,142 @@ namespace HyperspaceCheeseBattle
         }
 
 
+        static void ChooseColumnNumber(Player p)
+        {
+            int column;
+            bool rivalInSquare = false;
+            int newX;
+            int newY;
+
+            do
+            {
+                column = ChooseColumn($"{p.Name} please select the column of row 1 you would like to be sent to.\n Your options are: 1, 2, 3, 4, 5, 6, 7, 8: ", 1, 2, 3, 4, 5, 6, 7, 8);
+                switch (column)
+                {
+                    case 1:
+                        newY = 0;
+                        newX = 0;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 2:
+                        newY = 0;
+                        newX = 1;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 3:
+                        newY = 0;
+                        newX = 2;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 4:
+                        newY = 0;
+                        newX = 3;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 5:
+                        newY = 0;
+                        newX = 4;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 6:
+                        newY = 0;
+                        newX = 5;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 7:
+                        newY = 0;
+                        newX = 6;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                    case 8:
+                        newY = 0;
+                        newX = 7;
+                        Console.WriteLine($"column {(newX, newY)} was chosen");
+                        if (RocketInSquare(newX, newY) == true)
+                        {
+                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                            Console.WriteLine("There's already someone here, please choose another column");
+                            break;
+                        }
+                        p.PositionX = newX;
+                        p.PositionY = newY;
+                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                        return;
+                }
+            } while (rivalInSquare == true);
+        }
+
+
         // returns true if there is cheese in the specified square
         static bool CheeseInSquare(int X, int Y)
         {
             return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4));
         }
 
-
+        //checks if a player has reached square (7,7)
         static bool GameOver(int newX, int newY)
         {
             if(newX == 7 && newY == 7)
@@ -376,11 +410,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
-
-
-        
-
-
+        //displays players coordinates after one round of gameplay
         static void ShowStatus(Player[] players)
         {
             Console.WriteLine("\nHyperspace Cheese Battle Report");
@@ -393,6 +423,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
+        //in the reset method to manually enter a name for a player
         static string EnterPlayerName()
         {
             string name = ReadString("Please enter a player's name: ");
@@ -405,6 +436,59 @@ namespace HyperspaceCheeseBattle
             Random random = new Random();
             int roll = random.Next(1, 7);
             return roll;
+        }
+
+
+        static int[] diceValues = new int[] { 2, 2, 2, 3 };
+        static int diceValuePosition = 0;
+        static int RollDice()
+        {
+            {
+                int dots = diceValues[diceValuePosition];
+                diceValuePosition += 1;
+                if (diceValuePosition == diceValues.Length)
+                {
+                    diceValuePosition = 0;
+                }
+                return dots;
+            }
+        }
+
+
+        static int ChooseRival(Player p)
+        {
+            int input;
+            int i;
+
+            do
+            {
+                try
+                {
+                    Console.Write("\nWhich of your rivals do you wish to ZAP?\n");
+                    for (i = 0; i < players.Length; i++)
+                    {
+                            if (players[i].Name != p.Name)
+                            {
+                                Console.WriteLine($"{players[i].Name} = {i + 1}");  //outputting eligible players 
+                            }
+                    }
+                    input = int.Parse(Console.ReadLine());
+                    input -= 1;               
+                    if (players[input].Name != p.Name)
+                    {                        
+                        return input;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nYou can't choose yourself...turd!");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"\n{(e.Message)} \n" +
+                        $"Please select one of the eligible candidates");
+                }
+            } while (true);  
         }
 
 
@@ -445,6 +529,33 @@ namespace HyperspaceCheeseBattle
         }
 
 
+        static int ChooseColumn(string prompt, int column1, int column2, int column3, int column4, int column5, int column6, int column7, int column8)
+        {
+            int inputValue = 0;
+            do
+            {
+                try
+                {
+                    Console.Write(prompt);
+                    string input = Console.ReadLine().Trim();
+                    inputValue = int.Parse(input);
+                    if (inputValue == column1 || inputValue == column2 || inputValue == column3 || inputValue == column4 || inputValue == column5 || inputValue == column6 || inputValue == column7 || inputValue == column8)
+                    {
+                        return inputValue;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Error: Please select {column1}, {column2}, {column3}, {column4}, {column5}, {column6}, {column7} or {column8}.");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Error: {(e.Message)}.");
+                }
+            } while (true);
+        }
+
+
         static int ReadInteger(string prompt, int min, int max)
         {
             int result = min - 1;
@@ -467,6 +578,7 @@ namespace HyperspaceCheeseBattle
             return result;
         }
 
+
         static string ReadString(string prompt)
         {
             string result;
@@ -476,10 +588,6 @@ namespace HyperspaceCheeseBattle
                 result = Console.ReadLine();
             } while (result == "");
             return result;
-        }
-
-
-        
+        }        
     }
 }
-
