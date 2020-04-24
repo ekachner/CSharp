@@ -105,13 +105,13 @@ namespace HyperspaceCheeseBattle
         //}
 
 
-        static int[] diceValues = new int[] { 2, 2, 3, 3 };
+        static int[] diceValues = new int[] { 2,2,2,3 };
         static int diceValuePosition = 0;
         static int RollDice()
         {
             {
                 int dots = diceValues[diceValuePosition];
-                diceValuePosition = diceValuePosition + 1;
+                diceValuePosition += 1;
                 if (diceValuePosition == diceValues.Length)
                 {
                     diceValuePosition = 0;
@@ -142,6 +142,7 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
+                    return p;
                 }
             }
             else if (direction == Direction.Down)
@@ -153,6 +154,7 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
+                    return p;
                 }
             }
             else if (direction == Direction.Right)
@@ -164,9 +166,10 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
+                    return p;
                 }
             }
-            else if (direction == Direction.Left)
+            else //left
             {
                 if (p.PositionX - rollValue >= 0)
                 {
@@ -175,12 +178,10 @@ namespace HyperspaceCheeseBattle
                 else
                 {
                     Console.WriteLine(loseTurn);
+                    return p;
                 }
             }
-            else
-            {
-                Console.WriteLine("You have reached the final destination! You are the winner!!!");
-            }
+            
 
             Console.WriteLine($"New coordinates after rolling {rollValue} is ({newX},{newY})");
 
@@ -247,32 +248,71 @@ namespace HyperspaceCheeseBattle
                 }
                 if(decision == "D")
                 {
-                    int[] rivalNumber = new int[players.Length - 1];
+                    //int[] rivalNumber = new int[players.Length - 1];
+                    //int j = 1;
+                    //int rivalNumberPosition = 0;
 
+                    ////this generates the player[i] and a new array value 
+                    //Console.WriteLine("Which of your rivals do you wish to ZAP?");
+                    //for (int i = 0; i < players.Length; i++)
+                    //{
+                    //    if (players[i].Name == p.Name)
+                    //    {
+                    //        Console.Write("");
+                    //    }
+                    //    else
+                    //    {
+                    //        Console.WriteLine($"{players[i].Name} = {j}"); //somehow need the number to be assigned to the player displayed
+                    //        rivalNumber[i] = new int { };
+                    //        j++;
+                    //    }
+                    //}
+                    //string rivalChosen = Console.In.ReadLine();
+                    //Console.WriteLine($"You have chosen {rivalChosen}");
+
+
+                    //for(int i = 0; i < rivalNumber.Length; i++)
+                    //{
+                    //    int rivalNumberChosen = rivalNumber[i];
+                    //}
+
+                    //rivalNumberPosition += 1;
+                    //if (rivalNumberPosition == rivalNumber.Length)
+                    //{
+                        
+                    //}
+
+
+                    //this generates the player[i] and 
                     Console.WriteLine("Which of your rivals do you wish to ZAP?");
-                    for(int i = 0; i < players.Length; i++)
+                    for (int i = 0; i < players.Length; i++)
                     {
-                        if(players[i].Name == p.Name)
+                        if (players[i].Name == p.Name)
                         {
                             Console.Write("");
                         }
                         else
                         {
-                            for(int j = 1; j < players.Length; j++)
-                            {
-                                Console.WriteLine($"{players[i].Name} = {j}");
-                                j = new int { };
-                            }
-                        }                        
-                    }                    
+                            Console.WriteLine($"{players[i].Name} = {i + 1}");
+                        }
+                    }
+                    int rivalChosen = Convert.ToInt32(Console.In.ReadLine());   //somehow need to ensure they choose one of the valid numbers
+                    Console.WriteLine($"You have chosen {players[rivalChosen]}");
+
+                    Console.Write($"\n{players[rivalChosen].Name} which column of row 1 do you wish to move to?: ");
+                    Console.ReadLine();
+                    //create switch statement for column cases and determine whether they are open or not. Use rocketInSquare method
+                    //but instead of taking them to the do while loop, keep prompting them till they choose a column that is empty.
+
+                    
 
 
                 }
                 //if deathray prompt which player they want to shoot, display each players coordinates and have them pick which player to shoot.
-                //prompt THAT player which unoccupied square on the bottom do they want to go to.
-                //end of this player's turn.
+                //prompt THAT player and ask them which unoccupied column of row 1 they would like to go to. run the test for rocketInSquare again.
+                //end of this player's turn. RocketInSquare(players[rivalChosen].PositionX, players[rivalChosen].PositionY);
 
-            } //end of dealing with cheese power if CheeseInSquare
+            } //end of dealing with cheese power for CheeseInSquare method
 
 
             p.PositionX = newX;
@@ -281,6 +321,7 @@ namespace HyperspaceCheeseBattle
 
 
             winStatus = GameOver(p.PositionX, p.PositionY);
+
             
             if (winStatus == true)
             {               
@@ -331,7 +372,7 @@ namespace HyperspaceCheeseBattle
 
 
 
-
+        
 
 
         static void ShowStatus(Player[] players)
@@ -351,9 +392,6 @@ namespace HyperspaceCheeseBattle
             string name = ReadString("Please enter a player's name: ");
             return name;
         }
-
-
-        
 
 
         static int RandomDiceRoll()
