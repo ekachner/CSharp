@@ -9,18 +9,20 @@ namespace HyperspaceCheeseBattle
         static void Main(string[] args)
         {
             string decision;
+
             do
             {
                 ResetGame();
 
-                while (winStatus == false)
+                do
                 {
                     for (var i = 0; i < players.Length; i++)
                     {
-                        players[i] = PlayerTurn(players[i]);
-                    }                   
+                        players[i] = PlayerTurn(players[i]);                       
+                    }
                     ShowStatus(players);
                 }
+                while (winStatus == false);
 
                 decision = ChooseBetween("\nWould you like to play again? (Y or N)", "Y", "N");
 
@@ -42,7 +44,7 @@ namespace HyperspaceCheeseBattle
             {0,2,2,2,2,2,0,4}, //row 7
         };
 
-
+        
         private enum Direction
         {
             Down = 0,
@@ -61,7 +63,7 @@ namespace HyperspaceCheeseBattle
         }
 
 
-        static Player[] players = new Player[4];
+        static Player[] players = new Player[4]; //or "numberOfPlayers" and awaken method in Reset()
 
         static int NumberOfPlayers()
         {
@@ -81,7 +83,7 @@ namespace HyperspaceCheeseBattle
                 //string name = EnterPlayerName();
                 players[i] = new Player
                 {
-                    Name = $"Player{i + 1}",
+                    Name = $"Player{i + 1}", //and use "name" if adding names manually
                     PositionX = 0,
                     PositionY = 0
                 };
@@ -137,7 +139,7 @@ namespace HyperspaceCheeseBattle
             {
                 if (p.PositionY + rollValue <= 7)
                 {
-                    newY += rollValue;  
+                    newY += rollValue;
                 }
                 else
                 {
@@ -169,7 +171,7 @@ namespace HyperspaceCheeseBattle
                     return p;
                 }
             }
-            else //left
+            else if (direction == Direction.Right) //left
             {
                 if (p.PositionX - rollValue >= 0)
                 {
@@ -180,6 +182,10 @@ namespace HyperspaceCheeseBattle
                     Console.WriteLine(loseTurn);
                     return p;
                 }
+            }
+            else
+            {
+                Console.WriteLine("in Direction detection conditional, for ");
             }
             
 
@@ -325,7 +331,7 @@ namespace HyperspaceCheeseBattle
             
             if (winStatus == true)
             {               
-                Console.WriteLine($"{p.Name} has won the game!");
+                Console.WriteLine($"In PlayerTurn {p.Name} has won the game!");
             }
 
             return p;
