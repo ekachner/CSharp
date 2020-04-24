@@ -53,6 +53,7 @@ namespace HyperspaceCheeseBattle
         static void Welcome()
         {
             Console.WriteLine("============================================\n\n      Hyperspace Cheese Battle      \n\n============================================");
+            DisplayBoard();
         }
 
         static Player[] CreatePlayers()
@@ -64,7 +65,6 @@ namespace HyperspaceCheeseBattle
             foreach (var player in players)
             {
                 int playerNo = PlayerIndex(player);
-                //name needs to be unique
                 Console.WriteLine($"Enter the name for Player {playerNo + 1}: ");
                 string playerName = GetPlayerName();
                 players[playerNo] = new Player(playerName, 0, 0);
@@ -83,12 +83,13 @@ namespace HyperspaceCheeseBattle
             while (!nameAccepted) //add && players[p].Name != nameIn
             {
                 nameIn = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Console.ReadLine().Trim());
+                bool checkNameExists = Array.Exists(players, x => x.Name == nameIn);
 
-                if (nameIn.Length > 0 && !nameIn.Contains(" "))
+                if (nameIn.Length > 0 && !nameIn.Contains(" ") && checkNameExists == false)
                 {
                     break;
                 }
-                Console.WriteLine("Name not entered correctly.");
+                Console.WriteLine("Names must be unique.");
                 Console.Write("Enter the players name: ");
             }
             return nameIn;
@@ -220,7 +221,6 @@ namespace HyperspaceCheeseBattle
             foreach (Player player in players)
             {
                 player.PlayerPosition();
-                //Console.WriteLine(board[players[PlayerIndex(player)].X, players[PlayerIndex(player)].Y]);
             }
         }
 
@@ -286,8 +286,6 @@ namespace HyperspaceCheeseBattle
                     count += 1;
                 }
             }
-
-            Console.WriteLine(deathrayOptions.ToString());
             int attackedPlayer = Methods.VerifyNumber("\t   Enter the Number of the Player you wish to attack: ", 1, deathrayOptions.Length);
             for(int i = 0; i < deathrayOptions.Length; i++)
             {
@@ -377,6 +375,12 @@ namespace HyperspaceCheeseBattle
             return spots;
         }
 
+        static int PlayerIndex(Player player)
+        {
+            int playerIndex = Array.FindIndex(players, x => x.Equals(player));
+            return playerIndex;
+        }
+
         enum Direction
         {
             North,
@@ -385,13 +389,6 @@ namespace HyperspaceCheeseBattle
             West,
             Win
         };
-
-        static int PlayerIndex(Player player)
-        {
-            int playerIndex = Array.FindIndex(players, x => x.Equals(player));
-            return playerIndex;
-        }
-
 
         static Direction[,] board = new Direction[,]
         {
@@ -405,19 +402,6 @@ namespace HyperspaceCheeseBattle
             { Direction.North,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.Win },
         };
 
-        public static string PrintDirectionBoard(string direction)
-        {
-            return direction switch
-            {
-                "North" => " \u2191 ",
-                "West" => " \u2192 ",
-                "South" => " \u2193 ",
-                "East" => " \u2190 ",
-                "Win" => " Win",
-                _ => throw new Exception("Invalid state"),
-            };
-        }
-
         public static void DisplayBoard()
         {
             for (int i = 7; i >= 0; i--)
@@ -428,6 +412,19 @@ namespace HyperspaceCheeseBattle
                 }
                 Console.WriteLine();
             }
+        }
+
+        public static string PrintDirectionBoard(string direction)
+        {
+            return direction switch
+            {
+                "North" => " \u2191 ",
+                "East" => " \u2192 ",
+                "South" => " \u2193 ",
+                "West" => " \u2190 ",
+                "Win" => " Win",
+                _ => throw new Exception("Invalid state"),
+            };
         }
     }
 }

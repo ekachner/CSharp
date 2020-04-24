@@ -9,25 +9,14 @@ namespace HyperspaceCheeseBattle
             string playAgain = "Y";
 
             Game.TestMode();
-            Game.ResetGame();
 
-            do
+            while (playAgain == "Y")
             {
+                Game.ResetGame();
                 Game.PlayGame();
                 playAgain = Methods.StringChoice("Would you like to play again? ( Y / N ): ", "Y", "N");
-                if (playAgain == "Y")
-                {
-                    string samePlayers = Methods.StringChoice("Play with the same players? ( Y / N ): ", "Y", "N");
-                    if (samePlayers == "N")
-                    {
-                        Game.ResetGame();
-                    }
-                    else
-                    {
-                        Game.ResetXY();
-                    }
-                }
-            } while (playAgain == "Y");
+                Console.Clear();
+            };
         }
 
         static void Tests()
