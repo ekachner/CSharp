@@ -78,13 +78,20 @@ namespace HyperspaceCheeseBattle
 
             for (int i = 0; i < players.Length; i++)
             {
-                //string name = EnterPlayerName();
+                string name = EnterPlayerName();
                 players[i] = new Player
                 {
-                    Name = $"Player{i + 1}", //and use "name" if adding names manually
+                    Name = name,
                     PositionX = 0,
                     PositionY = 0
                 };
+
+                //players[i] = new Player
+                //{
+                //    Name = $"Player{i + 1}",
+                //    PositionX = 0,
+                //    PositionY = 0
+                //};
 
                 Console.WriteLine($"{players[i].Name}");
             }
@@ -397,6 +404,7 @@ namespace HyperspaceCheeseBattle
             return ((X == 0 && Y == 3) || (X == 3 && Y == 5) || (X == 4 && Y == 1) || (X == 6 && Y == 4));
         }
 
+
         //checks if a player has reached square (7,7)
         static bool GameOver(int newX, int newY)
         {
@@ -469,7 +477,7 @@ namespace HyperspaceCheeseBattle
                     {
                             if (players[i].Name != p.Name)
                             {
-                                Console.WriteLine($"{players[i].Name} = {i + 1}");  //outputting eligible players 
+                                Console.WriteLine($"{players[i].Name} = {i + 1}"); 
                             }
                     }
                     input = int.Parse(Console.ReadLine());
