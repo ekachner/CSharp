@@ -150,6 +150,49 @@ namespace ZachBoardGame1
 
             
 
+            if (CheesePower(player.X, player.Y))
+            {
+                Console.WriteLine("Player " + player.Name + "has landed on a Cheese Powerup!");
+                Console.WriteLine("They have the option to roll again or shoot rocket at another player.");
+                Console.WriteLine("To shoot rocket press 'f' and write player name. To roll again press 'r'.");
+                string decision = Console.ReadLine();
+                if (decision == "f")
+                {
+                    string target;
+                    bool validName = false;
+                    
+                    while (validName == false)
+                    {
+                        Console.WriteLine("Select which player to fire rocket at: ");
+                        target = Console.ReadLine();
+                        if (string.IsNullOrEmpty(target) || target == player.Name)
+                        {
+                            Console.WriteLine("Enter a valid name.");
+                        }
+                        else
+                        {
+                            for (int i = 0; i < players.Length; i++)
+                            {
+                                if (players[i].Name == target)
+                                {
+                                    validName = true;
+                                    break;
+                                }
+                            }
+                            Console.WriteLine("Enter a valid name.");
+                        }
+                    } 
+
+                }
+                else if (decision == "r")
+                {
+                    DiceThrow();
+                    PlayerTurn(player);
+                }
+                
+            }
+
+
         }
 
         static bool GameOver = false;
