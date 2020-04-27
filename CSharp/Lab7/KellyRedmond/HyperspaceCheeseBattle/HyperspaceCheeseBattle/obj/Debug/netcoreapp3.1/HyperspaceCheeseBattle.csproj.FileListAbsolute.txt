@@ -1,0 +1,12 @@
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/bin/Debug/netcoreapp3.1/HyperspaceCheeseBattle.deps.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/bin/Debug/netcoreapp3.1/HyperspaceCheeseBattle.runtimeconfig.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/bin/Debug/netcoreapp3.1/HyperspaceCheeseBattle.runtimeconfig.dev.json
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/bin/Debug/netcoreapp3.1/HyperspaceCheeseBattle.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/bin/Debug/netcoreapp3.1/HyperspaceCheeseBattle.pdb
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.csprojAssemblyReference.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.csproj.CoreCompileInputs.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.AssemblyInfoInputs.cache
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.AssemblyInfo.cs
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.dll
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.pdb
+/Users/kellyredmond/Projects/class-fullstack-19-20/CSharp/Lab7/KellyRedmond/HyperspaceCheeseBattle/HyperspaceCheeseBattle/obj/Debug/netcoreapp3.1/HyperspaceCheeseBattle.genruntimeconfig.cache

@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{BACA87E4-2208-4814-BCF2-7F11452B109C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hyperspace_Cheese_Battle/Game.cs">
+    <Files>
+      <File FileName="Hyperspace_Cheese_Battle/Program.cs" Line="14" Column="1" />
+      <File FileName="Hyperspace_Cheese_Battle/Player.cs" Line="19" Column="14" />
+      <File FileName="Hyperspace_Cheese_Battle/Board.cs" Line="30" Column="2" />
+      <File FileName="Hyperspace_Cheese_Battle/Dice.cs" Line="1" Column="1" />
+      <File FileName="Hyperspace_Cheese_Battle/Game.cs" Line="105" Column="53" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hyperspace_Cheese_Battle" expanded="True">
+            <Node name="Hyperspace_Cheese_Battle" expanded="True">
+              <Node name="Game.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Hyperspace__Cheese__Battle PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
