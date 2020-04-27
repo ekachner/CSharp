@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{25A9EC9B-1D51-41DB-915B-220490668D38}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CrazyTimers/ReturnTypes.cs">
+    <Files>
+      <File FileName="CrazyTimers/Program.cs" Line="24" Column="1" />
+      <File FileName="CrazyTimers/Inputs.cs" Line="3" Column="22" />
+      <File FileName="CrazyTimers/TimeConversions.cs" Line="25" Column="10" />
+      <File FileName="CrazyTimers/ReturnTypes.cs" Line="6" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CrazyTimers" expanded="True">
+            <Node name="CrazyTimers" expanded="True">
+              <Node name="ReturnTypes.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CrazyTimers PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
