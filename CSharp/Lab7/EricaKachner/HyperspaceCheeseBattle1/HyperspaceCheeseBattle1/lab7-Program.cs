@@ -37,7 +37,7 @@ namespace HyperspaceCheeseBattle
             Down = 0,
             Up = 1,
             Right = 2,
-            Left = 3,
+            Left = 3            
         }
 
 
@@ -48,9 +48,10 @@ namespace HyperspaceCheeseBattle
             public int PositionY;
         }
 
-        static Player[] players = new Player[GetNumberOfPlayers()];
 
-        static int GetNumberOfPlayers()
+        static Player[] players = new Player[NumberOfPlayers()];
+
+        static int NumberOfPlayers()
         {
             int numberOfPlayers = ReadInteger("How many players are there?: ", 2, 4);
             return numberOfPlayers;
@@ -60,13 +61,11 @@ namespace HyperspaceCheeseBattle
         // reads in the player information for a new game
         static void ResetGame()
         {
-            //1D array that holds the player information
-            //Player[] players = new Player[numberOfPlayers];
-
             Console.WriteLine($"You have selected {players.Length} players");
 
             for (int i = 0; i < players.Length; i++)
             {
+                //string name = EnterPlayerName();
                 players[i] = new Player
                 {
                     Name = $"Player{i + 1}",
@@ -75,12 +74,10 @@ namespace HyperspaceCheeseBattle
                 };
 
                 Console.WriteLine($"{players[i].Name}");
-            }
-                       
+            }                       
         }
 
 
-        // returns the value of the next dice throw
         static int RollDice()
         {
             //Random random = new Random();
@@ -137,7 +134,7 @@ namespace HyperspaceCheeseBattle
                     Console.WriteLine(loseTurn);
                 }
             }
-            else // left
+            else //left
             {
                 if(p.PositionX - rollValue >= 0)
                 {
@@ -157,13 +154,11 @@ namespace HyperspaceCheeseBattle
             if (rocketInSquare == true)
             {
                 do
-                {
-                    //rocketInSquare = false;
+                {                    
                     Console.WriteLine("in the while loop");
 
-
                     direction = (Direction)board[newY, newX];
-                    Console.WriteLine($"direction in do while loop moves {direction} for coordinates: ({newX}, {newY} )" );
+                    Console.WriteLine($"direction in do while loop moves {direction} for coordinates: ({newX},{newY})" );
 
                     if (direction == Direction.Up)
                     {
@@ -184,9 +179,7 @@ namespace HyperspaceCheeseBattle
 
                     Console.WriteLine($"New pending coordinates to test for ({newX},{newY})");   
 
-                rocketInSquare = RocketInSquare(newX, newY);
-                Console.WriteLine("while loop after rocketInSquare " + rocketInSquare);
-                    
+                    rocketInSquare = RocketInSquare(newX, newY);
 
                 } while (rocketInSquare == true);
             }
@@ -225,7 +218,13 @@ namespace HyperspaceCheeseBattle
 
 
 
+        //These are supplementary Methods to help out with funcationality of the other methods.
 
+        public static string EnterPlayerName()
+        {
+            string name = ReadString("Please enter a player's name: ");
+            return name;
+        }
 
         public static int ReadInteger(string prompt, int min, int max)
         {
@@ -260,29 +259,6 @@ namespace HyperspaceCheeseBattle
             return result;
         }
 
-        static int MoveDown(int rollValue, int PositionY)
-        {
-            PositionY -= rollValue;
-            return PositionY;
-        }
-
-        static int MoveUp(int rollValue, int PositionY)
-        {
-            PositionY += rollValue;
-            return PositionY;
-        }
-
-        static int MoveLeft(int rollValue, int PositionX)
-        {
-            PositionX -= rollValue;
-            return PositionX;
-        }
-
-        static int MoveRight(int rollValue, int PositionX)
-        {
-            PositionX += rollValue;
-            return PositionX;
-        }
 
         //// returns true if there is cheese in the specified square
         //static bool CheeseInSquare(int X, int Y)

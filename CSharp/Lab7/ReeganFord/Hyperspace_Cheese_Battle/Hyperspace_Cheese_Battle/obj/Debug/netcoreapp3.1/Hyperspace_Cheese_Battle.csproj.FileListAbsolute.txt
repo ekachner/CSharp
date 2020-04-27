@@ -1,0 +1,11 @@
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.deps.json
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.runtimeconfig.json
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.runtimeconfig.dev.json
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.dll
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/bin/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.pdb
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/obj/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.csprojAssemblyReference.cache
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/obj/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.AssemblyInfoInputs.cache
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/obj/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.AssemblyInfo.cs
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/obj/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.dll
+/Users/reeganford/Projects/Hyperspace_Cheese_Battle/Hyperspace_Cheese_Battle/obj/Debug/netcoreapp3.1/Hyperspace_Cheese_Battle.pdb

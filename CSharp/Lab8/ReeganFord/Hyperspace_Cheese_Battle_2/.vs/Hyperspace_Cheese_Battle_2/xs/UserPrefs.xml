@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{F1FDBCAA-B010-4771-B8EB-3C73F6E0A7B1}|Default">
+  <MonoDevelop.Ide.ItemProperties.Hyperspace__Cheese__Battle__2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hyperspace_Cheese_Battle_2/Dice.cs">
+    <Files>
+      <File FileName="Hyperspace_Cheese_Battle_2/Program.cs" Line="19" Column="1" />
+      <File FileName="Hyperspace_Cheese_Battle_2/Board.cs" Line="1" Column="1" />
+      <File FileName="Hyperspace_Cheese_Battle_2/Player.cs" Line="24" Column="13" />
+      <File FileName="Hyperspace_Cheese_Battle_2/Game.cs" Line="100" Column="78" />
+      <File FileName="Hyperspace_Cheese_Battle_2/Inputs.cs" Line="1" Column="1" />
+      <File FileName="Hyperspace_Cheese_Battle_2/Dice.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hyperspace_Cheese_Battle_2" expanded="True">
+            <Node name="Hyperspace_Cheese_Battle_2" expanded="True">
+              <Node name="Dice.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

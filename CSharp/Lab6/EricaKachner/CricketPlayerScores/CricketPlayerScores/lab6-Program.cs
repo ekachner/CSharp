@@ -66,7 +66,7 @@ namespace CricketPlayerScores
                 SortByName(players);
 
                 foreach(Player p in players)
-            {
+                {
                     Console.WriteLine($"{p.Name} scored {p.Score} points");
                 }
             }
