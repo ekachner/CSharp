@@ -1,0 +1,12 @@
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.csprojAssemblyReference.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.csproj.CoreCompileInputs.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.AssemblyInfoInputs.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.AssemblyInfo.cs
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/bin/Debug/netcoreapp3.1/CrazyTimers.deps.json
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/bin/Debug/netcoreapp3.1/CrazyTimers.runtimeconfig.json
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/bin/Debug/netcoreapp3.1/CrazyTimers.runtimeconfig.dev.json
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/bin/Debug/netcoreapp3.1/CrazyTimers.dll
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/bin/Debug/netcoreapp3.1/CrazyTimers.pdb
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.dll
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.pdb
+/Users/kellyredmond/Projects/class-projects/CSharp/CrazyTimers/CrazyTimers/CrazyTimers/obj/Debug/netcoreapp3.1/CrazyTimers.genruntimeconfig.cache

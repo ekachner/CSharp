@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{26070470-9FD2-4188-8699-8597262BA31F}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CrazyTimers" expanded="True">
+            <Node name="CrazyTimers" expanded="True">
+              <Node name="Time.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CrazyTimers PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
