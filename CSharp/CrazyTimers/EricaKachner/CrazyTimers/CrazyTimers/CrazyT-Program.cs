@@ -106,10 +106,8 @@ namespace CrazyTimers
             int inputMinutes = ReadInteger("\nEnter the minutes: ", 0, 59);
             int inputSeconds = ReadInteger("\nEnter the seconds: ", 0, 59);
 
-            minutes = inputHours * 60;
-            minutes += inputMinutes;
-            seconds = minutes * 60;
-            seconds += inputSeconds;
+            minutes = (inputHours * 60) + inputMinutes;            
+            seconds = (minutes * 60) + inputSeconds;           
             Console.WriteLine($"\nThere are {seconds} seconds in {inputHours} hours, {inputMinutes} minutes, and {inputSeconds} seconds");           
         }
 
