@@ -17,7 +17,7 @@ namespace CrazyTimers
 
         static void SecondsTillEvent()
         {
-            string eventName = ReadString("What's the name of your event: ");
+            string eventName = ReadString("Enter the name of your event: ");
             int year = ReadInteger("\nEnter the year of the event: ", 2020, 2120);
             int month = ReadInteger("\nEnter the month the event will take place: ", 0, 12);
             int day;
@@ -47,7 +47,7 @@ namespace CrazyTimers
             } while (((month == 4 || month == 6 || month == 9 || month == 11) && (day == 31)) || (month == 2 && day > 28));
             int hour = ReadInteger("\nEnter the hour of the event, in military time (0-23) : ", 0, 23);
 
-            DateTime eventDate = new System.DateTime(year, month, day, hour, 0, 0);
+            DateTime eventDate = new DateTime(year, month, day, hour, 0, 0);
             DateTime currentDate = DateTime.Now;
             TimeSpan timeLeft = eventDate.Subtract(currentDate);            
             Console.WriteLine($"\nThere are {Math.Ceiling(timeLeft.TotalSeconds)} seconds till {eventName}");
@@ -57,11 +57,6 @@ namespace CrazyTimers
 
         static void SecondsToHours()
         {
-            int seconds;
-            int minutes;
-            int hours;
-
-
             int result = -1;
             do
             {
@@ -88,9 +83,9 @@ namespace CrazyTimers
             } while (result < 0);
             Console.WriteLine("\nValue Accepted!");            
 
-            seconds = result % 60;
-            minutes = (result / 60) % 60;
-            hours = (result / 60) / 60;      
+            int seconds = result % 60;
+            int minutes = (result / 60) % 60;
+            int hours = result / 3600;      
 
             Console.WriteLine($"\nThere are {hours} hours, {minutes} minutes and {seconds} seconds in {result} seconds");
         }
@@ -99,15 +94,12 @@ namespace CrazyTimers
 
         static void HoursToSeconds()
         {            
-            int minutes;
-            int seconds;
-
             int inputHours = ReadInteger("\nEnter the hours: ", 0, 23);
             int inputMinutes = ReadInteger("\nEnter the minutes: ", 0, 59);
             int inputSeconds = ReadInteger("\nEnter the seconds: ", 0, 59);
 
-            minutes = (inputHours * 60) + inputMinutes;            
-            seconds = (minutes * 60) + inputSeconds;           
+            int minutes = (inputHours * 60) + inputMinutes;            
+            int seconds = (minutes * 60) + inputSeconds;           
             Console.WriteLine($"\nThere are {seconds} seconds in {inputHours} hours, {inputMinutes} minutes, and {inputSeconds} seconds");           
         }
 
