@@ -16,8 +16,8 @@ namespace CrazyTimers
         
 
         static void SecondsTillEvent()
-        {            
-            // hour day month year
+        {
+            string eventName = ReadString("What's the name of your event: ");
             int year = ReadInteger("\nEnter the year of the event: ", 2020, 2120);
             int month = ReadInteger("\nEnter the month the event will take place: ", 0, 12);
             int day;
@@ -50,7 +50,7 @@ namespace CrazyTimers
             DateTime eventDate = new System.DateTime(year, month, day, hour, 0, 0);
             DateTime currentDate = DateTime.Now;
             TimeSpan timeLeft = eventDate.Subtract(currentDate);            
-            Console.WriteLine($"\nThere are {Math.Ceiling(timeLeft.TotalSeconds)} seconds till your event");
+            Console.WriteLine($"\nThere are {Math.Ceiling(timeLeft.TotalSeconds)} seconds till {eventName}");
         }
 
 
@@ -141,6 +141,18 @@ namespace CrazyTimers
                     Console.WriteLine("\nError: " + (e.Message) + $"\nPlease enter a valid number between {min} and {max}");
                 }
             } while ((result < min) || (result > max));
+            return result;
+        }
+
+
+        static string ReadString(string prompt)
+        {
+            string result;
+            do
+            {
+                Console.Write(prompt);
+                result = Console.ReadLine();
+            } while (result == "");
             return result;
         }
     }
