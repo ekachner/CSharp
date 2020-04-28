@@ -50,21 +50,24 @@ namespace CrazyTimers
         static void CountdownTimer()
         {
             Console.WriteLine("Countdown Timer Calculator by Kelly Redmond\nVersion 1.0");
-            Time userTimer = new Time(Time.GetHours(), Time.GetMinutes(), Time.GetSeconds());
+            Timer userTimer = new Timer();
+            userTimer.GetHours();
+            userTimer.GetMinutes();
+            userTimer.GetSeconds();
             userTimer.CalculateSeconds();
         }
 
         static void ReverseCountdown()
         {
             Console.WriteLine("Reverse Countdown Timer Calculator by Kelly Redmond\nVersion 1.0");
-            Time userTimer = new Time();
+            Timer userTimer = new Timer();
             userTimer.CalculateRegTime();
         }
 
         static void SecondsToDate()
         {
             Console.WriteLine("Seconds to Calculator by Kelly Redmond\nVersion 1.0");
-            Time userTimer = new Time();
+            DayTimer userTimer = new DayTimer();
             userTimer.SecondsTill();
 
         }

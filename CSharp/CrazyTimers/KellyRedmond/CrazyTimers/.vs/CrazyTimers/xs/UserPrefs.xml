@@ -5,7 +5,7 @@
         <State name="__root__">
           <Node name="CrazyTimers" expanded="True">
             <Node name="CrazyTimers" expanded="True">
-              <Node name="Time.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
