@@ -85,22 +85,25 @@ namespace CrazyTimers
 
             int seconds = result % 60;
             int minutes = (result / 60) % 60;
-            int hours = result / 3600;      
+            int hours = (result / 3600) % 24;
+            int days = (result / 3600) / 24;
 
-            Console.WriteLine($"\nThere are {hours} hours, {minutes} minutes and {seconds} seconds in {result} seconds");
+            Console.WriteLine($"\nThere are {days} days, {hours} hours, {minutes} minutes and {seconds} seconds in {result} seconds");
         }
 
 
 
         static void HoursToSeconds()
-        {            
+        {
+            int inputDays = ReadInteger("\nEnter the days: ", 0, 364);
             int inputHours = ReadInteger("\nEnter the hours: ", 0, 23);
             int inputMinutes = ReadInteger("\nEnter the minutes: ", 0, 59);
             int inputSeconds = ReadInteger("\nEnter the seconds: ", 0, 59);
 
-            int minutes = (inputHours * 60) + inputMinutes;            
+            int hours = (inputDays * 24) + inputHours;
+            int minutes = (hours * 60) + inputMinutes;            
             int seconds = (minutes * 60) + inputSeconds;           
-            Console.WriteLine($"\nThere are {seconds} seconds in {inputHours} hours, {inputMinutes} minutes, and {inputSeconds} seconds");           
+            Console.WriteLine($"\nThere are {seconds} seconds in {inputDays} days, {inputHours} hours, {inputMinutes} minutes, and {inputSeconds} seconds");           
         }
 
 
