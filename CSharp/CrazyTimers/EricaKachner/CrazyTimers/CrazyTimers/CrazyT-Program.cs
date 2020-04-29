@@ -9,8 +9,8 @@ namespace CrazyTimers
         static void Main(string[] args)
         {
             SecondsTillEvent();
-            SecondsToHours();
-            HoursToSeconds();
+            SecondsToDays();
+            DaysToSeconds();
         }
 
         
@@ -19,7 +19,7 @@ namespace CrazyTimers
         {
             string eventName = ReadString("Enter the name of your event: ");
             int year = ReadInteger("\nEnter the year of the event: ", 2020, 2120);
-            int month = ReadInteger("\nEnter the month the event will take place: ", 0, 12);
+            int month = ReadInteger("\nEnter the month the event will take place: ", 1, 12);
             int day;
             do
             {
@@ -55,7 +55,7 @@ namespace CrazyTimers
 
 
 
-        static void SecondsToHours()
+        static void SecondsToDays()
         {
             int result = -1;
             do
@@ -66,7 +66,7 @@ namespace CrazyTimers
 
                     do
                     {
-                        Console.Write("\nPlease enter the total amount of seconds you wish to convert into hours, minutes and seconds: ");
+                        Console.Write("\nPlease enter the total amount of seconds you wish to convert into days, hours, minutes and seconds: ");
                         intString = Console.ReadLine();
                     } while (intString == "");
                     
@@ -93,7 +93,7 @@ namespace CrazyTimers
 
 
 
-        static void HoursToSeconds()
+        static void DaysToSeconds()
         {
             int inputDays = ReadInteger("\nEnter the days: ", 0, 364);
             int inputHours = ReadInteger("\nEnter the hours: ", 0, 23);
