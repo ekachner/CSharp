@@ -1,0 +1,13 @@
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker.deps.json
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker.runtimeconfig.json
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker.runtimeconfig.dev.json
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker.dll
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/Dice_Chucker.pdb
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/bin/Debug/netcoreapp3.1/DiceLibrary.dll
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.csprojAssemblyReference.cache
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.AssemblyInfoInputs.cache
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.AssemblyInfo.cs
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.csproj.CopyComplete
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.dll
+/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/Debug/netcoreapp3.1/Dice_Chucker.pdb

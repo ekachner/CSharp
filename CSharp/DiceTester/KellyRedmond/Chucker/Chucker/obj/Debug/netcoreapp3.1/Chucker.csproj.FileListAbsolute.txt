@@ -1,0 +1,14 @@
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/Chucker.deps.json
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/Chucker.runtimeconfig.json
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/Chucker.runtimeconfig.dev.json
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/Chucker.dll
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/Chucker.pdb
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/bin/Debug/netcoreapp3.1/DiceLibrary.dll
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.csprojAssemblyReference.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.csproj.CoreCompileInputs.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.AssemblyInfoInputs.cache
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.AssemblyInfo.cs
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.csproj.CopyComplete
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.dll
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.pdb
+/Users/kellyredmond/Projects/class-projects/CSharp/DiceTester/Chucker/Chucker/obj/Debug/netcoreapp3.1/Chucker.genruntimeconfig.cache

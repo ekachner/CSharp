@@ -1,20 +1,22 @@
 ﻿<Properties StartupConfiguration="{6A182183-7CC2-4110-92C3-D995F8C154B9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CricketPlayerScores/Sort.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CricketPlayerScores/Program.cs">
     <Files>
       <File FileName="CricketPlayerScores/Sort.cs" Line="21" Column="40" />
+      <File FileName="CricketPlayerScores/CreatePlayer.cs" Line="1" Column="1" />
+      <File FileName="CricketPlayerScores/Methods.cs" Line="1" Column="1" />
+      <File FileName="CricketPlayerScores/Player.cs" Line="1" Column="1" />
+      <File FileName="CricketPlayerScores/Program.cs" Line="1" Column="1" />
+      <File FileName="CricketPlayerScores/Team.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CricketPlayerScores" expanded="True">
             <Node name="CricketPlayerScores" expanded="True">
-              <Node name="Sort.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

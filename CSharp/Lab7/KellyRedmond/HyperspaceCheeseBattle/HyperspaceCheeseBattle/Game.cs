@@ -154,10 +154,11 @@ namespace HyperspaceCheeseBattle
             return false;
         }
 
-        static void OccupiedMessage(int number, int playerNo)
+        static int OccupiedMessage(int number, int playerNo)
         {
             Console.WriteLine($"Someone was here first, {players[playerNo].Name} is bounced to the next square");
             number = 1;
+            return number;
         }
 
         static int DiceThrow()
@@ -190,12 +191,12 @@ namespace HyperspaceCheeseBattle
 
         static Direction[,] board = new Direction[,]
         {
-            { Direction.North,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.South },
-            { Direction.North,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West },
-            { Direction.North,Direction.North,Direction.North,Direction.North,Direction.North,Direction.West,Direction.North,Direction.West },
-            { Direction.North,Direction.South,Direction.East,Direction.West,Direction.West,Direction.West,Direction.South,Direction.West },
-            { Direction.North,Direction.North,Direction.East,Direction.North,Direction.North,Direction.North,Direction.North,Direction.West },
-            { Direction.North,Direction.North,Direction.East,Direction.North,Direction.North,Direction.North,Direction.East,Direction.North },
+            { Direction.North,Direction.East,Direction.East,Direction.East,Direction.East,Direction.East,Direction.East,Direction.South },
+            { Direction.North,Direction.East,Direction.East,Direction.East,Direction.East,Direction.East,Direction.East,Direction.East },
+            { Direction.North,Direction.North,Direction.North,Direction.North,Direction.North,Direction.East,Direction.North,Direction.East },
+            { Direction.North,Direction.South,Direction.East,Direction.East,Direction.East,Direction.East,Direction.South,Direction.East },
+            { Direction.North,Direction.North,Direction.West,Direction.North,Direction.North,Direction.North,Direction.North,Direction.East },
+            { Direction.North,Direction.North,Direction.East,Direction.North,Direction.North,Direction.North,Direction.East,Direction.East },
             { Direction.North,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.South },
             { Direction.North,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.West,Direction.Win },
         };
