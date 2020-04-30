@@ -94,6 +94,7 @@ namespace DiceTester
         {
             Random random = new Random();
             Console.WriteLine("\nWelcome to a Fair Dice. \nIf at any time you would like to quit enter \"Q\" \n\"ENTER\" to roll\n");
+            Console.ReadLine();
 
             do
             {
