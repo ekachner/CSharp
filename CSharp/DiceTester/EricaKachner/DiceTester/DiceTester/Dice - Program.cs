@@ -6,7 +6,7 @@ namespace DiceTester
     class Chucker
     {
         static DiceClass dice = new DiceClass();
-        static int numberOfRolls = 100;
+        static int numberOfRolls = 1000;
 
 
         static void Main(string[] args)
@@ -30,7 +30,6 @@ namespace DiceTester
                 five = 0;
                 six = 0;
 
-                DiceClass dice = new DiceClass();
                 string name = ReadString("\nEnter name of player: ");
                 Console.WriteLine($"\n{name}'s Test");
                 dice.SetPlayer($"{name}");
@@ -41,11 +40,11 @@ namespace DiceTester
                 {
                     int rollNumber = dice.IntSpots();
                     Console.WriteLine($"{i + 1}. {rollNumber}");
-                    TestSpots(rollNumber);
+                    TallyValues(rollNumber);
                     total += rollNumber;
                     roll++;
                 }
-                Console.WriteLine($"Testing {numberOfRolls} rolls:");
+                Console.WriteLine($"Testing {numberOfRolls} rolls from player {name}:");
                 Console.WriteLine($"{one} Ones   {two} Twos   {three} Threes   {four} Fours   {five} Fives   {six} Sixes");
                 Console.WriteLine($"average of rolls: {total / numberOfRolls: 0.0}");
 
@@ -80,11 +79,11 @@ namespace DiceTester
             {
                 int rollNumber = random.Next(1, 7);
                 Console.WriteLine($"{i + 1}. {rollNumber}");
-                TestSpots(rollNumber);
+                TallyValues(rollNumber);
                 total += rollNumber;
                 roll++;
             }
-            Console.WriteLine($"Testing {numberOfRolls} rolls:");
+            Console.WriteLine($"Testing {numberOfRolls} rolls from \"Fair Dice\":");
             Console.WriteLine($"{one} Ones   {two} Twos   {three} Threes   {four} Fours   {five} Fives   {six} Sixes");
             Console.WriteLine($"average of rolls: {total / numberOfRolls: 0.0}");
         }
@@ -115,7 +114,7 @@ namespace DiceTester
         static int five;
         static int six;
 
-        static void TestSpots(int roll)
+        static void TallyValues(int roll)
         {            
             if (roll == 1)
             {
