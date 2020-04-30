@@ -279,121 +279,21 @@ namespace HyperspaceCheeseBattle
             do
             {
                 column = ChooseColumn($"{p.Name} please select the column of row 1 you would like to be sent to.\n Your options are: 1, 2, 3, 4, 5, 6, 7, 8: ", 1, 2, 3, 4, 5, 6, 7, 8);
-                switch (column)
+                
+                newY = 0;
+                newX = column - 1;
+                Console.WriteLine($"column {(newX, newY)} was chosen");
+                if (RocketInSquare(newX, newY) == true)
                 {
-                    case 1:
-                        newY = 0;
-                        newX = 0;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 2:
-                        newY = 0;
-                        newX = 1;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 3:
-                        newY = 0;
-                        newX = 2;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 4:
-                        newY = 0;
-                        newX = 3;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 5:
-                        newY = 0;
-                        newX = 4;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 6:
-                        newY = 0;
-                        newX = 5;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 7:
-                        newY = 0;
-                        newX = 6;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
-                    case 8:
-                        newY = 0;
-                        newX = 7;
-                        Console.WriteLine($"column {(newX, newY)} was chosen");
-                        if (RocketInSquare(newX, newY) == true)
-                        {
-                            rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
-                            Console.WriteLine("There's already someone here, please choose another column");
-                            break;
-                        }
-                        p.PositionX = newX;
-                        p.PositionY = newY;
-                        Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
-                        return;
+                    rivalInSquare = RocketInSquare(p.PositionX, p.PositionY);
+                    Console.WriteLine("There's already someone here, please choose another column");
+                    //break;
                 }
+                p.PositionX = newX;
+                p.PositionY = newY;
+                Console.WriteLine($"new coordinates for {p.Name} are ({p.PositionX}, {p.PositionY})");
+                return;                   
+                
             } while (rivalInSquare == true);
         }
 
