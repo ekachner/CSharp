@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CrazyTimers
 {
@@ -11,10 +11,17 @@ namespace CrazyTimers
             SecondsTillEvent();
             SecondsToDays();
             DaysToSeconds();
+<<<<<<< HEAD
+        }
+
+        
+
+=======
         }
 
         
         
+>>>>>>> e93fd626d08fd075fbaa9e2d281fb83dcc13fc63
         static void SecondsTillEvent()
         {
             string eventName = ReadString("Enter the name of your event: ");
@@ -51,10 +58,17 @@ namespace CrazyTimers
             DateTime currentDate = DateTime.Now;
             TimeSpan timeLeft = eventDate.Subtract(currentDate);           
             Console.WriteLine($"\nThere are {Math.Ceiling(timeLeft.TotalSeconds)} seconds till {eventName}");
+<<<<<<< HEAD
+        }
+
+
+
+=======
         }
         
 
 
+>>>>>>> e93fd626d08fd075fbaa9e2d281fb83dcc13fc63
         static void SecondsToDays()
         {
             int result = -1;
@@ -149,7 +163,12 @@ namespace CrazyTimers
             } while (result == "");
             return result;
         }
+<<<<<<< HEAD
+    }
+}
+=======
     }
 }
 
 
+>>>>>>> e93fd626d08fd075fbaa9e2d281fb83dcc13fc63
