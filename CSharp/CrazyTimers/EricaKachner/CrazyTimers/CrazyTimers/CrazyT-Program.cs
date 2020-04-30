@@ -82,8 +82,8 @@ namespace CrazyTimers
                 }
             } while (result < 0);
             Console.WriteLine("\nValue Accepted!");            
-
             int seconds = result % 60;
+
             int minutes = (result / 60) % 60;
             int hours = (result / 3600) % 24;
             int days = (result / 3600) / 24;
