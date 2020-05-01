@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CrazyTimers
 {
@@ -11,6 +11,7 @@ namespace CrazyTimers
             SecondsTillEvent();
             SecondsToDays();
             DaysToSeconds();
+
         }
 
         
@@ -23,9 +24,9 @@ namespace CrazyTimers
             int day;
             do
             {
-                day = ReadInteger("\nEnter the day of the event: ", 0, 31);
+                day = ReadInteger("\nEnter the day of the event: ", 1, 31);
                 if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31)
-                {                    
+                {
                     Console.WriteLine("\nThis month only contains up to 30 days");
                 }
                 else if (year % 4 == 0 && month == 2 && day == 29)
@@ -43,13 +44,13 @@ namespace CrazyTimers
                     {
                         Console.WriteLine($"\twhich {year} is not");
                     }
-                }
+                }                
             } while (((month == 4 || month == 6 || month == 9 || month == 11) && (day == 31)) || (month == 2 && day > 28));
             int hour = ReadInteger("\nEnter the hour of the event, in military time (0-23) : ", 0, 23);
 
             DateTime eventDate = new DateTime(year, month, day, hour, 0, 0);
             DateTime currentDate = DateTime.Now;
-            TimeSpan timeLeft = eventDate.Subtract(currentDate);            
+            TimeSpan timeLeft = eventDate.Subtract(currentDate);           
             Console.WriteLine($"\nThere are {Math.Ceiling(timeLeft.TotalSeconds)} seconds till {eventName}");
         }
 
@@ -82,8 +83,8 @@ namespace CrazyTimers
                 }
             } while (result < 0);
             Console.WriteLine("\nValue Accepted!");            
-
             int seconds = result % 60;
+
             int minutes = (result / 60) % 60;
             int hours = (result / 3600) % 24;
             int days = (result / 3600) / 24;
@@ -138,6 +139,7 @@ namespace CrazyTimers
         }
 
 
+
         static string ReadString(string prompt)
         {
             string result;
@@ -148,5 +150,11 @@ namespace CrazyTimers
             } while (result == "");
             return result;
         }
+
+
     }
 }
+
+
+
+
