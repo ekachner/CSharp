@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{630FAB4C-B817-4B49-AFFB-1CDC190EA094}|Default">
+  <MonoDevelop.Ide.ItemProperties.DodgeyDice PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DodgeyDice/Program.cs">
+    <Files>
+      <File FileName="../../../../../CrazyTimers/CrazyTimers/Program.cs" Line="1" Column="1" />
+      <File FileName="DodgeyDice/Program.cs" Line="10" Column="24" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DodgeyDice" expanded="True">
+            <Node name="DodgeyDice" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="AssemblyDependencies" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

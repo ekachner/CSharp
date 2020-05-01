@@ -1,0 +1,14 @@
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.csprojAssemblyReference.cache
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.csproj.CoreCompileInputs.cache
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.AssemblyInfoInputs.cache
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.AssemblyInfo.cs
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DodgeyDice.deps.json
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DodgeyDice.runtimeconfig.json
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DodgeyDice.runtimeconfig.dev.json
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DodgeyDice.dll
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DodgeyDice.pdb
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/bin/Debug/netcoreapp3.1/DiceLibrary.dll
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.csproj.CopyComplete
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.dll
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.pdb
+/Users/shanemcquilkin/Projects/class-fullstack-19-20/CSharp/DiceTester/ShaneMcQuilkin/DodgeyDice/DodgeyDice/obj/Debug/netcoreapp3.1/DodgeyDice.genruntimeconfig.cache
