@@ -11,7 +11,6 @@ namespace CrazyTimers
             SecondsTillEvent();
             SecondsToDays();
             DaysToSeconds();
-
         }
 
         
@@ -63,13 +62,7 @@ namespace CrazyTimers
             {
                 try
                 {
-                    string intString;
-
-                    do
-                    {
-                        Console.Write("\nPlease enter the total amount of seconds you wish to convert into days, hours, minutes and seconds: ");
-                        intString = Console.ReadLine();
-                    } while (intString == "");
+                    string intString = ReadString("\nPlease enter the total amount of seconds you wish to convert into days, hours, minutes and seconds: ");
                     
                     result = int.Parse(intString);
                     if (result < 0)
@@ -82,9 +75,9 @@ namespace CrazyTimers
                     Console.WriteLine("\nError: " + (e.Message));
                 }
             } while (result < 0);
-            Console.WriteLine("\nValue Accepted!");            
+            Console.WriteLine("\nValue Accepted!");
+            
             int seconds = result % 60;
-
             int minutes = (result / 60) % 60;
             int hours = (result / 3600) % 24;
             int days = (result / 3600) / 24;
@@ -116,13 +109,7 @@ namespace CrazyTimers
             {
                 try
                 {
-                    string intString;
-
-                    do
-                    {
-                        Console.Write(prompt);
-                        intString = Console.ReadLine();
-                    } while (intString == "");
+                    string intString = ReadString(prompt);
                     
                     result = int.Parse(intString);
                     if (result < min || result > max)
