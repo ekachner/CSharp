@@ -1,0 +1,11 @@
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing.deps.json
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing.runtimeconfig.json
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing.runtimeconfig.dev.json
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing.dll
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/bin/Debug/netcoreapp3.1/Bank_Testing.pdb
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/obj/Debug/netcoreapp3.1/Bank_Testing.csprojAssemblyReference.cache
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/obj/Debug/netcoreapp3.1/Bank_Testing.AssemblyInfoInputs.cache
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/obj/Debug/netcoreapp3.1/Bank_Testing.AssemblyInfo.cs
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/obj/Debug/netcoreapp3.1/Bank_Testing.dll
+/Users/reeganford/Projects/Bank_Testing/Bank_Testing/obj/Debug/netcoreapp3.1/Bank_Testing.pdb
