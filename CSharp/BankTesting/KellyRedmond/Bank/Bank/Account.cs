@@ -8,7 +8,7 @@ namespace Bank
         private decimal balance;
         private int accountNumber;
 
-        private decimal overdraft;
+        private decimal? overdraft;
 
         public int AccountNumber
         {
