@@ -4,32 +4,23 @@ namespace Bank_Testing
 {
     public class Account
     {
-        public string name;
-        public string address;
-        public decimal balance;
-        public decimal Overdraft { get; set; }
+        public string Name { get; private set; }
+        public string Address { get; private set; }
+        public decimal Balance { get; private set; }
+        public decimal Overdraft { get; private set; }
 
         public int AccountNumber { get; }
 
-        public static string AccountString(Account account)
+        public override string ToString()
         {
-            string name = account.name;
-            string address = account.address;
-            string balance = account.balance.ToString("0.00");
-            if(account.Overdraft < 0)
-            {
-                return $"You have insufficient funds. \nName: {name} \nBalance: {balance} \nAddress: {address}";
-            } else
-            {
-                return $"Name: {name} \nBalance: {balance} \nAddress: {address}";
-            }
+            return $"Name: {Name} \nBalance: {Balance} \nAddress: {Address}";
         }
 
         public static bool AccountsEqual(Account account1, Account account2)
         {
-            if(account1.name == account2.name
-                && account1.address == account2.address
-                && account1.balance == account2.balance
+            if(account1.Name == account2.Name
+                && account1.Address == account2.Address
+                && account1.Balance == account2.Balance
                )
             {
                 return true;
@@ -44,9 +35,9 @@ namespace Bank_Testing
             try
             {
                 textOut.WriteLine(AccountNumber);
-                textOut.WriteLine(name);
-                textOut.WriteLine(address);
-                textOut.WriteLine(balance);
+                textOut.WriteLine(Name);
+                textOut.WriteLine(Address);
+                textOut.WriteLine(Balance);
                 textOut.WriteLine(Overdraft);
             }
             catch
@@ -108,9 +99,9 @@ namespace Bank_Testing
 
         public Account(string inName, string inAddress, decimal inBalance, int inAccountNumber, decimal overdraft)
         {
-            name = inName;
-            address = inAddress;
-            balance = inBalance;
+            Name = inName;
+            Address = inAddress;
+            Balance = inBalance;
             AccountNumber = inAccountNumber;
             Overdraft = overdraft;
         }

@@ -26,7 +26,7 @@ namespace Bank_Testing
                 string lastName = LastNames[randLast];
                 string address = StreetAddresses[randAddress];
                 string town = Towns[randTown];
-                Account acc = bank.AddAccount($"{firstName} {lastName}", $"{address}, {town}", randBalance);
+                bank.AddAccount($"{firstName} {lastName}", $"{address}, {town}", randBalance);
             }
 
             return bank.bankAccounts;

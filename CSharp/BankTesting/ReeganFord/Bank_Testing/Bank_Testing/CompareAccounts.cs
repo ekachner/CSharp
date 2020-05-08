@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Diagnostics.CodeAnalysis;
 using System.Collections.Generic;
 
@@ -9,7 +8,7 @@ namespace Bank_Testing
     {
         public bool Equals(Account account1, Account account2)
         {
-            if (account1.name == account2.name && account1.address == account2.address && account1.balance == account2.balance)
+            if (account1.Name == account2.Name && account1.Address == account2.Address && account1.Balance == account2.Balance)
             {
                 return true;
             } else
