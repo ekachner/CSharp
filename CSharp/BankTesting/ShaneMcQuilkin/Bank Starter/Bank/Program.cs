@@ -30,7 +30,7 @@ namespace Bank
         {
             Account compareWith = (Account)obj;
             if (name != compareWith.name || address != compareWith.address ||
-                balance != compareWith.balance || accountNumber != compareWith.accountNumber)
+                balance != compareWith.balance || accountNumber != compareWith.accountNumber || overDraft != compareWith.overDraft)
             {
                 return true;
             }
@@ -41,23 +41,20 @@ namespace Bank
         }
         public override string ToString()
         {
-            return "Name: " + name + "address" + address + "balance" + balance;
+            return "Name: " + name + " address " + address + " balance " + balance;
         }
         public int GetOverDraft()
         {
             return overDraft;
         }
-        public int SetOverDraft(int overDraftValue)
+        public void SetOverDraft(int overDraftValue)
         {
             if(balance <= 0)
             {
                 Console.WriteLine("Your account is over drawn.");
             }
-            else
-            {
-                overDraft = overDraftValue;
-            }
-            return 1;
+           
+            overDraft = overDraftValue;
            
         }
         public bool Save(System.IO.TextWriter textOut)
@@ -277,7 +274,7 @@ namespace Bank
             Bank friendlyBank = new Bank("The Friendly Bank");
             Account a = friendlyBank.AddAccount("Rob", "Hull", 100);
             Account b = friendlyBank.AddAccount("Shane", "McQuikin", 400);
-            if (a.Equals (b))
+            if (a.Equals(b))
             {
                 Console.WriteLine("Test passed");
             }
@@ -287,9 +284,9 @@ namespace Bank
             }
 
             // TODO: Need to add some code that will create a large number of "fake" accounts
-            string[] firstNames = new string[80];
-            string[] surnames = new string[80];
-            string[] townnames = new string[80];
+            string[] firstNames = new string[] { "Shane", "Rob", "Chris" };
+            string[] surnames = new string[] {"McQuilkin", "Hull", "Frost"};
+            string[] townnames = new string[] {"Cheyenne", "Englsnd", "Cheynne"};
             foreach(string surname in surnames)
             {
                 foreach(string firstname in firstNames)
