@@ -43,9 +43,9 @@ namespace Bank
             }
             set
             {
-				decimal newBalance = balance - withdrawal;
+                decimal newBalance = balance - withdrawal;
                 overdraft = newBalance < 0 ? Math.Abs(newBalance) : 0;
-			}
+            }
         }
 
         public bool Save(System.IO.TextWriter textOut)
@@ -145,7 +145,7 @@ namespace Bank
             }
             Console.WriteLine("Account Equals() = true");
             return true;
-        }      
+        }
     }
 
 
@@ -155,7 +155,7 @@ namespace Bank
     class Bank
     {
         private string bankName;
-       
+
         public string BankName
         {
             get
@@ -172,7 +172,7 @@ namespace Bank
             bankName = newBankName;
             bankAccounts = new List<Account>();
         }
-        
+
         public Account AddAccount(string inName, string inAddress, decimal inBalance)
         {
             Account result = new Account(inName, inAddress, inBalance, newAccountNumber);
@@ -282,17 +282,16 @@ namespace Bank
             {
                 return false;
             }
-
-            foreach (Account account in bankAccounts)
+            foreach (Account accountA in bankAccounts)
             {
-                var matchingAccount = compareWith.bankAccounts.FirstOrDefault(x => x.AccountNumber == account.AccountNumber);
+                var matchingAccount = compareWith.bankAccounts.FirstOrDefault(x => x.AccountNumber == accountA.AccountNumber); //Linq statement and lambda functions
                 if (matchingAccount == null)
                 {
                     return false;
                 }
                 else
                 {
-                    if (!account.Equals(matchingAccount))
+                    if (!accountA.Equals(matchingAccount))
                     {
                         return false;
                     }
@@ -300,16 +299,7 @@ namespace Bank
             }
             return true;
         }
-    }        
-
-    
-
-
-
-
-
-
-
+    }
 
 
 
@@ -321,9 +311,10 @@ namespace Bank
             Bank friendlyBank = new Bank("The Friendly Bank");
             GenerateAccounts(friendlyBank);
 
-            Bank unfriendlyBank = new Bank("The Friendly Bank");
+            Bank unfriendlyBank = new Bank("The Unfriendly Bank");
             GenerateAccounts(unfriendlyBank);
             Console.WriteLine("Friendly vs. Unfriendly: " + friendlyBank.Equals(unfriendlyBank));
+
             //Account pickle = friendlyBank.AddAccount("Pickle", "Cheyenne", 50M);
             ////Console.WriteLine("Account created with account number: " + pickle.AccountNumber);
             //Account rick = friendlyBank.AddAccount("Rick", "Cheyenne", 500M);
@@ -362,10 +353,12 @@ namespace Bank
                 foreach (string lastName in lastNames)
                 {
                     string fullName = firstName + " " + lastName;               
-                    Account a = bank.AddAccount(fullName, address[random.Next(0,8)], random.Next(-100, 10000));                    
+                    bank.AddAccount(fullName, address[random.Next(0,8)], random.Next(-100, 10000));                    
                 }
             }
         }
+
+
 	}
 }
 
