@@ -1,11 +1,453 @@
 The Friendly Bank
-3
-2
+181
+90
 1
-Pickle
-Cheyenne
-50
+Jimmy Anderson
+Laramie
+1018
+0
 2
-Rick
+Jimmy Kachner
+Geneva
+7693
+0
+3
+Jimmy Corbet
+Hinesville
+4271
+0
+4
+Jimmy Ahn
+Colorado Springs
+9433
+0
+5
+Jimmy Hegstrom
 Cheyenne
-500
+6388
+0
+6
+Jimmy Pontapee
+Cheyenne
+2405
+0
+7
+Jimmy White
+Colorado Springs
+9896
+0
+8
+Jimmy Lasme
+Hinesville
+6514
+0
+9
+Jimmy Smith
+Colorado Springs
+6114
+0
+10
+Dean Anderson
+Hinesville
+6988
+0
+11
+Dean Kachner
+Stuttgart
+843
+0
+12
+Dean Corbet
+Laramie
+3757
+0
+13
+Dean Ahn
+Tacoma
+1611
+0
+14
+Dean Hegstrom
+Tacoma
+3003
+0
+15
+Dean Pontapee
+Tacoma
+8853
+0
+16
+Dean White
+Gingins
+7139
+0
+17
+Dean Lasme
+Hinesville
+37
+0
+18
+Dean Smith
+Stuttgart
+8043
+0
+19
+Bean Anderson
+Tacoma
+531
+0
+20
+Bean Kachner
+Gingins
+5205
+0
+21
+Bean Corbet
+Colorado Springs
+9937
+0
+22
+Bean Ahn
+Hinesville
+3804
+0
+23
+Bean Hegstrom
+Geneva
+6721
+0
+24
+Bean Pontapee
+Hinesville
+4676
+0
+25
+Bean White
+Laramie
+3470
+0
+26
+Bean Lasme
+Gingins
+1611
+0
+27
+Bean Smith
+Colorado Springs
+6886
+0
+28
+Adam Anderson
+Geneva
+1468
+0
+29
+Adam Kachner
+Stuttgart
+758
+0
+30
+Adam Corbet
+Stuttgart
+4829
+0
+31
+Adam Ahn
+Hinesville
+373
+0
+32
+Adam Hegstrom
+Cheyenne
+2069
+0
+33
+Adam Pontapee
+Cheyenne
+3050
+0
+34
+Adam White
+Gingins
+2995
+0
+35
+Adam Lasme
+Stuttgart
+8745
+0
+36
+Adam Smith
+Tacoma
+2124
+0
+37
+Benjamin Anderson
+Cheyenne
+1707
+0
+38
+Benjamin Kachner
+Geneva
+9555
+0
+39
+Benjamin Corbet
+Geneva
+7720
+0
+40
+Benjamin Ahn
+Stuttgart
+1137
+0
+41
+Benjamin Hegstrom
+Geneva
+3141
+0
+42
+Benjamin Pontapee
+Cheyenne
+4642
+0
+43
+Benjamin White
+Colorado Springs
+3807
+0
+44
+Benjamin Lasme
+Colorado Springs
+-24
+0
+45
+Benjamin Smith
+Gingins
+8349
+0
+46
+Caleb Anderson
+Tacoma
+7714
+0
+47
+Caleb Kachner
+Cheyenne
+166
+0
+48
+Caleb Corbet
+Stuttgart
+2182
+0
+49
+Caleb Ahn
+Tacoma
+4710
+0
+50
+Caleb Hegstrom
+Colorado Springs
+1136
+0
+51
+Caleb Pontapee
+Laramie
+3645
+0
+52
+Caleb White
+Geneva
+3623
+0
+53
+Caleb Lasme
+Gingins
+2990
+0
+54
+Caleb Smith
+Cheyenne
+1592
+0
+55
+Daniel Anderson
+Colorado Springs
+4335
+0
+56
+Daniel Kachner
+Tacoma
+1673
+0
+57
+Daniel Corbet
+Laramie
+8496
+0
+58
+Daniel Ahn
+Stuttgart
+3112
+0
+59
+Daniel Hegstrom
+Stuttgart
+6478
+0
+60
+Daniel Pontapee
+Tacoma
+6962
+0
+61
+Daniel White
+Stuttgart
+5365
+0
+62
+Daniel Lasme
+Hinesville
+1529
+0
+63
+Daniel Smith
+Cheyenne
+126
+0
+64
+Ephraim Anderson
+Laramie
+653
+0
+65
+Ephraim Kachner
+Colorado Springs
+1950
+0
+66
+Ephraim Corbet
+Cheyenne
+9252
+0
+67
+Ephraim Ahn
+Geneva
+8234
+0
+68
+Ephraim Hegstrom
+Stuttgart
+1124
+0
+69
+Ephraim Pontapee
+Tacoma
+6909
+0
+70
+Ephraim White
+Stuttgart
+447
+0
+71
+Ephraim Lasme
+Colorado Springs
+1945
+0
+72
+Ephraim Smith
+Hinesville
+1711
+0
+73
+Frank Anderson
+Cheyenne
+6777
+0
+74
+Frank Kachner
+Hinesville
+2301
+0
+75
+Frank Corbet
+Cheyenne
+5638
+0
+76
+Frank Ahn
+Laramie
+2138
+0
+77
+Frank Hegstrom
+Gingins
+5971
+0
+78
+Frank Pontapee
+Laramie
+5813
+0
+79
+Frank White
+Hinesville
+3068
+0
+80
+Frank Lasme
+Colorado Springs
+5302
+0
+81
+Frank Smith
+Laramie
+9938
+0
+82
+Gideon Anderson
+Tacoma
+503
+0
+83
+Gideon Kachner
+Colorado Springs
+8252
+0
+84
+Gideon Corbet
+Hinesville
+3053
+0
+85
+Gideon Ahn
+Tacoma
+8735
+0
+86
+Gideon Hegstrom
+Geneva
+2830
+0
+87
+Gideon Pontapee
+Hinesville
+7983
+0
+88
+Gideon White
+Geneva
+7365
+0
+89
+Gideon Lasme
+Tacoma
+5038
+0
+90
+Gideon Smith
+Cheyenne
+3318
+0

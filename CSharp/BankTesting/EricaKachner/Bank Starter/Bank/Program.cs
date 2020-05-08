@@ -34,8 +34,7 @@ namespace Bank
             }
         }
 
-
-        static decimal withdrawal;
+        private decimal withdrawal;
         public decimal Overdraft
         {
             get
@@ -44,24 +43,10 @@ namespace Bank
             }
             set
             {
-                decimal newBalance = balance - withdrawal;
-                overdraft = newBalance < 0 ? newBalance : 0;
-            }
+				decimal newBalance = balance - withdrawal;
+                overdraft = newBalance < 0 ? Math.Abs(newBalance) : 0;
+			}
         }
-
-
-  //      public decimal GetOverdraft()
-		//{
-
-		//}
-
-  //      public decimal SetOverdraft()
-		//{
-  //          decimal newBalance = balance - withdrawal;
-  //          overdraft = newBalance < 0 ? newBalance : 0;
-  //      }
-
-
 
         public bool Save(System.IO.TextWriter textOut)
         {
@@ -108,7 +93,7 @@ namespace Bank
             string overdraftText = textIn.ReadLine();
             decimal overdraftValue = decimal.Parse(overdraftText);
 
-            return new Account(nameText, addressText, balanceValue, overdraftValue, accountNumber);
+            return new Account(nameText, addressText, balanceValue, accountNumber);
         }
 
         public static Account Load(string filename)
@@ -298,21 +283,34 @@ namespace Bank
                 return false;
             }
 
-            foreach (Account a in bankAccounts)
+            foreach (Account account in bankAccounts)
             {
-                foreach (Account b in compareWith.bankAccounts)
+                var matchingAccount = compareWith.bankAccounts.FirstOrDefault(x => x.AccountNumber == account.AccountNumber);
+                if (matchingAccount == null)
                 {
-                    if (a.Equals(b))
+                    return false;
+                }
+                else
+                {
+                    if (!account.Equals(matchingAccount))
                     {
-                        Console.WriteLine("In Bank Equals() : These values are the same");
-                        return true;
+                        return false;
                     }
                 }
             }
-            return false;
-        }        
+            return true;
+        }
+    }        
 
-    }
+    
+
+
+
+
+
+
+
+
 
 
 
@@ -321,72 +319,53 @@ namespace Bank
         static void Main(string[] args)
         {
             Bank friendlyBank = new Bank("The Friendly Bank");
-
-            // TODO: Need to add some code that will create a large number of "fake" accounts
             GenerateAccounts(friendlyBank);
 
-            Account pickle = friendlyBank.AddAccount("Pickle", "Cheyenne", 50M, 0);
-            //Console.WriteLine("Account created with account number: " + pickle.AccountNumber);
-            Account rick = friendlyBank.AddAccount("Rick", "Cheyenne", 500M, 0);
-            //Console.WriteLine("Account created with account number: " + rick.AccountNumber);
-
-            TestingEquals(pickle, rick);
-
+            Bank unfriendlyBank = new Bank("The Friendly Bank");
+            GenerateAccounts(unfriendlyBank);
+            Console.WriteLine("Friendly vs. Unfriendly: " + friendlyBank.Equals(unfriendlyBank));
+            //Account pickle = friendlyBank.AddAccount("Pickle", "Cheyenne", 50M);
+            ////Console.WriteLine("Account created with account number: " + pickle.AccountNumber);
+            //Account rick = friendlyBank.AddAccount("Rick", "Cheyenne", 500M);
+            ////Console.WriteLine("Account created with account number: " + rick.AccountNumber);
+            //TestingEquals(pickle, rick);
 
             friendlyBank.Save("test.txt");
-
             Bank loadedBank = Bank.Load("test.txt");
-
-            Console.WriteLine((loadedBank.Equals(friendlyBank)) ? "Checking Loaded Bank and Friendly Bank = Same Bank" : "Checking Loaded Bank and Friendly Bank = Different Bank");
+            Console.WriteLine((loadedBank.Equals(friendlyBank)) ? "Checking Loaded Bank and Friendly Bank = Same Bank" : "Checking Loaded Bank and Friendly Bank = Different Bank");            
         }
 
-
-
-        static void TestingEquals(Account a, Account b)
-        {
-            if (a.Equals(b))
-            {
-                Console.WriteLine($"TestingEquals() Account {a.Name} is SAME as account {b.Name}");
-            }
-            else
-            {
-                Console.WriteLine($"TestingEquals() Account {a.Name} is DIFFERENT from account {b.Name}");
-            }
-        }
-
-
+        //static void TestingEquals(Account a, Account b)
+        //{
+        //    if (a.Equals(b))
+        //    {
+        //        Console.WriteLine($"TestingEquals() Account {a.Name} is SAME as account {b.Name}");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"TestingEquals() Account {a.Name} is DIFFERENT from account {b.Name}");
+        //    }
+        //}
 
         static void GenerateAccounts(Bank bank)
         {
             string[] firstNames = new string[] { "Jimmy", "Dean", "Bean", "Adam", "Benjamin",
-                "Caleb", "Daniel", "Ephraim", "Frankincense", "Giddeon" };
+                "Caleb", "Daniel", "Ephraim", "Frank", "Gideon" };
             string[] lastNames = new string[] { "Anderson", "Kachner", "Corbet", "Ahn",
                 "Hegstrom", "Pontapee", "White", "Lasme", "Smith" };
             string[] address = new string[] { "Cheyenne", "Laramie", "Colorado Springs",
                 "Geneva", "Gingins", "Hinesville", "Tacoma", "Stuttgart" };
-            Random balance = new Random(1);
+            Random random = new Random(1);
 
             foreach (string firstName in firstNames)
             {
                 foreach (string lastName in lastNames)
                 {
-                    string fullName = firstName + " " + lastName;
-                    foreach (string addy in address)
-                    {
-                        Account a = bank.AddAccount(fullName, addy, balance.Next(-100, 10000));
-                        Console.WriteLine(a.ToString());
-                    }
+                    string fullName = firstName + " " + lastName;               
+                    Account a = bank.AddAccount(fullName, address[random.Next(0,8)], random.Next(-100, 10000));                    
                 }
             }
         }
-
-
-        //how to create a test bank with 80 accounts 
-        //Bank testBank = new Bank[80];
-        //GenerateAccounts(testBank);
-        //get and set overBalance methods (book pg.134  VS pdf pg.4)
-        //issues with saving code. How to save everything to my name file in class-fullStack
-
-    }
+	}
 }
 

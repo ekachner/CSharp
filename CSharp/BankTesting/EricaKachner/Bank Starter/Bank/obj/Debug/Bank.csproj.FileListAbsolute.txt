@@ -17,3 +17,10 @@ C:/Users/Rob/SkyDrive/2013-2014 Year/08120 Programming 2/Week 31 Creating a Bank
 /Users/ericakachner/Desktop/Yellow Book C Sharp Programming Course by Rob Miles/Labs/Week 31 Creating a Bank/Bank Starter/Bank/obj/Debug/Bank.csproj.CoreCompileInputs.cache
 /Users/ericakachner/Desktop/Yellow Book C Sharp Programming Course by Rob Miles/Labs/Week 31 Creating a Bank/Bank Starter/Bank/obj/Debug/Bank.exe
 /Users/ericakachner/Desktop/Yellow Book C Sharp Programming Course by Rob Miles/Labs/Week 31 Creating a Bank/Bank Starter/Bank/obj/Debug/Bank.pdb
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/obj/Debug/Bank.csprojAssemblyReference.cache
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/obj/Debug/Bank.csproj.CoreCompileInputs.cache
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/obj/Debug/Bank.exe
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/obj/Debug/Bank.pdb
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/bin/Debug/Bank.exe.config
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/bin/Debug/Bank.exe
+/Users/ericakachner/Projects/class-fullstack-19-20/CSharp/BankTesting/EricaKachner/Bank Starter/Bank/bin/Debug/Bank.pdb
