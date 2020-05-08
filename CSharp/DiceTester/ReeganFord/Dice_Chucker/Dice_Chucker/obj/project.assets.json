@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/Dice_Chucker.csproj",
+      "projectUniqueName": "/Users/reeganford/Projects/class-fullstack-19-20/CSharp/DiceTester/ReeganFord/Dice_Chucker/Dice_Chucker/Dice_Chucker.csproj",
       "projectName": "Dice_Chucker",
-      "projectPath": "/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/Dice_Chucker.csproj",
+      "projectPath": "/Users/reeganford/Projects/class-fullstack-19-20/CSharp/DiceTester/ReeganFord/Dice_Chucker/Dice_Chucker/Dice_Chucker.csproj",
       "packagesPath": "/Users/reeganford/.nuget/packages/",
-      "outputPath": "/Users/reeganford/Projects/Dice_Chucker/Dice_Chucker/obj/",
+      "outputPath": "/Users/reeganford/Projects/class-fullstack-19-20/CSharp/DiceTester/ReeganFord/Dice_Chucker/Dice_Chucker/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/reeganford/.config/NuGet/NuGet.Config"

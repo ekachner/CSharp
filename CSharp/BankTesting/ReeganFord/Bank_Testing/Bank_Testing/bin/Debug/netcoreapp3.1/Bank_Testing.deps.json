@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Bank_Testing/1.0.0": {
+        "runtime": {
+          "Bank_Testing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bank_Testing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

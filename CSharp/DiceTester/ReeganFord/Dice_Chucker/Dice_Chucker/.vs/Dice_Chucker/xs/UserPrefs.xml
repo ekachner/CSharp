@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{D45D9449-D3FA-42C9-A96E-74F5FA61E071}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Chucker.cs">
+    <Files>
+      <File FileName="Chucker.cs" Line="24" Column="1" />
+      <File FileName="DodgeyDice.cs" Line="1" Column="1" />
+      <File FileName="FairDice.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Dice_Chucker" expanded="True">
+            <Node name="Dice_Chucker" expanded="True">
+              <Node name="Chucker.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Dice__Chucker PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

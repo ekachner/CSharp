@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bank_Testing/FakeAccounts.cs">
+    <Files>
+      <File FileName="Bank_Testing/Program.cs" Line="2" Column="34" />
+      <File FileName="Bank_Testing/Account.cs" Line="28" Column="23" />
+      <File FileName="Bank_Testing/Bank.cs" Line="7" Column="12" />
+      <File FileName="Bank_Testing/CompareAccounts.cs" Line="44" Column="1" />
+      <File FileName="Bank_Testing/FakeAccounts.cs" Line="36" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bank_Testing" expanded="True">
+            <Node name="Bank_Testing" expanded="True">
+              <Node name="FakeAccounts.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Bank__Testing PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

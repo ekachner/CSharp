@@ -1,0 +1,103 @@
+Bank #2
+121
+20
+101
+Nigel Brown
+110 6th Street, Laramie, WY
+3822
+100
+102
+Ethel Bloggs
+9980 Murphy Drive, Douglas, WY
+6889
+100
+103
+Ethel Smith
+110 6th Street, Laramie, WY
+3160
+100
+104
+Rob Acaster
+442 1st Street, Laramie, WY
+3154
+100
+105
+Jim Bloggs
+1773 Jones Street, Saratoga, WY
+5166
+100
+106
+Nigel Smith
+442 1st Street, Cheyenne, WY
+277
+100
+107
+Ethel Bloggs
+442 1st Street, Sheridan, WY
+2184
+100
+108
+Simon Bloggs
+801 Sanders Drive, Cheyenne, WY
+2728
+100
+109
+Nigel Thomson
+913 12th Street, Laramie, WY
+6736
+100
+110
+Simon Thomson
+442 1st Street, Sheridan, WY
+4196
+100
+111
+Nigel Acaster
+110 6th Street, Rawlins, WY
+1221
+100
+112
+Ethel Smith
+801 Sanders Drive, Casper, WY
+8743
+100
+113
+Fred Berry
+123 Dunn Avenue, Cheyenne, WY
+2144
+100
+114
+Jim Berry
+123 Dunn Avenue, Rawlins, WY
+6079
+100
+115
+Rob Acaster
+110 6th Street, Saratoga, WY
+8089
+100
+116
+Gloria Thomson
+442 1st Street, Laramie, WY
+8177
+100
+117
+Rob Berry
+913 12th Street, Saratoga, WY
+4184
+100
+118
+Simon Jones
+442 1st Street, Sheridan, WY
+7526
+100
+119
+Ethel Bloggs
+442 1st Street, Douglas, WY
+561
+100
+120
+Nigel Thomson
+442 1st Street, Rawlins, WY
+3713
+100
