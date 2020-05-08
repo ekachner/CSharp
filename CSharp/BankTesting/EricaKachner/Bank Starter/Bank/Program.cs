@@ -18,7 +18,6 @@ namespace Bank
         private int accountNumber;
         private decimal overdraft;
 
-
         public int AccountNumber
         {
             get
@@ -36,26 +35,32 @@ namespace Bank
         }
 
 
-        private decimal withdrawal;
-        public decimal SetOverdraft(decimal withdrawal)
+        static decimal withdrawal;
+        public decimal Overdraft
         {
-            decimal newBalance = balance - withdrawal;
-            return newBalance < 0 ? newBalance : 0;
+            get
+            {
+                return overdraft;
+            }
+            set
+            {
+                decimal newBalance = balance - withdrawal;
+                overdraft = newBalance < 0 ? newBalance : 0;
+            }
         }
 
-        //public decimal GetSetOverdraft(decimal withdrawal)
-        //{
-        //    decimal newBalance;
-        //    set
-        //    {
-        //        newBalance = balance - withdrawal;
-        //        return newBalance < 0 ? newBalance : 0;
-        //    }
-        //    get
-        //    {
-        //        return newBalance;
-        //    }
-        //}
+
+  //      public decimal GetOverdraft()
+		//{
+
+		//}
+
+  //      public decimal SetOverdraft()
+		//{
+  //          decimal newBalance = balance - withdrawal;
+  //          overdraft = newBalance < 0 ? newBalance : 0;
+  //      }
+
 
 
         public bool Save(System.IO.TextWriter textOut)
@@ -135,15 +140,11 @@ namespace Bank
             accountNumber = inAccountNumber;
         }
 
-
-
         public override string ToString()
         {
             return $"Account Details:\n\tName: {name}\n\tAddress: {address}" +
                 $"\n\tBalance: {balance}\n\tOverdraft: {overdraft}\n\tAccount Number: {accountNumber}";
         }
-
-
 
         public override bool Equals(object obj)
         {
@@ -159,19 +160,17 @@ namespace Bank
             }
             Console.WriteLine("Account Equals() = true");
             return true;
-        }
-        
-        //The Equals method is always given a reference to an object
-        //The Equals method must cast this to a reference to an Account
-        //The Account class is based on the object class
-
+        }      
     }
+
+
+
+
 
     class Bank
     {
         private string bankName;
        
-
         public string BankName
         {
             get
@@ -188,7 +187,6 @@ namespace Bank
             bankName = newBankName;
             bankAccounts = new List<Account>();
         }
-
         
         public Account AddAccount(string inName, string inAddress, decimal inBalance)
         {
@@ -286,13 +284,10 @@ namespace Bank
             return result;
         }
 
-
         public override string ToString()
         {
             return $"Bank Details:\n\tBank Name: {bankName}\n\tNumber of Accounts: {bankAccounts.Count}";
         }
-
-
 
         public override bool Equals(object obj)
         {
@@ -378,7 +373,7 @@ namespace Bank
                     string fullName = firstName + " " + lastName;
                     foreach (string addy in address)
                     {
-                        Account a = bank.AddAccount(fullName, addy, balance.Next(-100, 10000), 0);
+                        Account a = bank.AddAccount(fullName, addy, balance.Next(-100, 10000));
                         Console.WriteLine(a.ToString());
                     }
                 }
@@ -388,6 +383,7 @@ namespace Bank
 
         //how to create a test bank with 80 accounts 
         //Bank testBank = new Bank[80];
+        //GenerateAccounts(testBank);
         //get and set overBalance methods (book pg.134  VS pdf pg.4)
         //issues with saving code. How to save everything to my name file in class-fullStack
 
