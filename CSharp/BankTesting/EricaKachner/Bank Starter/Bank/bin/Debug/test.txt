@@ -1,0 +1,11 @@
+The Friendly Bank
+3
+2
+1
+Pickle
+Cheyenne
+50
+2
+Rick
+Cheyenne
+500
