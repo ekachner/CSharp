@@ -1,0 +1,103 @@
+Bank #2
+121
+20
+101
+Simon Smith
+1773 Jones Street, Casper, WY
+8223
+100
+102
+Gloria Bloggs
+913 12th Street, Douglas, WY
+8309
+100
+103
+Nigel Berry
+123 Dunn Avenue, Sheridan, WY
+7432
+100
+104
+Ethel Berry
+1773 Jones Street, Laramie, WY
+5077
+100
+105
+Gloria Acaster
+1773 Jones Street, Laramie, WY
+7430
+100
+106
+Simon Jones
+9980 Murphy Drive, Casper, WY
+936
+100
+107
+Fred Brown
+9980 Murphy Drive, Casper, WY
+9917
+100
+108
+Jim Thomson
+9980 Murphy Drive, Cheyenne, WY
+7272
+100
+109
+Fred Acaster
+1773 Jones Street, Cheyenne, WY
+9091
+100
+110
+Fred Wooster
+123 Dunn Avenue, Rawlins, WY
+5512
+100
+111
+Gloria Wooster
+110 6th Street, Rawlins, WY
+6741
+100
+112
+Evande Wooster
+9980 Murphy Drive, Rawlins, WY
+1810
+100
+113
+Ethel Brown
+110 6th Street, Cheyenne, WY
+6819
+100
+114
+Gloria Wooster
+442 1st Street, Sheridan, WY
+4108
+100
+115
+Rob Wooster
+123 Dunn Avenue, Douglas, WY
+3059
+100
+116
+Evande Jones
+442 1st Street, Laramie, WY
+5372
+100
+117
+Rob Jones
+9980 Murphy Drive, Laramie, WY
+2214
+100
+118
+Nigel Berry
+9980 Murphy Drive, Rawlins, WY
+893
+100
+119
+Gloria Bloggs
+442 1st Street, Laramie, WY
+2638
+100
+120
+Ethel Bloggs
+442 1st Street, Sheridan, WY
+831
+100

@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank_Testing", "Bank_Testing\Bank_Testing.csproj", "{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E1D4A2-2A18-4871-BF29-32EEB4AE627A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
