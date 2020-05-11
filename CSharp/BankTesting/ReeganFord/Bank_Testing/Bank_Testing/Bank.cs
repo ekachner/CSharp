@@ -6,6 +6,10 @@ namespace Bank_Testing
 {
     public class Bank
     {
+        public override string ToString()
+        {
+            return $"{BankName} \nNumber of accounts: {bankAccounts.Count}";
+        }
         public static void BanksEqual(Bank bank1, Bank bank2)
         {
             bool equal = bank1.bankAccounts.SequenceEqual(bank2.bankAccounts, new CompareAccounts());
@@ -21,15 +25,6 @@ namespace Bank_Testing
 
         public List<Account> bankAccounts;
         static int newAccountNumber = 1;
-
-        public static string BankString(Bank bank)
-        {
-            string bankName = bank.BankName;
-            int number = bank.bankAccounts.Count();
-            string numOfAccounts = number.ToString();
-            return $"{bankName} \nNumber of accounts: {numOfAccounts}";
-
-        }
 
         public Bank(string newBankName)
         {

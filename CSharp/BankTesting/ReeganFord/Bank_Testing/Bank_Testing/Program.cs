@@ -12,7 +12,7 @@ namespace Bank_Testing
             List<Account> accounts = FakeAccounts.CreateAccounts(FakeBank, 80);
 
             Account a = accounts[0];
-            Console.WriteLine(Account.AccountString(a));
+            Console.WriteLine(a.ToString());
 
             //Accounts are equal test
             Bank bank1 = new Bank("Bank #1");
@@ -34,9 +34,9 @@ namespace Bank_Testing
             Bank.BanksEqual(bank1, bank2);
 
             //ToString tests for Account and Bank objects
-            Console.WriteLine(Bank.BankString(bank1));
-            Console.WriteLine(Account.AccountString(b));
-            Console.WriteLine(Account.AccountString(c));
+            Console.WriteLine(bank1.ToString());
+            Console.WriteLine(b.ToString());
+            Console.WriteLine(c.ToString());
 
             bank1.Save("test.txt");
             bank2.Save("test.txt");
