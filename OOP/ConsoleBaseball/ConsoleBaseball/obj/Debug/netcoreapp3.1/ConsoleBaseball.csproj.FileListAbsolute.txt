@@ -1,0 +1,12 @@
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/bin/Debug/netcoreapp3.1/ConsoleBaseball.deps.json
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/bin/Debug/netcoreapp3.1/ConsoleBaseball.runtimeconfig.json
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/bin/Debug/netcoreapp3.1/ConsoleBaseball.runtimeconfig.dev.json
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/bin/Debug/netcoreapp3.1/ConsoleBaseball.dll
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/bin/Debug/netcoreapp3.1/ConsoleBaseball.pdb
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.csprojAssemblyReference.cache
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.csproj.CoreCompileInputs.cache
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.AssemblyInfoInputs.cache
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.AssemblyInfo.cs
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.dll
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.pdb
+/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/Debug/netcoreapp3.1/ConsoleBaseball.genruntimeconfig.cache
