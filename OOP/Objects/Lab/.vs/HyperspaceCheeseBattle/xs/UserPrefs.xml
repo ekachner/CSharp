@@ -1,19 +1,14 @@
 ﻿<Properties StartupConfiguration="{0FEC9CD9-373B-4B90-9C44-86254F226E33}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="HyperspaceCheeseBattle/Player.cs">
     <Files>
-      <File FileName="HyperspaceCheeseBattle/Program.cs" Line="27" Column="40" IsPinned="True" />
-      <File FileName="HyperspaceCheeseBattle/Methods.cs" />
-      <File FileName="HyperspaceCheeseBattle/Player.cs" Line="34" Column="14" />
-      <File FileName="HyperspaceCheeseBattle/Game.cs" Line="19" Column="10" />
+      <File FileName="HyperspaceCheeseBattle/Player.cs" Line="45" Column="6" />
+      <File FileName="HyperspaceCheeseBattle/Program.cs" Line="15" Column="27" />
+      <File FileName="HyperspaceCheeseBattle/Game.cs" Line="146" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HyperspaceCheeseBattle" expanded="True">
-            <Node name="HyperspaceCheeseBattle" expanded="True">
-              <Node name="Player.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node />
         </State>
       </Pad>
     </Pads>

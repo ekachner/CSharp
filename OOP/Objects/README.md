@@ -272,6 +272,7 @@ namespace Baseball
         */
         public override string ToString()
         {
+            // return base.ToString(); //Baseball.BaseballPlayer
             return $"{base.ToString()}: {Name} has hit safely in {Hits} of his/her {AtBats} AB's.";
         }
     }
@@ -285,4 +286,75 @@ In the coming days, we will discuss, use, and override virtual methods as we mor
 2. What does the GetHashCode method do and how does it help determine equality?
 
 
+# Access modifiers
 
+## What is a Access Modifier?
+
+All types and type members have an accessibility level. The accessibility level controls whether they can be used from other code in your project or other project. Use the following access modifiers to specify the accessibility of a type or member when you declare it:
+
+- `public`: can be accessed by any other code in the same project or another project that references it (think libraries).
+- `private`: can be accessed only by code in the same `class` or `struct`.
+- `protected`: The type or member can be accessed only by code in the same `class`, or in a `class` that is derived from that `class`
+- `private readonly`: The type or member can be accessed only by code in the same `class` and can only be set at the time of instantiation.
+
+```csharp
+public class BallPlayer
+{
+    public string Name { get; private set; } 
+    // private readonly int careerHits;
+    public int CareerHits { get; private set; }
+    private int careerAtBats;
+
+    public BallPlayer(string name, int hits, int atBats)
+    {
+        Name = name;
+        careerHits = hits;
+        careerAtBats = atBats;
+    } 
+
+    protected float GetBattingAverage()
+    {
+        return careerHits/careerAtBats;
+    }
+
+    public void AddHit()
+    {
+        careerHits++;
+    }
+
+    public void AddAtBat()
+    {
+        careerAtBats++;
+    }
+}
+
+var shane = new BallPlayer("Shane", 100, 100);
+var jason = new BallPlayer("Jason", 0, 1000);
+
+shane.AddHit(); //careerHits == 101;
+shane.AddAtBat(); //careerAtBats == 101;
+
+Console.WriteLine(jason.careerAtBats); //invalid
+jason.AddAtBat();// careerAtBats == 1001;
+
+public class PowerHitter : BallPlayer
+{
+    public PowerHitter(string name) : base(name, 4557, 342)
+    {
+        AddAtBat();
+        Name = "Erica";
+        CareerHits++; //not allowed because its marked private
+        Console.WriteLine(CareerHits);
+        GetBattingAverage(); //allowed because its protected
+    }
+
+    public void SwingReallyHard()
+    {
+        //do something
+    }
+}
+
+BallPlayer player = new PowerHitter("Reegan");
+player.careerAtBats = 23; //not allowed because its marked private;
+player.GetBattingAverage(); //not allowed because its marked protected;
+```

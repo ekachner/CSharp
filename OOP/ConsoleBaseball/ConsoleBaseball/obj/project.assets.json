@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/Objects/Lab/HyperspaceCheeseBattle/HyperspaceCheeseBattle.csproj",
-      "projectName": "HyperspaceCheeseBattle",
-      "projectPath": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/Objects/Lab/HyperspaceCheeseBattle/HyperspaceCheeseBattle.csproj",
+      "projectUniqueName": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/ConsoleBaseball.csproj",
+      "projectName": "ConsoleBaseball",
+      "projectPath": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/ConsoleBaseball.csproj",
       "packagesPath": "/Users/jasonhammock/.nuget/packages/",
-      "outputPath": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/Objects/Lab/HyperspaceCheeseBattle/obj/",
+      "outputPath": "/Users/jasonhammock/Projects/Class/class-fullstack-19-20/OOP/ConsoleBaseball/ConsoleBaseball/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

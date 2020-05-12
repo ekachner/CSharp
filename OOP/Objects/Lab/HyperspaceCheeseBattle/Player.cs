@@ -15,6 +15,11 @@ namespace HyperspaceCheeseBattle
             Y = y;
         }
 
+        public void Move(int x, int y)
+        {
+            //code here
+        }
+
         public override string ToString()
         {
             return $"Player Name: {Name}\t\tStarting Position: {X}, {Y}";
