@@ -8,10 +8,10 @@ namespace ConsoleBaseball
     {
         private readonly Team home;
         private readonly Team away;
-        private readonly Pitcher pitcher;
+        private readonly Pitcher pitcher;   //Why is Pitcher a readonly? *
         private readonly int maxInnings;
         public int Inning { get; private set; }
-        public InningHalf InningHalf { get; private set; }
+        public InningHalf InningHalf { get; private set; }  //why is this it's own type? *
         public int Outs { get; private set; }
         public int[,] ScoreBoard { get; private set; }
         public List<Hitter> BaseRunners { get; private set; }
@@ -73,8 +73,8 @@ namespace ConsoleBaseball
                 Console.ReadLine();
             }
 
-            InningHalf = InningHalf == InningHalf.Top ? InningHalf.Bottom : InningHalf.Top;  //are these switched? *
-            Inning = InningHalf == InningHalf.Top ? Inning + 1 : Inning;   // WTF does this mean? *
+            InningHalf = InningHalf == InningHalf.Top ? InningHalf.Bottom : InningHalf.Top;
+            Inning = InningHalf == InningHalf.Top ? Inning + 1 : Inning;   
             Outs = 0;
             BaseRunners.Clear();
             ShowScoreBoard();
@@ -94,13 +94,13 @@ namespace ConsoleBaseball
         {
             int homeTeamScore = 0;
             int awayTeamScore = 0;
-            for (int i = 0; i < ScoreBoard.GetLength(0); i++)  //GetLength vs. Length *
+            for (int i = 0; i < ScoreBoard.GetLength(0); i++)  //GetLength vs. Length * multi dimensional array
             {
                 awayTeamScore += ScoreBoard[i, 0];
-                homeTeamScore += ScoreBoard[i, 1];  //why starting at 1 *
+                homeTeamScore += ScoreBoard[i, 1]; 
             }
 
-            return (homeScore: homeTeamScore, awayScore: awayTeamScore); //is string interpolation missing? *
+            return (homeScore: homeTeamScore, awayScore: awayTeamScore); //named tuple
         }
 
         //top = visitors bat first(offense) ; bottom = visitors in defense 
@@ -119,18 +119,16 @@ namespace ConsoleBaseball
         {
             BaseRunners.Add(hitter);
             int baseRunners = BaseRunners.Count;
-            //bases are loaded
             if (baseRunners == 4)
             {
                 AddRun();
-                BaseRunners.RemoveAt(0);   //remove the index of baseRunners? *
+                BaseRunners.RemoveAt(0);   //remove baserunner from beginning of list "index[0]"
             }
         }
 
-        //inning - 1 ?????  *
         private void AddRun()
         {
-            ScoreBoard[Inning - 1, (int)InningHalf]++;
+            ScoreBoard[Inning - 1, (int)InningHalf]++;  //Inning - 1 : converting back to index value
             Console.Beep();
             ShowScoreBoard();
         }

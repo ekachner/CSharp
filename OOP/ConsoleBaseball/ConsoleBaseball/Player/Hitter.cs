@@ -29,7 +29,7 @@ namespace ConsoleBaseball.Player
 
         public double GetBattingAverage()
         {
-            return (double)Hits/AtBats;
+            return (double)Hits/AtBats;   //returns double
         }
 
         public override string ToString()
@@ -40,4 +40,3 @@ namespace ConsoleBaseball.Player
     }
 }
 
-//in GetBattingAverage()  will the value be a double?

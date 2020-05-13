@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{86B536F4-0237-4730-9BEF-C1AEE009F5DE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Objects/README.md">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConsoleBaseball/BallGame.cs">
     <Files>
-      <File FileName="ConsoleBaseball/Program.cs" Line="16" Column="87" />
-      <File FileName="ConsoleBaseball/Team.cs" Line="37" Column="1" />
-      <File FileName="ConsoleBaseball/BallGame.cs" Line="1" Column="1" />
-      <File FileName="ConsoleBaseball/Player/Hitter.cs" Line="29" Column="42" />
-      <File FileName="ConsoleBaseball/Player/Pitcher.cs" Line="6" Column="40" />
-      <File FileName="../Objects/README.md" Line="1" Column="1" />
+      <File FileName="ConsoleBaseball/Program.cs" Line="8" Column="47" />
+      <File FileName="ConsoleBaseball/Team.cs" />
+      <File FileName="ConsoleBaseball/BallGame.cs" Line="59" Column="78" />
+      <File FileName="ConsoleBaseball/Player/Hitter.cs" />
+      <File FileName="ConsoleBaseball/Player/Pitcher.cs" />
+      <File FileName="../Objects/README.md" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ConsoleBaseball" expanded="True">
             <Node name="ConsoleBaseball" expanded="True">
-              <Node name="Player" expanded="True">
-                <Node name="Pitcher.cs" selected="True" />
-              </Node>
+              <Node name="Player" expanded="True" />
+              <Node name="BallGame.cs" selected="True" />
             </Node>
           </Node>
         </State>
