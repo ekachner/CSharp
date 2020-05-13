@@ -12,7 +12,6 @@ namespace ConsoleBaseball
         private int head;
         private int tail;
 
-        //constructor for team
         public Team(string name, int teamSize = 9)
         {
             Name = name;
@@ -24,7 +23,6 @@ namespace ConsoleBaseball
 
         public void AddHitter(Hitter hitter)
         {
-            //tail keeps track of where the end of the array is for the purposes of adding a new hitter
             Debug.Assert(tail < MaxHitters);
             Hitters[tail] = hitter;
             tail++;
@@ -32,7 +30,6 @@ namespace ConsoleBaseball
 
         public Hitter GetNextHitter()
         {
-            //head keeps track of the position of the current hitter
             Hitter hitter = Hitters[head];
             head = (head + 1) == MaxHitters ? 0 : head + 1;
             return hitter;

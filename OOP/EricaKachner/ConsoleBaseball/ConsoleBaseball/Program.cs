@@ -5,7 +5,6 @@ namespace ConsoleBaseball
 {
     class Program
     {
-        //creating two teams of 9 players and 
         static void Main(string[] args)
         {
             const int TEAM_SIZE = 9;
@@ -14,9 +13,7 @@ namespace ConsoleBaseball
 
             for(int i = 0; i < TEAM_SIZE; i++)
             {
-                //1380 = starting point for atBats
-                //4575 = max bats a player can have
-                homeTeam.AddHitter(new Hitter(homeTeam.Name, i.ToString(), 4575, 1380)); 
+                homeTeam.AddHitter(new Hitter(homeTeam.Name, i.ToString(), 4575, 1380));
                 awayTeam.AddHitter(new Hitter(awayTeam.Name, i.ToString(), 4575, 1380));
             }
 
@@ -25,5 +22,3 @@ namespace ConsoleBaseball
         }
     }
 }
-
-//what do the numbers in 17 and 18 represent

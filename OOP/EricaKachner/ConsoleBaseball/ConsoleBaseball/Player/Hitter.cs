@@ -21,7 +21,6 @@ namespace ConsoleBaseball.Player
             return $"{FirstName} {LastName}";
         }
 
-
         public bool DidHitPitch(double pitch)
         {
             return pitch < GetBattingAverage();
@@ -39,5 +38,3 @@ namespace ConsoleBaseball.Player
 
     }
 }
-
-//in GetBattingAverage()  will the value be a double?

@@ -16,7 +16,6 @@ namespace ConsoleBaseball
         public int[,] ScoreBoard { get; private set; }
         public List<Hitter> BaseRunners { get; private set; }
 
-        //ballgame constructor
         public BallGame(Team homeTeam, Team awayTeam, int innings)
         {
             home = homeTeam;
@@ -30,7 +29,6 @@ namespace ConsoleBaseball
             BaseRunners = new List<Hitter>();
         }
 
-        //plays a half inning
         public void Start()
         {
             Console.WriteLine("Welcome to Console Baseball.");
@@ -41,7 +39,6 @@ namespace ConsoleBaseball
             {
                 PlayHalfInning();
             }
-            //tuple scores
             (int homeScore, int awayScore) score = GetGameScore();
             Console.WriteLine($"That's all for Console Baseball. The final score is {away.Name} {score.awayScore}, {home.Name} {score.homeScore}");
             Console.ReadLine();
@@ -49,22 +46,22 @@ namespace ConsoleBaseball
 
         private void PlayHalfInning()
         {
-            Team team = GetTeamAtBat();  //based on inning half; top or bottom
+            Team team = GetTeamAtBat();
             while (Outs < 3)
             {
                 Console.Clear();
                 Hitter hitter = team.GetNextHitter();
                 Console.WriteLine(hitter);
                 double pitch = pitcher.ThrowPitch();
-                Console.WriteLine("The pitcher winds up and delivers...type \"swing\" to see if you can hit it");
-                Console.ReadLine();   //here shouldn't this be done three times before out? proper strikeout *
-                bool isHit = hitter.DidHitPitch(pitch);    //does this mean the pitcher only pitches once? Because batter gets out if he swings and misses three times. *
+                Console.WriteLine("The pitcher winds up and delivers...type swing to see if you can hit it");
+                Console.ReadLine();
+                bool isHit = hitter.DidHitPitch(pitch);
                 if (isHit)
                 {
                     Console.WriteLine("It's a hit!");
                     MoveBaseRunners(hitter);
                 }
-                else   //if this, then here should be given two more pitches before out right? *
+                else
                 {
                     Outs++;
                     Console.WriteLine("You're out");
@@ -73,8 +70,8 @@ namespace ConsoleBaseball
                 Console.ReadLine();
             }
 
-            InningHalf = InningHalf == InningHalf.Top ? InningHalf.Bottom : InningHalf.Top;  //are these switched? *
-            Inning = InningHalf == InningHalf.Top ? Inning + 1 : Inning;   // WTF does this mean? *
+            InningHalf = InningHalf == InningHalf.Top ? InningHalf.Bottom : InningHalf.Top;
+            Inning = InningHalf == InningHalf.Top ? Inning + 1 : Inning;
             Outs = 0;
             BaseRunners.Clear();
             ShowScoreBoard();
@@ -82,7 +79,6 @@ namespace ConsoleBaseball
             Console.ReadLine();
         }
 
-        //states wheather it's the top or bottom of the __ inning
         private void ShowScoreBoard()
         {
             (int homeScore, int awayScore) score = GetGameScore(); 
@@ -94,16 +90,15 @@ namespace ConsoleBaseball
         {
             int homeTeamScore = 0;
             int awayTeamScore = 0;
-            for (int i = 0; i < ScoreBoard.GetLength(0); i++)  //GetLength vs. Length *
+            for (int i = 0; i < ScoreBoard.GetLength(0); i++)
             {
                 awayTeamScore += ScoreBoard[i, 0];
-                homeTeamScore += ScoreBoard[i, 1];  //why starting at 1 *
+                homeTeamScore += ScoreBoard[i, 1];
             }
 
-            return (homeScore: homeTeamScore, awayScore: awayTeamScore); //is string interpolation missing? *
+            return (homeScore: homeTeamScore, awayScore: awayTeamScore);
         }
 
-        //top = visitors bat first(offense) ; bottom = visitors in defense 
         private Team GetTeamAtBat()
         {
             if (InningHalf.Top == InningHalf)
@@ -114,20 +109,17 @@ namespace ConsoleBaseball
             return home;
         }
 
-        //baseRunners set to total number of hitters? *
         private void MoveBaseRunners(Hitter hitter)
         {
             BaseRunners.Add(hitter);
             int baseRunners = BaseRunners.Count;
-            //bases are loaded
             if (baseRunners == 4)
             {
                 AddRun();
-                BaseRunners.RemoveAt(0);   //remove the index of baseRunners? *
+                BaseRunners.RemoveAt(0);
             }
         }
 
-        //inning - 1 ?????  *
         private void AddRun()
         {
             ScoreBoard[Inning - 1, (int)InningHalf]++;
@@ -137,11 +129,9 @@ namespace ConsoleBaseball
 
     }
 
-    //top = visitors bat first(offense) ; bottom = visitors in defense
     public enum InningHalf
     {
         Top,
         Bottom
     }
 }
-

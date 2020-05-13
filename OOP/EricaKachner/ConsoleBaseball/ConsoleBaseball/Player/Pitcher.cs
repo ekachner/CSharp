@@ -10,7 +10,6 @@ namespace ConsoleBaseball.Player
             random = new Random();
         }
 
-        //gives random double value to represent the quality of the pitch. higher value = better, lower value = poor
         public double ThrowPitch()
         {
             return random.NextDouble();
